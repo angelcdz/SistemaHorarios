@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB57BEB3-5560-4BF4-A7AA-D3FF54AFD491}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistemaHorarios.Client.Model</RootNamespace>
+    <AssemblyName>SistemaHorarios.Client.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Atualizacao\AtualizarComposicaoCursoModel.cs" />
+    <Compile Include="Atualizacao\AtualizarComposicoesHorarioModel.cs" />
+    <Compile Include="Atualizacao\AtualizarCursosModel.cs" />
+    <Compile Include="Atualizacao\AtualizarHorariosModel.cs" />
+    <Compile Include="Atualizacao\AtualizarMateriasModel.cs" />
+    <Compile Include="Atualizacao\AtualizarNiveisAcessoModel.cs" />
+    <Compile Include="Atualizacao\AtualizarPeriodosModel.cs" />
+    <Compile Include="Atualizacao\AtualizarProfessoresModel.cs" />
+    <Compile Include="Atualizacao\AtualizarSemestresModel.cs" />
+    <Compile Include="Atualizacao\AtualizarUsuariosModel.cs" />
+    <Compile Include="AutenticarUsuarioModel.cs" />
+    <Compile Include="Cadastros\CadastrarComposicaoCursoModel.cs" />
+    <Compile Include="Cadastros\CadastrarComposicoesHorarioModel.cs" />
+    <Compile Include="Cadastros\CadastrarCursosModel.cs" />
+    <Compile Include="Cadastros\CadastrarHorariosModel.cs" />
+    <Compile Include="Cadastros\CadastrarMateriasModel.cs" />
+    <Compile Include="Cadastros\CadastrarNiveisAcessoModel.cs" />
+    <Compile Include="Cadastros\CadastrarPeriodosModel.cs" />
+    <Compile Include="Cadastros\CadastrarProfessoresModel.cs" />
+    <Compile Include="Cadastros\CadastrarSemestresModel.cs" />
+    <Compile Include="Cadastros\CadastrarUsuariosModel.cs" />
+    <Compile Include="Consultas\ConsultarCursoParamModel.cs" />
+    <Compile Include="Consultas\ConsultarDiaSemanaParamModel.cs" />
+    <Compile Include="Consultas\ConsultarDiasHorariosModel.cs" />
+    <Compile Include="Consultas\ConsultarDiasPeriodosModel.cs" />
+    <Compile Include="Consultas\ConsultarHorarioParamModel.cs" />
+    <Compile Include="Consultas\ConsultarMateriaParamModel.cs" />
+    <Compile Include="Consultas\ConsultarNiveisAcessoModel.cs" />
+    <Compile Include="Consultas\ConsultarNivelAcessoParamModel.cs" />
+    <Compile Include="Consultas\ConsultarPeriodoParamModel.cs" />
+    <Compile Include="Consultas\ConsultarProfessorParamModel.cs" />
+    <Compile Include="Consultas\ConsultarUsuariosNiveisModel.cs" />
+    <Compile Include="Consultas\ConsultarUsuariosParamModel.cs" />
+    <Compile Include="Consultas\ConsultarComposicoesCursoModel.cs" />
+    <Compile Include="Consultas\ConsultarComposicoesHorarioModel.cs" />
+    <Compile Include="Consultas\ConsultarCursosModel.cs" />
+    <Compile Include="Consultas\ConsultarDiasSemanaModel.cs" />
+    <Compile Include="Consultas\ConsultarHorariosModel.cs" />
+    <Compile Include="Consultas\ConsultarMateriasModel.cs" />
+    <Compile Include="Consultas\ConsultarPeriodosModel.cs" />
+    <Compile Include="Consultas\ConsultarProfessoresModel.cs" />
+    <Compile Include="Consultas\ConsultarSemestresModel.cs" />
+    <Compile Include="Consultas\ConsultarUsuariosModel.cs" />
+    <Compile Include="Delete\DeletarComposicaoCursoModel.cs" />
+    <Compile Include="Delete\DeletarComposicoesHorarioModel.cs" />
+    <Compile Include="Delete\DeletarCursosModel.cs" />
+    <Compile Include="Delete\DeletarHorariosModel.cs" />
+    <Compile Include="Delete\DeletarMateriasModel.cs" />
+    <Compile Include="Delete\DeletarNiveisAcessoModel.cs" />
+    <Compile Include="Delete\DeletarPeriodosModel.cs" />
+    <Compile Include="Delete\DeletarProfessoresModel.cs" />
+    <Compile Include="Delete\DeletarSemestresModel.cs" />
+    <Compile Include="Delete\DeletarUsuariosModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\SistemaHorariosService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaHorarios.Base\SistemaHorarios.Base.csproj">
+      <Project>{3a55bc74-f0dd-4dd9-9486-1dc868b7bf30}</Project>
+      <Name>SistemaHorarios.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SistemaHorarios.Contracts\SistemaHorarios.Contracts.csproj">
+      <Project>{63c5e2b3-271a-4a66-9f0a-2f4571a9ee18}</Project>
+      <Name>SistemaHorarios.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.AtualizarComposicaoCurso.AtualizarComposicaoCursoResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.AtualizarComposicoesHorario.AtualizarComposicoesHorarioResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.AtualizarCursos.AtualizarCursosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.AtualizarHorarios.AtualizarHorariosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.AtualizarMaterias.AtualizarMateriasResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.AtualizarNiveisAcesso.AtualizarNiveisAcessoResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.AtualizarPeriodos.AtualizarPeriodosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.AtualizarProfessores.AtualizarProfessoresResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.AtualizarSemestres.AtualizarSemestresResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.AtualizarUsuarios.AtualizarUsuariosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.AutenticarUsuario.AutenticarUsuarioResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.CadastrarComposicaoCurso.CadastrarComposicaoCursoResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.CadastrarComposicoesHorario.CadastrarComposicoesHorarioResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.CadastrarCursos.CadastrarCursosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.CadastrarHorarios.CadastrarHorariosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.CadastrarMaterias.CadastrarMateriasResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.CadastrarNiveisAcesso.CadastrarNiveisAcessoResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.CadastrarPeriodos.CadastrarPeriodosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.CadastrarProfessores.CadastrarProfessoresResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.CadastrarSemestres.CadastrarSemestresResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.CadastrarUsuarios.CadastrarUsuariosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarComposicoesCurso.ConsultarComposicoesCursoResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarComposicoesHorario.ConsultarComposicoesHorarioResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarCursoParam.ConsultarCursoParamResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarCursos.ConsultarCursosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarDiaSemanaParam.ConsultarDiaSemanaParamResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarDiasHorarios.ConsultarDiasHorariosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarDiasPeriodos.ConsultarDiasPeriodosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarDiasSemana.ConsultarDiasSemanaResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarHorarioParam.ConsultarHorarioParamResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarHorarios.ConsultarHorariosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarMateriaParam.ConsultarMateriaParamResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarMaterias.ConsultarMateriasResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarNiveisAcesso.ConsultarNiveisAcessoResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarNivelAcessoParam.ConsultarNivelAcessoParamResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarPeriodoParam.ConsultarPeriodoParamResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarPeriodos.ConsultarPeriodosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarProfessores.ConsultarProfessoresResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarProfessorParam.ConsultarProfessorParamResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarSemestres.ConsultarSemestresResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarUsuarios.ConsultarUsuariosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarUsuariosNiveis.ConsultarUsuariosNiveisResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarUsuariosParam.ConsultarUsuariosParamResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.Corinthians.CorinthiansResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.Coriri.CoririResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.DeletarComposicaoCurso.DeletarComposicaoCursoResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.DeletarComposicoesHorario.DeletarComposicoesHorarioResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.DeletarCursos.DeletarCursosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.DeletarHorarios.DeletarHorariosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.DeletarMaterias.DeletarMateriasResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.DeletarNiveisAcesso.DeletarNiveisAcessoResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.DeletarPeriodos.DeletarPeriodosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.DeletarProfessores.DeletarProfessoresResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.DeletarSemestres.DeletarSemestresResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.DeletarUsuarios.DeletarUsuariosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.Dormir.DormirResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.Melpal.MelpalResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.Teste.TesteResponse.datasource" />
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService.wsdl" />
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService18.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService19.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService20.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService23.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService24.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService25.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService26.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService27.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService28.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService29.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService30.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService33.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService34.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService35.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService36.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService37.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService38.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService39.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService40.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService44.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService45.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService46.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService47.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService48.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService49.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService50.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService51.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService52.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService53.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService54.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService55.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SistemaHorariosService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SistemaHorariosService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SistemaHorariosService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SistemaHorariosService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuariosParam" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuariosParam" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuarios" />
+  <xs:complexType name="ConsultarUsuariosParamRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q1:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+          <xs:element minOccurs="0" name="CodigoNivel" type="xs:int" />
+          <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarUsuariosParamRequest" nillable="true" type="tns:ConsultarUsuariosParamRequest" />
+  <xs:complexType name="ConsultarUsuariosParamResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q2:BaseResponse">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuarios" minOccurs="0" name="Usuarios" nillable="true" type="q3:ArrayOfConsultarUsuariosUsuarioDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarUsuariosParamResponse" nillable="true" type="tns:ConsultarUsuariosParamResponse" />
+</xs:schema>

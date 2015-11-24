@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarNivelAcessoParam" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarNivelAcessoParam" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd50" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarNiveisAcesso" />
+  <xs:complexType name="ConsultarNivelAcessoParamRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q1:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Administrador" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+          <xs:element minOccurs="0" name="Consultas" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Operacoes" nillable="true" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarNivelAcessoParamRequest" nillable="true" type="tns:ConsultarNivelAcessoParamRequest" />
+  <xs:complexType name="ConsultarNivelAcessoParamResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q2:BaseResponse">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarNiveisAcesso" minOccurs="0" name="Niveis" nillable="true" type="q3:ArrayOfConsultarNiveisAcessoDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarNivelAcessoParamResponse" nillable="true" type="tns:ConsultarNivelAcessoParamResponse" />
+</xs:schema>

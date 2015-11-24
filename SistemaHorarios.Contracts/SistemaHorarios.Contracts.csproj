@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{63C5E2B3-271A-4A66-9F0A-2F4571A9EE18}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistemaHorarios.Contracts</RootNamespace>
+    <AssemblyName>SistemaHorarios.Contracts</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Atualizacao\AtualizarComposicaoCurso.cs" />
+    <Compile Include="Atualizacao\AtualizarComposicoesHorario.cs" />
+    <Compile Include="Atualizacao\AtualizarCursos.cs" />
+    <Compile Include="Atualizacao\AtualizarHorarios.cs" />
+    <Compile Include="Atualizacao\AtualizarMaterias.cs" />
+    <Compile Include="Atualizacao\AtualizarNiveisAcesso.cs" />
+    <Compile Include="Atualizacao\AtualizarPeriodos.cs" />
+    <Compile Include="Atualizacao\AtualizarProfessores.cs" />
+    <Compile Include="Atualizacao\AtualizarSemestres.cs" />
+    <Compile Include="Atualizacao\AtualizarUsuarios.cs" />
+    <Compile Include="AutenticarUsuario.cs" />
+    <Compile Include="Cadastros\CadastrarComposicoesHorario.cs" />
+    <Compile Include="Cadastros\CadastrarComposicaoCurso.cs" />
+    <Compile Include="Cadastros\CadastrarSemestres.cs" />
+    <Compile Include="Cadastros\CadastrarProfessores.cs" />
+    <Compile Include="Cadastros\CadastrarMaterias.cs" />
+    <Compile Include="Cadastros\CadastrarUsuarios.cs" />
+    <Compile Include="Cadastros\CadastrarNiveisAcesso.cs" />
+    <Compile Include="Cadastros\CadastrarHorarios.cs" />
+    <Compile Include="Cadastros\CadastrarPeriodos.cs" />
+    <Compile Include="Cadastros\CadastrarCursos.cs" />
+    <Compile Include="Consultas\ConsultarCursoParam.cs" />
+    <Compile Include="Consultas\ConsultarDiaSemanaParam.cs" />
+    <Compile Include="Consultas\ConsultarDiasHorarios.cs" />
+    <Compile Include="Consultas\ConsultarDiasPeriodos.cs" />
+    <Compile Include="Consultas\ConsultarHorarioParam.cs" />
+    <Compile Include="Consultas\ConsultarMateriaParam.cs" />
+    <Compile Include="Consultas\ConsultarUsuariosNiveis.cs" />
+    <Compile Include="Consultas\ConsultarUsuariosParam.cs" />
+    <Compile Include="Consultas\ConsultarNiveisAcesso.cs" />
+    <Compile Include="Consultas\ConsultarNivelAcessoParam.cs" />
+    <Compile Include="Consultas\ConsultarPeriodoParam.cs" />
+    <Compile Include="Consultas\ConsultarProfessorParam.cs" />
+    <Compile Include="Consultas\ConsultarComposicoesCurso.cs" />
+    <Compile Include="Consultas\ConsultarComposicoesHorario.cs" />
+    <Compile Include="Consultas\ConsultarDiasSemana.cs" />
+    <Compile Include="Consultas\ConsultarUsuarios.cs" />
+    <Compile Include="Consultas\ConsultarMaterias.cs" />
+    <Compile Include="Consultas\ConsultarSemestres.cs" />
+    <Compile Include="Consultas\ConsultarProfessores.cs" />
+    <Compile Include="Consultas\ConsultarHorarios.cs" />
+    <Compile Include="Consultas\ConsultarPeriodos.cs" />
+    <Compile Include="Consultas\ConsultarCursos.cs" />
+    <Compile Include="Delete\DeletarComposicaoCurso.cs" />
+    <Compile Include="Delete\DeletarComposicoesHorario.cs" />
+    <Compile Include="Delete\DeletarCursos.cs" />
+    <Compile Include="Delete\DeletarHorarios.cs" />
+    <Compile Include="Delete\DeletarMaterias.cs" />
+    <Compile Include="Delete\DeletarNiveisAcesso.cs" />
+    <Compile Include="Delete\DeletarPeriodos.cs" />
+    <Compile Include="Delete\DeletarProfessores.cs" />
+    <Compile Include="Delete\DeletarSemestres.cs" />
+    <Compile Include="Delete\DeletarUsuarios.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaHorarios.Base\SistemaHorarios.Base.csproj">
+      <Project>{3a55bc74-f0dd-4dd9-9486-1dc868b7bf30}</Project>
+      <Name>SistemaHorarios.Base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

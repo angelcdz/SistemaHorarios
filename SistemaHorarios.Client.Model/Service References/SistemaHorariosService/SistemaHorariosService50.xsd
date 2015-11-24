@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarNiveisAcesso" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarNiveisAcesso" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" />
+  <xs:complexType name="ArrayOfConsultarNiveisAcessoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConsultarNiveisAcessoDTO" nillable="true" type="tns:ConsultarNiveisAcessoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConsultarNiveisAcessoDTO" nillable="true" type="tns:ArrayOfConsultarNiveisAcessoDTO" />
+  <xs:complexType name="ConsultarNiveisAcessoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Administrador" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Consultas" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Operacoes" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarNiveisAcessoDTO" nillable="true" type="tns:ConsultarNiveisAcessoDTO" />
+  <xs:complexType name="ConsultarNiveisAcessoRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q1:BaseRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarNiveisAcessoRequest" nillable="true" type="tns:ConsultarNiveisAcessoRequest" />
+  <xs:complexType name="ConsultarNiveisAcessoResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q2:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Niveis" nillable="true" type="tns:ArrayOfConsultarNiveisAcessoDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarNiveisAcessoResponse" nillable="true" type="tns:ConsultarNiveisAcessoResponse" />
+</xs:schema>

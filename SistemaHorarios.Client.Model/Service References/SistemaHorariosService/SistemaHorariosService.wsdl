@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SistemaHorariosService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursos" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiasSemana" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarHorarios" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarMaterias" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarPeriodos" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarProfessores" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarSemestres" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuarios" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarComposicaoCurso" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarComposicoesHorario" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarCursos" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarHorarios" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarMaterias" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarNiveisAcesso" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarPeriodos" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarProfessores" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd19" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarSemestres" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd20" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarUsuarios" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd21" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarComposicoesCurso" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd22" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarComposicoesHorario" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd23" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarComposicaoCurso" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd24" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarComposicoesHorario" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd25" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarCursos" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd26" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarHorarios" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd27" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarMaterias" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd28" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarNiveisAcesso" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd29" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarPeriodos" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd30" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarProfessores" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd31" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarSemestres" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd32" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarUsuarios" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd33" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarComposicaoCurso" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd34" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarComposicoesHorario" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd35" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarCursos" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd36" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarHorarios" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd37" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarMaterias" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd38" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarNiveisAcesso" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd39" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarPeriodos" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd40" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarProfessores" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd41" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarSemestres" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd42" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarUsuarios" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd43" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarProfessorParam" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd44" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursoParam" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd45" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarPeriodoParam" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd46" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarHorarioParam" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd47" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarMateriaParam" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd48" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiaSemanaParam" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd49" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarNivelAcessoParam" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd50" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarNiveisAcesso" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd51" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiasPeriodos" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd52" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiasHorarios" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd53" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuariosParam" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd54" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuariosNiveis" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd55" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AutenticarUsuario" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISistemaHorariosService_ConsultarCursos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCursos" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarCursos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCursosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarDiasSemana_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDiasSemana" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarDiasSemana_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDiasSemanaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarHorarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarHorarios" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarHorarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarHorariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarMaterias_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarMaterias" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarMaterias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarMateriasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarPeriodos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPeriodos" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarPeriodos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPeriodosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarProfessores_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarProfessores" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarProfessores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarProfessoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarSemestres_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarSemestres" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarSemestres_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarSemestresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarUsuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarUsuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarComposicaoCurso_InputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarComposicaoCurso" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarComposicaoCurso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarComposicaoCursoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarComposicoesHorario_InputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarComposicoesHorario" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarComposicoesHorario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarComposicoesHorarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarCursos_InputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarCursos" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarCursos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarCursosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarHorarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarHorarios" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarHorarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarHorariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarMaterias_InputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarMaterias" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarMaterias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarMateriasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarNiveisAcesso_InputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarNiveisAcesso" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarNiveisAcesso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarNiveisAcessoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarPeriodos_InputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarPeriodos" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarPeriodos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarPeriodosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarProfessores_InputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarProfessores" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarProfessores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarProfessoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarSemestres_InputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarSemestres" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarSemestres_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarSemestresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarUsuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarUsuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarComposicoesCurso_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarComposicoesCurso" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarComposicoesCurso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarComposicoesCursoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarComposicoesHorario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarComposicoesHorario" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarComposicoesHorario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarComposicoesHorarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AtualizarComposicaoCurso_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarComposicaoCurso" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AtualizarComposicaoCurso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarComposicaoCursoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AtualizarComposicoesHorario_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarComposicoesHorario" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AtualizarComposicoesHorario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarComposicoesHorarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AtualizarCursos_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarCursos" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AtualizarCursos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarCursosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AtualizarHorarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarHorarios" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AtualizarHorarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarHorariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AtualizarMaterias_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarMaterias" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AtualizarMaterias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarMateriasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AtualizarNiveisAcesso_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarNiveisAcesso" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AtualizarNiveisAcesso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarNiveisAcessoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AtualizarPeriodos_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarPeriodos" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AtualizarPeriodos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarPeriodosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AtualizarProfessores_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarProfessores" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AtualizarProfessores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarProfessoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AtualizarSemestres_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarSemestres" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AtualizarSemestres_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarSemestresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AtualizarUsuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AtualizarUsuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_DeletarComposicaoCurso_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarComposicaoCurso" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_DeletarComposicaoCurso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarComposicaoCursoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_DeletarComposicoesHorario_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarComposicoesHorario" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_DeletarComposicoesHorario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarComposicoesHorarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_DeletarCursos_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarCursos" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_DeletarCursos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarCursosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_DeletarHorarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarHorarios" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_DeletarHorarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarHorariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_DeletarMaterias_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarMaterias" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_DeletarMaterias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarMateriasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_DeletarNiveisAcesso_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarNiveisAcesso" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_DeletarNiveisAcesso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarNiveisAcessoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_DeletarPeriodos_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarPeriodos" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_DeletarPeriodos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarPeriodosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_DeletarProfessores_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarProfessores" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_DeletarProfessores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarProfessoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_DeletarSemestres_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarSemestres" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_DeletarSemestres_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarSemestresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_DeletarUsuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_DeletarUsuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarProfessorParam_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarProfessorParam" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarProfessorParam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarProfessorParamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarCursoParam_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCursoParam" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarCursoParam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCursoParamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarPeriodoParam_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPeriodoParam" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarPeriodoParam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPeriodoParamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarHorarioParam_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarHorarioParam" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarHorarioParam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarHorarioParamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarMateriaParam_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarMateriaParam" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarMateriaParam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarMateriaParamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarDiaSemanaParam_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDiaSemanaParam" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarDiaSemanaParam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDiaSemanaParamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarNivelAcessoParam_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarNivelAcessoParam" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarNivelAcessoParam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarNivelAcessoParamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarNiveisAcesso_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarNiveisAcesso" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarNiveisAcesso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarNiveisAcessoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarDiasPeriodos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDiasPeriodos" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarDiasPeriodos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDiasPeriodosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarDiasHorarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDiasHorarios" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarDiasHorarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDiasHorariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarUsuariosParam_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarUsuariosParam" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarUsuariosParam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarUsuariosParamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarUsuariosNiveis_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarUsuariosNiveis" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarUsuariosNiveis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarUsuariosNiveisResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AutenticarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:AutenticarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_AutenticarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AutenticarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISistemaHorariosService">
+    <wsdl:operation name="ConsultarCursos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarCursos" message="tns:ISistemaHorariosService_ConsultarCursos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarCursosResponse" message="tns:ISistemaHorariosService_ConsultarCursos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDiasSemana">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarDiasSemana" message="tns:ISistemaHorariosService_ConsultarDiasSemana_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarDiasSemanaResponse" message="tns:ISistemaHorariosService_ConsultarDiasSemana_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarHorarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarHorarios" message="tns:ISistemaHorariosService_ConsultarHorarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarHorariosResponse" message="tns:ISistemaHorariosService_ConsultarHorarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarMaterias">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarMaterias" message="tns:ISistemaHorariosService_ConsultarMaterias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarMateriasResponse" message="tns:ISistemaHorariosService_ConsultarMaterias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPeriodos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarPeriodos" message="tns:ISistemaHorariosService_ConsultarPeriodos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarPeriodosResponse" message="tns:ISistemaHorariosService_ConsultarPeriodos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProfessores">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarProfessores" message="tns:ISistemaHorariosService_ConsultarProfessores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarProfessoresResponse" message="tns:ISistemaHorariosService_ConsultarProfessores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSemestres">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarSemestres" message="tns:ISistemaHorariosService_ConsultarSemestres_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarSemestresResponse" message="tns:ISistemaHorariosService_ConsultarSemestres_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUsuarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarUsuarios" message="tns:ISistemaHorariosService_ConsultarUsuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarUsuariosResponse" message="tns:ISistemaHorariosService_ConsultarUsuarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarComposicaoCurso">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarComposicaoCurso" message="tns:ISistemaHorariosService_CadastrarComposicaoCurso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarComposicaoCursoResponse" message="tns:ISistemaHorariosService_CadastrarComposicaoCurso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarComposicoesHorario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarComposicoesHorario" message="tns:ISistemaHorariosService_CadastrarComposicoesHorario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarComposicoesHorarioResponse" message="tns:ISistemaHorariosService_CadastrarComposicoesHorario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarCursos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarCursos" message="tns:ISistemaHorariosService_CadastrarCursos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarCursosResponse" message="tns:ISistemaHorariosService_CadastrarCursos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarHorarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarHorarios" message="tns:ISistemaHorariosService_CadastrarHorarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarHorariosResponse" message="tns:ISistemaHorariosService_CadastrarHorarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarMaterias">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarMaterias" message="tns:ISistemaHorariosService_CadastrarMaterias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarMateriasResponse" message="tns:ISistemaHorariosService_CadastrarMaterias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarNiveisAcesso">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarNiveisAcesso" message="tns:ISistemaHorariosService_CadastrarNiveisAcesso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarNiveisAcessoResponse" message="tns:ISistemaHorariosService_CadastrarNiveisAcesso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarPeriodos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarPeriodos" message="tns:ISistemaHorariosService_CadastrarPeriodos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarPeriodosResponse" message="tns:ISistemaHorariosService_CadastrarPeriodos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarProfessores">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarProfessores" message="tns:ISistemaHorariosService_CadastrarProfessores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarProfessoresResponse" message="tns:ISistemaHorariosService_CadastrarProfessores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarSemestres">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarSemestres" message="tns:ISistemaHorariosService_CadastrarSemestres_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarSemestresResponse" message="tns:ISistemaHorariosService_CadastrarSemestres_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarUsuarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarUsuarios" message="tns:ISistemaHorariosService_CadastrarUsuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarUsuariosResponse" message="tns:ISistemaHorariosService_CadastrarUsuarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarComposicoesCurso">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarComposicoesCurso" message="tns:ISistemaHorariosService_ConsultarComposicoesCurso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarComposicoesCursoResponse" message="tns:ISistemaHorariosService_ConsultarComposicoesCurso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarComposicoesHorario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarComposicoesHorario" message="tns:ISistemaHorariosService_ConsultarComposicoesHorario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarComposicoesHorarioResponse" message="tns:ISistemaHorariosService_ConsultarComposicoesHorario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarComposicaoCurso">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/AtualizarComposicaoCurso" message="tns:ISistemaHorariosService_AtualizarComposicaoCurso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/AtualizarComposicaoCursoResponse" message="tns:ISistemaHorariosService_AtualizarComposicaoCurso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarComposicoesHorario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/AtualizarComposicoesHorario" message="tns:ISistemaHorariosService_AtualizarComposicoesHorario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/AtualizarComposicoesHorarioResponse" message="tns:ISistemaHorariosService_AtualizarComposicoesHorario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarCursos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/AtualizarCursos" message="tns:ISistemaHorariosService_AtualizarCursos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/AtualizarCursosResponse" message="tns:ISistemaHorariosService_AtualizarCursos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarHorarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/AtualizarHorarios" message="tns:ISistemaHorariosService_AtualizarHorarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/AtualizarHorariosResponse" message="tns:ISistemaHorariosService_AtualizarHorarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarMaterias">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/AtualizarMaterias" message="tns:ISistemaHorariosService_AtualizarMaterias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/AtualizarMateriasResponse" message="tns:ISistemaHorariosService_AtualizarMaterias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarNiveisAcesso">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/AtualizarNiveisAcesso" message="tns:ISistemaHorariosService_AtualizarNiveisAcesso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/AtualizarNiveisAcessoResponse" message="tns:ISistemaHorariosService_AtualizarNiveisAcesso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarPeriodos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/AtualizarPeriodos" message="tns:ISistemaHorariosService_AtualizarPeriodos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/AtualizarPeriodosResponse" message="tns:ISistemaHorariosService_AtualizarPeriodos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarProfessores">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/AtualizarProfessores" message="tns:ISistemaHorariosService_AtualizarProfessores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/AtualizarProfessoresResponse" message="tns:ISistemaHorariosService_AtualizarProfessores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarSemestres">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/AtualizarSemestres" message="tns:ISistemaHorariosService_AtualizarSemestres_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/AtualizarSemestresResponse" message="tns:ISistemaHorariosService_AtualizarSemestres_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarUsuarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/AtualizarUsuarios" message="tns:ISistemaHorariosService_AtualizarUsuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/AtualizarUsuariosResponse" message="tns:ISistemaHorariosService_AtualizarUsuarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletarComposicaoCurso">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/DeletarComposicaoCurso" message="tns:ISistemaHorariosService_DeletarComposicaoCurso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/DeletarComposicaoCursoResponse" message="tns:ISistemaHorariosService_DeletarComposicaoCurso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletarComposicoesHorario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/DeletarComposicoesHorario" message="tns:ISistemaHorariosService_DeletarComposicoesHorario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/DeletarComposicoesHorarioResponse" message="tns:ISistemaHorariosService_DeletarComposicoesHorario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletarCursos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/DeletarCursos" message="tns:ISistemaHorariosService_DeletarCursos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/DeletarCursosResponse" message="tns:ISistemaHorariosService_DeletarCursos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletarHorarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/DeletarHorarios" message="tns:ISistemaHorariosService_DeletarHorarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/DeletarHorariosResponse" message="tns:ISistemaHorariosService_DeletarHorarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletarMaterias">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/DeletarMaterias" message="tns:ISistemaHorariosService_DeletarMaterias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/DeletarMateriasResponse" message="tns:ISistemaHorariosService_DeletarMaterias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletarNiveisAcesso">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/DeletarNiveisAcesso" message="tns:ISistemaHorariosService_DeletarNiveisAcesso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/DeletarNiveisAcessoResponse" message="tns:ISistemaHorariosService_DeletarNiveisAcesso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletarPeriodos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/DeletarPeriodos" message="tns:ISistemaHorariosService_DeletarPeriodos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/DeletarPeriodosResponse" message="tns:ISistemaHorariosService_DeletarPeriodos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletarProfessores">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/DeletarProfessores" message="tns:ISistemaHorariosService_DeletarProfessores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/DeletarProfessoresResponse" message="tns:ISistemaHorariosService_DeletarProfessores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletarSemestres">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/DeletarSemestres" message="tns:ISistemaHorariosService_DeletarSemestres_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/DeletarSemestresResponse" message="tns:ISistemaHorariosService_DeletarSemestres_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletarUsuarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/DeletarUsuarios" message="tns:ISistemaHorariosService_DeletarUsuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/DeletarUsuariosResponse" message="tns:ISistemaHorariosService_DeletarUsuarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProfessorParam">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarProfessorParam" message="tns:ISistemaHorariosService_ConsultarProfessorParam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarProfessorParamResponse" message="tns:ISistemaHorariosService_ConsultarProfessorParam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCursoParam">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarCursoParam" message="tns:ISistemaHorariosService_ConsultarCursoParam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarCursoParamResponse" message="tns:ISistemaHorariosService_ConsultarCursoParam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPeriodoParam">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarPeriodoParam" message="tns:ISistemaHorariosService_ConsultarPeriodoParam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarPeriodoParamResponse" message="tns:ISistemaHorariosService_ConsultarPeriodoParam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarHorarioParam">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarHorarioParam" message="tns:ISistemaHorariosService_ConsultarHorarioParam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarHorarioParamResponse" message="tns:ISistemaHorariosService_ConsultarHorarioParam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarMateriaParam">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarMateriaParam" message="tns:ISistemaHorariosService_ConsultarMateriaParam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarMateriaParamResponse" message="tns:ISistemaHorariosService_ConsultarMateriaParam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDiaSemanaParam">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarDiaSemanaParam" message="tns:ISistemaHorariosService_ConsultarDiaSemanaParam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarDiaSemanaParamResponse" message="tns:ISistemaHorariosService_ConsultarDiaSemanaParam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNivelAcessoParam">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarNivelAcessoParam" message="tns:ISistemaHorariosService_ConsultarNivelAcessoParam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarNivelAcessoParamResponse" message="tns:ISistemaHorariosService_ConsultarNivelAcessoParam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNiveisAcesso">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarNiveisAcesso" message="tns:ISistemaHorariosService_ConsultarNiveisAcesso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarNiveisAcessoResponse" message="tns:ISistemaHorariosService_ConsultarNiveisAcesso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDiasPeriodos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarDiasPeriodos" message="tns:ISistemaHorariosService_ConsultarDiasPeriodos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarDiasPeriodosResponse" message="tns:ISistemaHorariosService_ConsultarDiasPeriodos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDiasHorarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarDiasHorarios" message="tns:ISistemaHorariosService_ConsultarDiasHorarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarDiasHorariosResponse" message="tns:ISistemaHorariosService_ConsultarDiasHorarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUsuariosParam">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarUsuariosParam" message="tns:ISistemaHorariosService_ConsultarUsuariosParam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarUsuariosParamResponse" message="tns:ISistemaHorariosService_ConsultarUsuariosParam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUsuariosNiveis">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarUsuariosNiveis" message="tns:ISistemaHorariosService_ConsultarUsuariosNiveis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarUsuariosNiveisResponse" message="tns:ISistemaHorariosService_ConsultarUsuariosNiveis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AutenticarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/AutenticarUsuario" message="tns:ISistemaHorariosService_AutenticarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/AutenticarUsuarioResponse" message="tns:ISistemaHorariosService_AutenticarUsuario_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISistemaHorariosService" type="tns:ISistemaHorariosService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultarCursos">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarCursos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDiasSemana">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarDiasSemana" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarHorarios">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarHorarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarMaterias">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarMaterias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPeriodos">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarPeriodos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProfessores">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarProfessores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSemestres">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarSemestres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUsuarios">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarComposicaoCurso">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/CadastrarComposicaoCurso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarComposicoesHorario">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/CadastrarComposicoesHorario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarCursos">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/CadastrarCursos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarHorarios">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/CadastrarHorarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarMaterias">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/CadastrarMaterias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarNiveisAcesso">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/CadastrarNiveisAcesso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarPeriodos">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/CadastrarPeriodos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarProfessores">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/CadastrarProfessores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarSemestres">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/CadastrarSemestres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarUsuarios">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/CadastrarUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarComposicoesCurso">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarComposicoesCurso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarComposicoesHorario">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarComposicoesHorario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarComposicaoCurso">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/AtualizarComposicaoCurso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarComposicoesHorario">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/AtualizarComposicoesHorario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarCursos">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/AtualizarCursos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarHorarios">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/AtualizarHorarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarMaterias">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/AtualizarMaterias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarNiveisAcesso">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/AtualizarNiveisAcesso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarPeriodos">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/AtualizarPeriodos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarProfessores">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/AtualizarProfessores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarSemestres">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/AtualizarSemestres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarUsuarios">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/AtualizarUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletarComposicaoCurso">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/DeletarComposicaoCurso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletarComposicoesHorario">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/DeletarComposicoesHorario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletarCursos">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/DeletarCursos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletarHorarios">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/DeletarHorarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletarMaterias">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/DeletarMaterias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletarNiveisAcesso">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/DeletarNiveisAcesso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletarPeriodos">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/DeletarPeriodos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletarProfessores">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/DeletarProfessores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletarSemestres">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/DeletarSemestres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletarUsuarios">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/DeletarUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProfessorParam">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarProfessorParam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCursoParam">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarCursoParam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPeriodoParam">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarPeriodoParam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarHorarioParam">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarHorarioParam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarMateriaParam">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarMateriaParam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDiaSemanaParam">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarDiaSemanaParam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNivelAcessoParam">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarNivelAcessoParam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNiveisAcesso">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarNiveisAcesso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDiasPeriodos">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarDiasPeriodos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDiasHorarios">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarDiasHorarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUsuariosParam">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarUsuariosParam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUsuariosNiveis">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarUsuariosNiveis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutenticarUsuario">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/AutenticarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SistemaHorariosService">
+    <wsdl:port name="BasicHttpBinding_ISistemaHorariosService" binding="tns:BasicHttpBinding_ISistemaHorariosService">
+      <soap:address location="http://localhost:34859/SistemaHorariosService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

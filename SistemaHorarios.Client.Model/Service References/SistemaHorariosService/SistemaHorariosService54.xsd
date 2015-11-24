@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuariosNiveis" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuariosNiveis" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd50" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarNiveisAcesso" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuarios" />
+  <xs:complexType name="ConsultarUsuariosNiveisRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q1:BaseRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarUsuariosNiveisRequest" nillable="true" type="tns:ConsultarUsuariosNiveisRequest" />
+  <xs:complexType name="ConsultarUsuariosNiveisResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q2:BaseResponse">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarNiveisAcesso" minOccurs="0" name="Niveis" nillable="true" type="q3:ArrayOfConsultarNiveisAcessoDTO" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuarios" minOccurs="0" name="Usuarios" nillable="true" type="q4:ArrayOfConsultarUsuariosUsuarioDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarUsuariosNiveisResponse" nillable="true" type="tns:ConsultarUsuariosNiveisResponse" />
+</xs:schema>

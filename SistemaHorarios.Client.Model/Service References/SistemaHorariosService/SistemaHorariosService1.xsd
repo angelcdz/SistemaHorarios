@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarHorarios" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarHorarios" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ConsultarHorariosRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q1:BaseRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarHorariosRequest" nillable="true" type="tns:ConsultarHorariosRequest" />
+  <xs:complexType name="ConsultarHorariosResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q2:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Horarios" nillable="true" type="tns:ArrayOfConsultarHorariosHorarioDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarHorariosResponse" nillable="true" type="tns:ConsultarHorariosResponse" />
+  <xs:complexType name="ArrayOfConsultarHorariosHorarioDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConsultarHorariosHorarioDTO" nillable="true" type="tns:ConsultarHorariosHorarioDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConsultarHorariosHorarioDTO" nillable="true" type="tns:ArrayOfConsultarHorariosHorarioDTO" />
+  <xs:complexType name="ConsultarHorariosHorarioDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="DiaSemana" nillable="true" type="tns:ConsultarHorariosDiaDTO" />
+      <xs:element minOccurs="0" name="HoraFinal" type="ser:duration" />
+      <xs:element minOccurs="0" name="HoraInicial" type="ser:duration" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarHorariosHorarioDTO" nillable="true" type="tns:ConsultarHorariosHorarioDTO" />
+  <xs:complexType name="ConsultarHorariosDiaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarHorariosDiaDTO" nillable="true" type="tns:ConsultarHorariosDiaDTO" />
+</xs:schema>

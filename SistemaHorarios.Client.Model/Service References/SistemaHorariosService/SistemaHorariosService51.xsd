@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiasPeriodos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiasPeriodos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiasSemana" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarPeriodos" />
+  <xs:complexType name="ConsultarDiasPeriodosRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q1:BaseRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarDiasPeriodosRequest" nillable="true" type="tns:ConsultarDiasPeriodosRequest" />
+  <xs:complexType name="ConsultarDiasPeriodosResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q2:BaseResponse">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiasSemana" minOccurs="0" name="Dias" nillable="true" type="q3:ArrayOfConsultarDiasSemanaDiaDTO" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarPeriodos" minOccurs="0" name="Periodos" nillable="true" type="q4:ArrayOfConsultarPeriodosPeriodoDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarDiasPeriodosResponse" nillable="true" type="tns:ConsultarDiasPeriodosResponse" />
+</xs:schema>

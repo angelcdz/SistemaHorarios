@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SistemaHorariosModelStoreContainer" CdmEntityContainer="SistemaHorariosEntities">
+    <EntitySetMapping Name="ComposicoesCurso">
+      <EntityTypeMapping TypeName="SistemaHorariosModel.ComposicaoCurso">
+        <MappingFragment StoreEntitySet="COMPOSICAO_CURSO">
+          <ScalarProperty Name="CodigoComposicaoCurso" ColumnName="COD_COMP_CURSO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComposicoesHorario">
+      <EntityTypeMapping TypeName="SistemaHorariosModel.ComposicaoHorario">
+        <MappingFragment StoreEntitySet="COMPOSICAO_HORARIO">
+          <ScalarProperty Name="CodigoComposicaoHorario" ColumnName="COD_COMP_HOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cursos">
+      <EntityTypeMapping TypeName="SistemaHorariosModel.Curso">
+        <MappingFragment StoreEntitySet="CURSO">
+          <ScalarProperty Name="NomeCurso" ColumnName="NOME_CURSO" />
+          <ScalarProperty Name="CodigoCurso" ColumnName="COD_CURSO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Horarios">
+      <EntityTypeMapping TypeName="SistemaHorariosModel.Horario">
+        <MappingFragment StoreEntitySet="HORARIO">
+          <ScalarProperty Name="HoraFinal" ColumnName="HORA_FINAL" />
+          <ScalarProperty Name="HoraInicial" ColumnName="HORA_INICIAL" />
+          <ScalarProperty Name="CodigoHorario" ColumnName="COD_HORARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Materias">
+      <EntityTypeMapping TypeName="SistemaHorariosModel.Materia">
+        <MappingFragment StoreEntitySet="MATERIA">
+          <ScalarProperty Name="NomeMateria" ColumnName="NOME_MATERIA" />
+          <ScalarProperty Name="CodigoMateria" ColumnName="COD_MATERIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Periodos">
+      <EntityTypeMapping TypeName="SistemaHorariosModel.Periodo">
+        <MappingFragment StoreEntitySet="PERIODO">
+          <ScalarProperty Name="NomePeriodo" ColumnName="NOME_PERIODO" />
+          <ScalarProperty Name="CodigoPeriodo" ColumnName="COD_PERIODO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Professores">
+      <EntityTypeMapping TypeName="SistemaHorariosModel.Professor">
+        <MappingFragment StoreEntitySet="PROFESSOR">
+          <ScalarProperty Name="NomeProfessor" ColumnName="NOME_PROFESSOR" />
+          <ScalarProperty Name="CodigoProfessor" ColumnName="COD_PROFESSOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Semestres">
+      <EntityTypeMapping TypeName="SistemaHorariosModel.Semestre">
+        <MappingFragment StoreEntitySet="SEMESTRE">
+          <ScalarProperty Name="NumeroSemestre" ColumnName="NUM_SEMESTRE" />
+          <ScalarProperty Name="CodigoSemestre" ColumnName="COD_SEMESTRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="SistemaHorariosModel.Usuario">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="UltimoLogin" ColumnName="ULT_LOGIN" />
+          <ScalarProperty Name="Senha" ColumnName="SENHA" />
+          <ScalarProperty Name="Login" ColumnName="LOGIN" />
+          <ScalarProperty Name="CodigoUsuario" ColumnName="COD_USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FK__COMPOSICA__COD_C__1BFD2C07" TypeName="SistemaHorariosModel.FK__COMPOSICA__COD_C__1BFD2C07" StoreEntitySet="COMPOSICAO_CURSO">
+      <EndProperty Name="COMPOSICAO_CURSO">
+        <ScalarProperty Name="CodigoComposicaoCurso" ColumnName="COD_COMP_CURSO" />
+      </EndProperty>
+      <EndProperty Name="CURSO">
+        <ScalarProperty Name="CodigoCurso" ColumnName="COD_CURSO" />
+      </EndProperty>
+      <Condition ColumnName="COD_CURSO" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__COMPOSICA__COD_C__22AA2996" TypeName="SistemaHorariosModel.FK__COMPOSICA__COD_C__22AA2996" StoreEntitySet="COMPOSICAO_HORARIO">
+      <EndProperty Name="COMPOSICAO_HORARIO">
+        <ScalarProperty Name="CodigoComposicaoHorario" ColumnName="COD_COMP_HOR" />
+      </EndProperty>
+      <EndProperty Name="COMPOSICAO_CURSO">
+        <ScalarProperty Name="CodigoComposicaoCurso" ColumnName="COD_COMP_CURSO" />
+      </EndProperty>
+      <Condition ColumnName="COD_COMP_CURSO" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__COMPOSICA__COD_M__1CF15040" TypeName="SistemaHorariosModel.FK__COMPOSICA__COD_M__1CF15040" StoreEntitySet="COMPOSICAO_CURSO">
+      <EndProperty Name="COMPOSICAO_CURSO">
+        <ScalarProperty Name="CodigoComposicaoCurso" ColumnName="COD_COMP_CURSO" />
+      </EndProperty>
+      <EndProperty Name="MATERIA">
+        <ScalarProperty Name="CodigoMateria" ColumnName="COD_MATERIA" />
+      </EndProperty>
+      <Condition ColumnName="COD_MATERIA" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__COMPOSICA__COD_P__1DE57479" TypeName="SistemaHorariosModel.FK__COMPOSICA__COD_P__1DE57479" StoreEntitySet="COMPOSICAO_CURSO">
+      <EndProperty Name="COMPOSICAO_CURSO">
+        <ScalarProperty Name="CodigoComposicaoCurso" ColumnName="COD_COMP_CURSO" />
+      </EndProperty>
+      <EndProperty Name="PROFESSOR">
+        <ScalarProperty Name="CodigoProfessor" ColumnName="COD_PROFESSOR" />
+      </EndProperty>
+      <Condition ColumnName="COD_PROFESSOR" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__COMPOSICA__COD_S__1B0907CE" TypeName="SistemaHorariosModel.FK__COMPOSICA__COD_S__1B0907CE" StoreEntitySet="COMPOSICAO_CURSO">
+      <EndProperty Name="COMPOSICAO_CURSO">
+        <ScalarProperty Name="CodigoComposicaoCurso" ColumnName="COD_COMP_CURSO" />
+      </EndProperty>
+      <EndProperty Name="SEMESTRE">
+        <ScalarProperty Name="CodigoSemestre" ColumnName="COD_SEMESTRE" />
+      </EndProperty>
+      <Condition ColumnName="COD_SEMESTRE" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__COMPOSICA__COD_H__239E4DCF" TypeName="SistemaHorariosModel.FK__COMPOSICA__COD_H__239E4DCF" StoreEntitySet="COMPOSICAO_HORARIO">
+      <EndProperty Name="COMPOSICAO_HORARIO">
+        <ScalarProperty Name="CodigoComposicaoHorario" ColumnName="COD_COMP_HOR" />
+      </EndProperty>
+      <EndProperty Name="HORARIO">
+        <ScalarProperty Name="CodigoHorario" ColumnName="COD_HORARIO" />
+      </EndProperty>
+      <Condition ColumnName="COD_HORARIO" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__CURSO__COD_PERIO__145C0A3F" TypeName="SistemaHorariosModel.FK__CURSO__COD_PERIO__145C0A3F" StoreEntitySet="CURSO">
+      <EndProperty Name="CURSO">
+        <ScalarProperty Name="CodigoCurso" ColumnName="COD_CURSO" />
+      </EndProperty>
+      <EndProperty Name="PERIODO">
+        <ScalarProperty Name="CodigoPeriodo" ColumnName="COD_PERIODO" />
+      </EndProperty>
+      <Condition ColumnName="COD_PERIODO" IsNull="false" />
+    </AssociationSetMapping>
+    <EntitySetMapping Name="NiveisAcesso">
+      <EntityTypeMapping TypeName="SistemaHorariosModel.NivelAcesso">
+        <MappingFragment StoreEntitySet="NIVEL_ACESSO">
+          <ScalarProperty Name="Administrador" ColumnName="ADMINISTRADOR" />
+          <ScalarProperty Name="Cadastro" ColumnName="CADASTRO" />
+          <ScalarProperty Name="Consulta" ColumnName="CONSULTA" />
+          <ScalarProperty Name="Descricao" ColumnName="DESCRICAO" />
+          <ScalarProperty Name="CodigoNivel" ColumnName="COD_NIVEL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FK__USUARIO__NIVEL_A__286302EC" TypeName="SistemaHorariosModel.FK__USUARIO__NIVEL_A__286302EC" StoreEntitySet="USUARIO">
+      <EndProperty Name="Usuario">
+        <ScalarProperty Name="CodigoUsuario" ColumnName="COD_USUARIO" />
+      </EndProperty>
+      <EndProperty Name="NIVEL_ACESSO">
+        <ScalarProperty Name="CodigoNivel" ColumnName="NIVEL_ACESSO" />
+      </EndProperty>
+      <Condition ColumnName="NIVEL_ACESSO" IsNull="false" />
+    </AssociationSetMapping>
+    <EntitySetMapping Name="DiasSemana">
+      <EntityTypeMapping TypeName="SistemaHorariosModel.DiaSemana">
+        <MappingFragment StoreEntitySet="DIA_SEMANA">
+          <ScalarProperty Name="NomeDia" ColumnName="NOME_DIA" />
+          <ScalarProperty Name="CodigoDia" ColumnName="COD_DIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FK__HORARIO__COD_DIA__3D5E1FD2" TypeName="SistemaHorariosModel.FK__HORARIO__COD_DIA__3D5E1FD2" StoreEntitySet="HORARIO">
+      <EndProperty Name="Horario">
+        <ScalarProperty Name="CodigoHorario" ColumnName="COD_HORARIO" />
+      </EndProperty>
+      <EndProperty Name="DIA_SEMANA">
+        <ScalarProperty Name="CodigoDia" ColumnName="COD_DIA" />
+      </EndProperty>
+      <Condition ColumnName="COD_DIA" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__HORARIO__COD_PER__31EC6D26" TypeName="SistemaHorariosModel.FK__HORARIO__COD_PER__31EC6D26" StoreEntitySet="HORARIO">
+      <EndProperty Name="Horario">
+        <ScalarProperty Name="CodigoHorario" ColumnName="COD_HORARIO" />
+      </EndProperty>
+      <EndProperty Name="Periodo">
+        <ScalarProperty Name="CodigoPeriodo" ColumnName="COD_PERIODO" />
+      </EndProperty>
+      <Condition ColumnName="COD_PERIODO" IsNull="false" />
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

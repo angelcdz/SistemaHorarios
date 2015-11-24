@@ -1,0 +1,54 @@
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.WCF\obj\Debug\SistemaHorarios.Server.WCF.csprojResolveAssemblyReference.cache
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.WCF.dll.config
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.WCF.dll
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.WCF.pdb
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.WCF\bin\EntityFramework.dll
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.WCF\bin\EntityFramework.SqlServer.dll
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Base.dll
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Contracts.dll
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.Business.dll
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.DAO.dll
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Base.pdb
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Contracts.pdb
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.Business.pdb
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.WCF\bin\EntityFramework.xml
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.WCF\bin\EntityFramework.SqlServer.xml
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.DAO.pdb
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.WCF\obj\Debug\SistemaHorarios.Server.WCF.dll
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.WCF\obj\Debug\SistemaHorarios.Server.WCF.pdb
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.WCF.dll.config
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.WCF.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.WCF.pdb
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.WCF\bin\EntityFramework.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.WCF\bin\EntityFramework.SqlServer.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Base.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Contracts.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.Business.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.DAO.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Base.pdb
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Contracts.pdb
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.Business.pdb
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.WCF\bin\EntityFramework.xml
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.WCF\bin\EntityFramework.SqlServer.xml
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.DAO.pdb
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.WCF\obj\Debug\SistemaHorarios.Server.WCF.csprojResolveAssemblyReference.cache
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.WCF\obj\Debug\SistemaHorarios.Server.WCF.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.WCF\obj\Debug\SistemaHorarios.Server.WCF.pdb
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.WCF.dll.config
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.WCF.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.WCF.pdb
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.WCF\bin\EntityFramework.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.WCF\bin\EntityFramework.SqlServer.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Base.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Contracts.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.Business.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.DAO.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Base.pdb
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Contracts.pdb
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.Business.pdb
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.WCF\bin\EntityFramework.xml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.WCF\bin\EntityFramework.SqlServer.xml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.WCF\bin\SistemaHorarios.Server.DAO.pdb
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.WCF\obj\Debug\SistemaHorarios.Server.WCF.csprojResolveAssemblyReference.cache
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.WCF\obj\Debug\SistemaHorarios.Server.WCF.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.WCF\obj\Debug\SistemaHorarios.Server.WCF.pdb

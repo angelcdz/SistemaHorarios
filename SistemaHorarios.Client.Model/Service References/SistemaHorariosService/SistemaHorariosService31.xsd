@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiasSemana" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiasSemana" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" />
+  <xs:complexType name="ConsultarDiasSemanaRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q1:BaseRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarDiasSemanaRequest" nillable="true" type="tns:ConsultarDiasSemanaRequest" />
+  <xs:complexType name="ConsultarDiasSemanaResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q2:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Dias" nillable="true" type="tns:ArrayOfConsultarDiasSemanaDiaDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarDiasSemanaResponse" nillable="true" type="tns:ConsultarDiasSemanaResponse" />
+  <xs:complexType name="ArrayOfConsultarDiasSemanaDiaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConsultarDiasSemanaDiaDTO" nillable="true" type="tns:ConsultarDiasSemanaDiaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConsultarDiasSemanaDiaDTO" nillable="true" type="tns:ArrayOfConsultarDiasSemanaDiaDTO" />
+  <xs:complexType name="ConsultarDiasSemanaDiaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoDia" type="xs:int" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarDiasSemanaDiaDTO" nillable="true" type="tns:ConsultarDiasSemanaDiaDTO" />
+</xs:schema>

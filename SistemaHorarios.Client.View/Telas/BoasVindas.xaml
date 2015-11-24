@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="SistemaHorarios.Client.View.BoasVindas"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="665" d:DesignWidth="1184" Name="BemVindo">
+    <Grid Background="White">
+        <TextBlock HorizontalAlignment="Left" 
+                   Height="40" 
+                   FontSize="30"
+                   FontWeight="Bold"
+                   Margin="252,127,0,0" 
+                   TextWrapping="Wrap" VerticalAlignment="Top" Width="242"
+                   Text="Seja bem-vindo!"
+                   Style="{StaticResource BoldTextBlock}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="252,185,0,0" TextWrapping="Wrap"
+                   FontSize="20"
+                   Text="Para Cadastrar/Consultar itens utilize os itens do menu no topo da página" 
+                   VerticalAlignment="Top" Height="87" Width="348" Style="{StaticResource DefaultTextBlock}"/>
+        <Image HorizontalAlignment="Left" Height="195" Margin="0,29,0,0" VerticalAlignment="Top" Width="227" Source="../images/Arrow.jpg"/>
+
+    </Grid>
+</UserControl>

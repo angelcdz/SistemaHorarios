@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuarios" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuarios" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" />
+  <xs:complexType name="ConsultarUsuariosRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q1:BaseRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarUsuariosRequest" nillable="true" type="tns:ConsultarUsuariosRequest" />
+  <xs:complexType name="ConsultarUsuariosResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q2:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Usuarios" nillable="true" type="tns:ArrayOfConsultarUsuariosUsuarioDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarUsuariosResponse" nillable="true" type="tns:ConsultarUsuariosResponse" />
+  <xs:complexType name="ArrayOfConsultarUsuariosUsuarioDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConsultarUsuariosUsuarioDTO" nillable="true" type="tns:ConsultarUsuariosUsuarioDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConsultarUsuariosUsuarioDTO" nillable="true" type="tns:ArrayOfConsultarUsuariosUsuarioDTO" />
+  <xs:complexType name="ConsultarUsuariosUsuarioDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NivelAcesso" nillable="true" type="tns:ConsultarUsuariosNivelAcessoDTO" />
+      <xs:element minOccurs="0" name="UltimoLogin" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarUsuariosUsuarioDTO" nillable="true" type="tns:ConsultarUsuariosUsuarioDTO" />
+  <xs:complexType name="ConsultarUsuariosNivelAcessoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Administrador" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Cadastro" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Consulta" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Descricao" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarUsuariosNivelAcessoDTO" nillable="true" type="tns:ConsultarUsuariosNivelAcessoDTO" />
+</xs:schema>

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A57B36F3-AE09-4F3A-AC57-5B65AB9575A8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistemaHorarios.Server.Business</RootNamespace>
+    <AssemblyName>SistemaHorarios.Server.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Atualizacao\AtualizarComposicaoCursoBL.cs" />
+    <Compile Include="Atualizacao\AtualizarComposicoesHorarioBL.cs" />
+    <Compile Include="Atualizacao\AtualizarCursosBL.cs" />
+    <Compile Include="Atualizacao\AtualizarHorariosBL.cs" />
+    <Compile Include="Atualizacao\AtualizarMateriasBL.cs" />
+    <Compile Include="Atualizacao\AtualizarNiveisAcessoBL.cs" />
+    <Compile Include="Atualizacao\AtualizarPeriodosBL.cs" />
+    <Compile Include="Atualizacao\AtualizarProfessoresBL.cs" />
+    <Compile Include="Atualizacao\AtualizarSemestresBL.cs" />
+    <Compile Include="Atualizacao\AtualizarUsuariosBL.cs" />
+    <Compile Include="AutenticarUsuarioBL.cs" />
+    <Compile Include="Cadastros\CadastrarComposicaoCursoBL.cs" />
+    <Compile Include="Cadastros\CadastrarComposicoesHorarioBL.cs" />
+    <Compile Include="Cadastros\CadastrarCursosBL.cs" />
+    <Compile Include="Cadastros\CadastrarHorariosBL.cs" />
+    <Compile Include="Cadastros\CadastrarMateriasBL.cs" />
+    <Compile Include="Cadastros\CadastrarNiveisAcessoBL.cs" />
+    <Compile Include="Cadastros\CadastrarPeriodosBL.cs" />
+    <Compile Include="Cadastros\CadastrarProfessoresBL.cs" />
+    <Compile Include="Cadastros\CadastrarSemestresBL.cs" />
+    <Compile Include="Cadastros\CadastrarUsuariosBL.cs" />
+    <Compile Include="Consultas\ConsultarCursoParamBL.cs" />
+    <Compile Include="Consultas\ConsultarDiaSemanaParamBL.cs" />
+    <Compile Include="Consultas\ConsultarDiasHorariosBL.cs" />
+    <Compile Include="Consultas\ConsultarDiasPeriodosBL.cs" />
+    <Compile Include="Consultas\ConsultarHorarioParamBL.cs" />
+    <Compile Include="Consultas\ConsultarMateriaParamBL.cs" />
+    <Compile Include="Consultas\ConsultarNiveisAcessoBL.cs" />
+    <Compile Include="Consultas\ConsultarNivelAcessoParamBL.cs" />
+    <Compile Include="Consultas\ConsultarPeriodoParamBL.cs" />
+    <Compile Include="Consultas\ConsultarProfessorParamBL.cs" />
+    <Compile Include="Consultas\ConsultarUsuariosNiveisBL.cs" />
+    <Compile Include="Consultas\ConsultarUsuariosParamBL.cs" />
+    <Compile Include="Consultas\ConsultarComposicoesCursoBL.cs" />
+    <Compile Include="Consultas\ConsultarComposicoesHorarioBL.cs" />
+    <Compile Include="Consultas\ConsultarDiasSemanaBL.cs" />
+    <Compile Include="Consultas\ConsultarUsuariosBL.cs" />
+    <Compile Include="Consultas\ConsultarSemestresBL.cs" />
+    <Compile Include="Consultas\ConsultarProfessoresBL.cs" />
+    <Compile Include="Consultas\ConsultarPeriodosBL.cs" />
+    <Compile Include="Consultas\ConsultarMateriasBL.cs" />
+    <Compile Include="Consultas\ConsultarHorariosBL.cs" />
+    <Compile Include="Consultas\ConsultarCursosBL.cs" />
+    <Compile Include="Delete\DeletarComposicaoCursoBL.cs" />
+    <Compile Include="Delete\DeletarComposicoesHorarioBL.cs" />
+    <Compile Include="Delete\DeletarCursosBL.cs" />
+    <Compile Include="Delete\DeletarHorariosBL.cs" />
+    <Compile Include="Delete\DeletarMateriasBL.cs" />
+    <Compile Include="Delete\DeletarNiveisAcessoBL.cs" />
+    <Compile Include="Delete\DeletarPeriodosBL.cs" />
+    <Compile Include="Delete\DeletarProfessoresBL.cs" />
+    <Compile Include="Delete\DeletarSemestresBL.cs" />
+    <Compile Include="Delete\DeletarUsuariosBL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaHorarios.Base\SistemaHorarios.Base.csproj">
+      <Project>{3a55bc74-f0dd-4dd9-9486-1dc868b7bf30}</Project>
+      <Name>SistemaHorarios.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SistemaHorarios.Contracts\SistemaHorarios.Contracts.csproj">
+      <Project>{63c5e2b3-271a-4a66-9f0a-2f4571a9ee18}</Project>
+      <Name>SistemaHorarios.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SistemaHorarios.Server.DAO\SistemaHorarios.Server.DAO.csproj">
+      <Project>{f39ec381-4d12-443e-b78b-29bbf8b782aa}</Project>
+      <Name>SistemaHorarios.Server.DAO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

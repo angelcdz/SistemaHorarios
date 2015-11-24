@@ -1,0 +1,41 @@
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.DAO\obj\Debug\SistemaHorarios.Server.DAO.csprojResolveAssemblyReference.cache
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Server.DAO.dll
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Server.DAO.pdb
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.DAO\bin\Debug\EntityFramework.dll
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.DAO\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Base.dll
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Contracts.dll
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Base.pdb
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Contracts.pdb
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.DAO\bin\Debug\EntityFramework.xml
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.DAO\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.DAO\obj\Debug\SistemaHorarios.Server.DAO.dll
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Server.DAO\obj\Debug\SistemaHorarios.Server.DAO.pdb
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Server.DAO.dll.config
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Server.DAO.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Server.DAO.pdb
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.DAO\bin\Debug\EntityFramework.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.DAO\bin\Debug\EntityFramework.SqlServer.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Base.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Contracts.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Base.pdb
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Contracts.pdb
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.DAO\bin\Debug\EntityFramework.xml
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.DAO\bin\Debug\EntityFramework.SqlServer.xml
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.DAO\obj\Debug\SistemaHorarios.Server.DAO.csprojResolveAssemblyReference.cache
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.DAO\obj\Debug\SistemaHorarios.Server.DAO.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Server.DAO\obj\Debug\SistemaHorarios.Server.DAO.pdb
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Server.DAO.dll.config
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Server.DAO.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Server.DAO.pdb
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\EntityFramework.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\EntityFramework.SqlServer.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Base.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Contracts.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Base.pdb
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Contracts.pdb
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\EntityFramework.xml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\EntityFramework.SqlServer.xml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.DAO\obj\Debug\SistemaHorarios.Server.DAO.csprojResolveAssemblyReference.cache
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.DAO\obj\Debug\SistemaHorarios.Server.DAO.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.DAO\obj\Debug\SistemaHorarios.Server.DAO.pdb

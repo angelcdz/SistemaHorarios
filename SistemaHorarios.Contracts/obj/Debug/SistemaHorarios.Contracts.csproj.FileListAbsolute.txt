@@ -1,0 +1,21 @@
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Contracts\bin\Debug\SistemaHorarios.Contracts.dll
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Contracts\bin\Debug\SistemaHorarios.Contracts.pdb
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Contracts\bin\Debug\SistemaHorarios.Base.dll
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Contracts\bin\Debug\SistemaHorarios.Base.pdb
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Contracts\obj\Debug\SistemaHorarios.Contracts.csprojResolveAssemblyReference.cache
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Contracts\obj\Debug\SistemaHorarios.Contracts.dll
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Contracts\obj\Debug\SistemaHorarios.Contracts.pdb
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Contracts\bin\Debug\SistemaHorarios.Contracts.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Contracts\bin\Debug\SistemaHorarios.Contracts.pdb
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Contracts\bin\Debug\SistemaHorarios.Base.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Contracts\bin\Debug\SistemaHorarios.Base.pdb
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Contracts\obj\Debug\SistemaHorarios.Contracts.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Contracts\obj\Debug\SistemaHorarios.Contracts.pdb
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Contracts\obj\Debug\SistemaHorarios.Contracts.csprojResolveAssemblyReference.cache
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Contracts\bin\Debug\SistemaHorarios.Contracts.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Contracts\bin\Debug\SistemaHorarios.Contracts.pdb
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Contracts\bin\Debug\SistemaHorarios.Base.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Contracts\bin\Debug\SistemaHorarios.Base.pdb
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Contracts\obj\Debug\SistemaHorarios.Contracts.csprojResolveAssemblyReference.cache
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Contracts\obj\Debug\SistemaHorarios.Contracts.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Contracts\obj\Debug\SistemaHorarios.Contracts.pdb

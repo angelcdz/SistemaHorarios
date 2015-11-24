@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="BaseRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TransactionId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseRequest" nillable="true" type="tns:BaseRequest" />
+  <xs:complexType name="BaseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="tns:ExecutionStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseResponse" nillable="true" type="tns:BaseResponse" />
+  <xs:simpleType name="ExecutionStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotExecuted" />
+      <xs:enumeration value="TechnicalError" />
+      <xs:enumeration value="BusinessError" />
+      <xs:enumeration value="Success" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExecutionStatus" nillable="true" type="tns:ExecutionStatus" />
+</xs:schema>

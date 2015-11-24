@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f6e28207ef5d4bdebcc1fd1d33dac7db" Name="Diagram1" >
+        <EntityTypeShape EntityType="SistemaHorariosModel.ComposicaoCurso" Width="2" PointX="3.25" PointY="2" />
+        <EntityTypeShape EntityType="SistemaHorariosModel.ComposicaoHorario" Width="2.125" PointX="2.625" PointY="4.625" />
+        <EntityTypeShape EntityType="SistemaHorariosModel.Curso" Width="1.625" PointX="0.75" PointY="2" />
+        <EntityTypeShape EntityType="SistemaHorariosModel.Horario" Width="1.625" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="SistemaHorariosModel.Materia" Width="1.625" PointX="6.125" PointY="5.5" />
+        <EntityTypeShape EntityType="SistemaHorariosModel.Periodo" Width="1.5" PointX="0.75" PointY="4.25" />
+        <EntityTypeShape EntityType="SistemaHorariosModel.Professor" Width="1.625" PointX="6.125" PointY="2" />
+        <EntityTypeShape EntityType="SistemaHorariosModel.Semestre" Width="1.625" PointX="6.125" PointY="3.75" />
+        <EntityTypeShape EntityType="SistemaHorariosModel.Usuario" Width="1.5" PointX="6.5" PointY="7.375" />
+        <AssociationConnector Association="SistemaHorariosModel.FK__COMPOSICA__COD_C__1BFD2C07" />
+        <AssociationConnector Association="SistemaHorariosModel.FK__COMPOSICA__COD_C__22AA2996" />
+        <AssociationConnector Association="SistemaHorariosModel.FK__COMPOSICA__COD_M__1CF15040" ></AssociationConnector>
+        <AssociationConnector Association="SistemaHorariosModel.FK__COMPOSICA__COD_P__1DE57479" />
+        <AssociationConnector Association="SistemaHorariosModel.FK__COMPOSICA__COD_S__1B0907CE" />
+        <AssociationConnector Association="SistemaHorariosModel.FK__COMPOSICA__COD_H__239E4DCF" ></AssociationConnector>
+        <AssociationConnector Association="SistemaHorariosModel.FK__CURSO__COD_PERIO__145C0A3F" />
+        <EntityTypeShape EntityType="SistemaHorariosModel.NivelAcesso" Width="1.5" PointX="4.5" PointY="7.375" />
+        <AssociationConnector Association="SistemaHorariosModel.FK__USUARIO__NIVEL_A__286302EC" />
+        <EntityTypeShape EntityType="SistemaHorariosModel.DiaSemana" Width="1.5" PointX="2.875" PointY="6.5" />
+        <AssociationConnector Association="SistemaHorariosModel.FK__HORARIO__COD_DIA__3D5E1FD2" />
+        <AssociationConnector Association="SistemaHorariosModel.FK__HORARIO__COD_PER__31EC6D26" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

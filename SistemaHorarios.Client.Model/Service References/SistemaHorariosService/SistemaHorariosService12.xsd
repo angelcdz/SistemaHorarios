@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursos" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiasSemana" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarHorarios" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarMaterias" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarPeriodos" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarProfessores" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarSemestres" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuarios" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarComposicaoCurso" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarComposicoesHorario" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarCursos" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarHorarios" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarMaterias" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarNiveisAcesso" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarPeriodos" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarProfessores" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd19" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarSemestres" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd20" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarUsuarios" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd21" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarComposicoesCurso" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd22" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarComposicoesHorario" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd23" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarComposicaoCurso" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd24" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarComposicoesHorario" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd25" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarCursos" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd26" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarHorarios" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd27" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarMaterias" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd28" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarNiveisAcesso" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd29" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarPeriodos" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd30" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarProfessores" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd31" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarSemestres" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd32" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarUsuarios" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd33" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarComposicaoCurso" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd34" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarComposicoesHorario" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd35" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarCursos" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd36" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarHorarios" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd37" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarMaterias" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd38" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarNiveisAcesso" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd39" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarPeriodos" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd40" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarProfessores" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd41" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarSemestres" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd42" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarUsuarios" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd43" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarProfessorParam" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd44" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursoParam" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd45" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarPeriodoParam" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd46" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarHorarioParam" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd47" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarMateriaParam" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd48" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiaSemanaParam" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd49" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarNivelAcessoParam" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd50" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarNiveisAcesso" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd51" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiasPeriodos" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd52" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiasHorarios" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd53" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuariosParam" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd54" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuariosNiveis" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd55" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AutenticarUsuario" />
+  <xs:element name="ConsultarCursos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursos" minOccurs="0" name="request" nillable="true" type="q1:ConsultarCursosRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCursosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursos" minOccurs="0" name="ConsultarCursosResult" nillable="true" type="q2:ConsultarCursosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDiasSemana">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiasSemana" minOccurs="0" name="request" nillable="true" type="q3:ConsultarDiasSemanaRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDiasSemanaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiasSemana" minOccurs="0" name="ConsultarDiasSemanaResult" nillable="true" type="q4:ConsultarDiasSemanaResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarHorarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarHorarios" minOccurs="0" name="request" nillable="true" type="q5:ConsultarHorariosRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarHorariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarHorarios" minOccurs="0" name="ConsultarHorariosResult" nillable="true" type="q6:ConsultarHorariosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarMaterias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarMaterias" minOccurs="0" name="request" nillable="true" type="q7:ConsultarMateriasRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarMateriasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarMaterias" minOccurs="0" name="ConsultarMateriasResult" nillable="true" type="q8:ConsultarMateriasResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPeriodos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarPeriodos" minOccurs="0" name="request" nillable="true" type="q9:ConsultarPeriodosRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPeriodosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarPeriodos" minOccurs="0" name="ConsultarPeriodosResult" nillable="true" type="q10:ConsultarPeriodosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarProfessores">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarProfessores" minOccurs="0" name="request" nillable="true" type="q11:ConsultarProfessoresRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarProfessoresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarProfessores" minOccurs="0" name="ConsultarProfessoresResult" nillable="true" type="q12:ConsultarProfessoresResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarSemestres">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarSemestres" minOccurs="0" name="request" nillable="true" type="q13:ConsultarSemestresRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarSemestresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarSemestres" minOccurs="0" name="ConsultarSemestresResult" nillable="true" type="q14:ConsultarSemestresResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarUsuarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuarios" minOccurs="0" name="request" nillable="true" type="q15:ConsultarUsuariosRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarUsuariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuarios" minOccurs="0" name="ConsultarUsuariosResult" nillable="true" type="q16:ConsultarUsuariosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarComposicaoCurso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarComposicaoCurso" minOccurs="0" name="request" nillable="true" type="q17:CadastrarComposicaoCursoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarComposicaoCursoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarComposicaoCurso" minOccurs="0" name="CadastrarComposicaoCursoResult" nillable="true" type="q18:CadastrarComposicaoCursoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarComposicoesHorario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarComposicoesHorario" minOccurs="0" name="request" nillable="true" type="q19:CadastrarComposicoesHorarioRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarComposicoesHorarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarComposicoesHorario" minOccurs="0" name="CadastrarComposicoesHorarioResult" nillable="true" type="q20:CadastrarComposicoesHorarioResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarCursos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarCursos" minOccurs="0" name="request" nillable="true" type="q21:CadastrarCursosRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarCursosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarCursos" minOccurs="0" name="CadastrarCursosResult" nillable="true" type="q22:CadastrarCursosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarHorarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarHorarios" minOccurs="0" name="request" nillable="true" type="q23:CadastrarHorariosRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarHorariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarHorarios" minOccurs="0" name="CadastrarHorariosResult" nillable="true" type="q24:CadastrarHorariosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarMaterias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarMaterias" minOccurs="0" name="request" nillable="true" type="q25:CadastrarMateriasRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarMateriasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarMaterias" minOccurs="0" name="CadastrarMateriasResult" nillable="true" type="q26:CadastrarMateriasResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarNiveisAcesso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarNiveisAcesso" minOccurs="0" name="request" nillable="true" type="q27:CadastrarNiveisAcessoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarNiveisAcessoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarNiveisAcesso" minOccurs="0" name="CadastrarNiveisAcessoResult" nillable="true" type="q28:CadastrarNiveisAcessoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarPeriodos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarPeriodos" minOccurs="0" name="request" nillable="true" type="q29:CadastrarPeriodosRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarPeriodosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarPeriodos" minOccurs="0" name="CadastrarPeriodosResult" nillable="true" type="q30:CadastrarPeriodosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarProfessores">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarProfessores" minOccurs="0" name="request" nillable="true" type="q31:CadastrarProfessoresRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarProfessoresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarProfessores" minOccurs="0" name="CadastrarProfessoresResult" nillable="true" type="q32:CadastrarProfessoresResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarSemestres">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarSemestres" minOccurs="0" name="request" nillable="true" type="q33:CadastrarSemestresRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarSemestresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarSemestres" minOccurs="0" name="CadastrarSemestresResult" nillable="true" type="q34:CadastrarSemestresResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarUsuarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarUsuarios" minOccurs="0" name="request" nillable="true" type="q35:CadastrarUsuariosRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarUsuariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarUsuarios" minOccurs="0" name="CadastrarUsuariosResult" nillable="true" type="q36:CadastrarUsuariosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarComposicoesCurso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarComposicoesCurso" minOccurs="0" name="request" nillable="true" type="q37:ConsultarComposicoesCursoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarComposicoesCursoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarComposicoesCurso" minOccurs="0" name="ConsultarComposicoesCursoResult" nillable="true" type="q38:ConsultarComposicoesCursoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarComposicoesHorario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarComposicoesHorario" minOccurs="0" name="request" nillable="true" type="q39:ConsultarComposicoesHorarioRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarComposicoesHorarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarComposicoesHorario" minOccurs="0" name="ConsultarComposicoesHorarioResult" nillable="true" type="q40:ConsultarComposicoesHorarioResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarComposicaoCurso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarComposicaoCurso" minOccurs="0" name="request" nillable="true" type="q41:AtualizarComposicaoCursoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarComposicaoCursoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarComposicaoCurso" minOccurs="0" name="AtualizarComposicaoCursoResult" nillable="true" type="q42:AtualizarComposicaoCursoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarComposicoesHorario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarComposicoesHorario" minOccurs="0" name="request" nillable="true" type="q43:AtualizarComposicoesHorarioRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarComposicoesHorarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarComposicoesHorario" minOccurs="0" name="AtualizarComposicoesHorarioResult" nillable="true" type="q44:AtualizarComposicoesHorarioResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarCursos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarCursos" minOccurs="0" name="request" nillable="true" type="q45:AtualizarCursosRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarCursosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarCursos" minOccurs="0" name="AtualizarCursosResult" nillable="true" type="q46:AtualizarCursosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarHorarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarHorarios" minOccurs="0" name="request" nillable="true" type="q47:AtualizarHorariosRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarHorariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarHorarios" minOccurs="0" name="AtualizarHorariosResult" nillable="true" type="q48:AtualizarHorariosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarMaterias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarMaterias" minOccurs="0" name="request" nillable="true" type="q49:AtualizarMateriasRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarMateriasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarMaterias" minOccurs="0" name="AtualizarMateriasResult" nillable="true" type="q50:AtualizarMateriasResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarNiveisAcesso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarNiveisAcesso" minOccurs="0" name="request" nillable="true" type="q51:AtualizarNiveisAcessoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarNiveisAcessoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarNiveisAcesso" minOccurs="0" name="AtualizarNiveisAcessoResult" nillable="true" type="q52:AtualizarNiveisAcessoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarPeriodos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarPeriodos" minOccurs="0" name="request" nillable="true" type="q53:AtualizarPeriodosRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarPeriodosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarPeriodos" minOccurs="0" name="AtualizarPeriodosResult" nillable="true" type="q54:AtualizarPeriodosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarProfessores">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarProfessores" minOccurs="0" name="request" nillable="true" type="q55:AtualizarProfessoresRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarProfessoresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarProfessores" minOccurs="0" name="AtualizarProfessoresResult" nillable="true" type="q56:AtualizarProfessoresResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarSemestres">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarSemestres" minOccurs="0" name="request" nillable="true" type="q57:AtualizarSemestresRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarSemestresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarSemestres" minOccurs="0" name="AtualizarSemestresResult" nillable="true" type="q58:AtualizarSemestresResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarUsuarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarUsuarios" minOccurs="0" name="request" nillable="true" type="q59:AtualizarUsuariosRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarUsuariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AtualizarUsuarios" minOccurs="0" name="AtualizarUsuariosResult" nillable="true" type="q60:AtualizarUsuariosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarComposicaoCurso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarComposicaoCurso" minOccurs="0" name="request" nillable="true" type="q61:DeletarComposicaoCursoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarComposicaoCursoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarComposicaoCurso" minOccurs="0" name="DeletarComposicaoCursoResult" nillable="true" type="q62:DeletarComposicaoCursoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarComposicoesHorario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarComposicoesHorario" minOccurs="0" name="request" nillable="true" type="q63:DeletarComposicoesHorarioRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarComposicoesHorarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarComposicoesHorario" minOccurs="0" name="DeletarComposicoesHorarioResult" nillable="true" type="q64:DeletarComposicoesHorarioResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarCursos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarCursos" minOccurs="0" name="request" nillable="true" type="q65:DeletarCursosRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarCursosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarCursos" minOccurs="0" name="DeletarCursosResult" nillable="true" type="q66:DeletarCursosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarHorarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarHorarios" minOccurs="0" name="request" nillable="true" type="q67:DeletarHorariosRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarHorariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarHorarios" minOccurs="0" name="DeletarHorariosResult" nillable="true" type="q68:DeletarHorariosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarMaterias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarMaterias" minOccurs="0" name="request" nillable="true" type="q69:DeletarMateriasRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarMateriasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarMaterias" minOccurs="0" name="DeletarMateriasResult" nillable="true" type="q70:DeletarMateriasResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarNiveisAcesso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarNiveisAcesso" minOccurs="0" name="request" nillable="true" type="q71:DeletarNiveisAcessoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarNiveisAcessoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarNiveisAcesso" minOccurs="0" name="DeletarNiveisAcessoResult" nillable="true" type="q72:DeletarNiveisAcessoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarPeriodos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarPeriodos" minOccurs="0" name="request" nillable="true" type="q73:DeletarPeriodosRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarPeriodosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarPeriodos" minOccurs="0" name="DeletarPeriodosResult" nillable="true" type="q74:DeletarPeriodosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarProfessores">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarProfessores" minOccurs="0" name="request" nillable="true" type="q75:DeletarProfessoresRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarProfessoresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarProfessores" minOccurs="0" name="DeletarProfessoresResult" nillable="true" type="q76:DeletarProfessoresResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarSemestres">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarSemestres" minOccurs="0" name="request" nillable="true" type="q77:DeletarSemestresRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarSemestresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarSemestres" minOccurs="0" name="DeletarSemestresResult" nillable="true" type="q78:DeletarSemestresResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarUsuarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarUsuarios" minOccurs="0" name="request" nillable="true" type="q79:DeletarUsuariosRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarUsuariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.DeletarUsuarios" minOccurs="0" name="DeletarUsuariosResult" nillable="true" type="q80:DeletarUsuariosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarProfessorParam">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarProfessorParam" minOccurs="0" name="request" nillable="true" type="q81:ConsultarProfessorParamRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarProfessorParamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarProfessorParam" minOccurs="0" name="ConsultarProfessorParamResult" nillable="true" type="q82:ConsultarProfessorParamResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCursoParam">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursoParam" minOccurs="0" name="request" nillable="true" type="q83:ConsultarCursoParamRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCursoParamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursoParam" minOccurs="0" name="ConsultarCursoParamResult" nillable="true" type="q84:ConsultarCursoParamResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPeriodoParam">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarPeriodoParam" minOccurs="0" name="request" nillable="true" type="q85:ConsultarPeriodoParamRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPeriodoParamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarPeriodoParam" minOccurs="0" name="ConsultarPeriodoParamResult" nillable="true" type="q86:ConsultarPeriodoParamResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarHorarioParam">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarHorarioParam" minOccurs="0" name="request" nillable="true" type="q87:ConsultarHorarioParamRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarHorarioParamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarHorarioParam" minOccurs="0" name="ConsultarHorarioParamResult" nillable="true" type="q88:ConsultarHorarioParamResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarMateriaParam">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarMateriaParam" minOccurs="0" name="request" nillable="true" type="q89:ConsultarMateriaParamRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarMateriaParamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarMateriaParam" minOccurs="0" name="ConsultarMateriaParamResult" nillable="true" type="q90:ConsultarMateriaParamResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDiaSemanaParam">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiaSemanaParam" minOccurs="0" name="request" nillable="true" type="q91:ConsultarDiaSemanaParamRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDiaSemanaParamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiaSemanaParam" minOccurs="0" name="ConsultarDiaSemanaParamResult" nillable="true" type="q92:ConsultarDiaSemanaParamResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarNivelAcessoParam">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarNivelAcessoParam" minOccurs="0" name="request" nillable="true" type="q93:ConsultarNivelAcessoParamRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarNivelAcessoParamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarNivelAcessoParam" minOccurs="0" name="ConsultarNivelAcessoParamResult" nillable="true" type="q94:ConsultarNivelAcessoParamResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarNiveisAcesso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarNiveisAcesso" minOccurs="0" name="request" nillable="true" type="q95:ConsultarNiveisAcessoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarNiveisAcessoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarNiveisAcesso" minOccurs="0" name="ConsultarNiveisAcessoResult" nillable="true" type="q96:ConsultarNiveisAcessoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDiasPeriodos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiasPeriodos" minOccurs="0" name="request" nillable="true" type="q97:ConsultarDiasPeriodosRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDiasPeriodosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiasPeriodos" minOccurs="0" name="ConsultarDiasPeriodosResult" nillable="true" type="q98:ConsultarDiasPeriodosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDiasHorarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiasHorarios" minOccurs="0" name="request" nillable="true" type="q99:ConsultarDiasHorariosRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDiasHorariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarDiasHorarios" minOccurs="0" name="ConsultarDiasHorariosResult" nillable="true" type="q100:ConsultarDiasHorariosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarUsuariosParam">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuariosParam" minOccurs="0" name="request" nillable="true" type="q101:ConsultarUsuariosParamRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarUsuariosParamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuariosParam" minOccurs="0" name="ConsultarUsuariosParamResult" nillable="true" type="q102:ConsultarUsuariosParamResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarUsuariosNiveis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuariosNiveis" minOccurs="0" name="request" nillable="true" type="q103:ConsultarUsuariosNiveisRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarUsuariosNiveisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuariosNiveis" minOccurs="0" name="ConsultarUsuariosNiveisResult" nillable="true" type="q104:ConsultarUsuariosNiveisResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutenticarUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AutenticarUsuario" minOccurs="0" name="request" nillable="true" type="q105:AutenticarUsuarioRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutenticarUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AutenticarUsuario" minOccurs="0" name="AutenticarUsuarioResult" nillable="true" type="q106:AutenticarUsuarioResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

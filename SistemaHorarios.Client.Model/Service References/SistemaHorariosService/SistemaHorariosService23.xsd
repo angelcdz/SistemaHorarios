@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarSemestres" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarSemestres" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" />
+  <xs:complexType name="ConsultarSemestresRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q1:BaseRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarSemestresRequest" nillable="true" type="tns:ConsultarSemestresRequest" />
+  <xs:complexType name="ConsultarSemestresResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q2:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Semestres" nillable="true" type="tns:ArrayOfConsultarSemestresSemestreDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarSemestresResponse" nillable="true" type="tns:ConsultarSemestresResponse" />
+  <xs:complexType name="ArrayOfConsultarSemestresSemestreDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConsultarSemestresSemestreDTO" nillable="true" type="tns:ConsultarSemestresSemestreDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConsultarSemestresSemestreDTO" nillable="true" type="tns:ArrayOfConsultarSemestresSemestreDTO" />
+  <xs:complexType name="ConsultarSemestresSemestreDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Numero" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarSemestresSemestreDTO" nillable="true" type="tns:ConsultarSemestresSemestreDTO" />
+</xs:schema>

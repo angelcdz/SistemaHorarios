@@ -1,0 +1,133 @@
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.View.exe.config
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.View.exe
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.View.pdb
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.Model.dll
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.ViewModel.dll
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.Model.pdb
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.ViewModel.pdb
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View.csprojResolveAssemblyReference.cache
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Client.View\obj\Debug\Principal.baml
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Client.View\obj\Debug\App.baml
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Client.View\obj\Debug\Principal.g.cs
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Client.View\obj\Debug\App.g.cs
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View_MarkupCompile.cache
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View.g.resources
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View.Properties.Resources.resources
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View.csproj.GenerateResource.Cache
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View.exe
+c:\users\angel\documents\visual studio 2013\Projects\SistemaHorarios.Client.View\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View.pdb
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.View.exe.config
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.View.exe
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.View.pdb
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.Model.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.ViewModel.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Base.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Contracts.dll
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.Model.pdb
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.ViewModel.pdb
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Base.pdb
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Contracts.pdb
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View.csprojResolveAssemblyReference.cache
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\obj\Debug\Principal.baml
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\obj\Debug\App.baml
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\obj\Debug\Principal.g.cs
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\obj\Debug\App.g.cs
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View_MarkupCompile.cache
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View.g.resources
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View.Properties.Resources.resources
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View.csproj.GenerateResource.Cache
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View.exe
+Z:\Compartilhada\Projetos\SistemaHorariosSolution\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View.pdb
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View.csprojResolveAssemblyReference.cache
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Alteracoes\AlterarCursos.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Alteracoes\AlterarGrade.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Alteracoes\AlterarHorarios.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Alteracoes\AlterarMaterias.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Alteracoes\AlterarPeriodos.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Alteracoes\AlterarProfessores.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Alteracoes\AlterarUsuarios.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\BoasVindas.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Alteracoes\AlterarNiveisAcesso.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Cadastro\CadastrarCurso.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Cadastro\CadastrarGrade.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Cadastro\CadastrarHorario.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Cadastro\CadastrarNiveisAcesso.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Cadastro\CadastrarPeriodo.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Cadastro\CadastrarProfessor.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Cadastro\CadastrarUsuario.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Cadastro\CadastroMateria.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Consulta\ConsultarHorarios.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Consulta\ConsultarMaterias.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Consulta\ConsultarNiveisAcesso.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Consulta\ConsultarPeriodos.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Consulta\ConsultarUsuarios.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Consulta\ConsultarGrade.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Consulta\ConsultarCursos.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Login.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\App.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Alteracoes\AlterarCursos.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Alteracoes\AlterarGrade.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Alteracoes\AlterarHorarios.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Alteracoes\AlterarMaterias.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Alteracoes\AlterarPeriodos.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Alteracoes\AlterarProfessores.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Alteracoes\AlterarUsuarios.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\BoasVindas.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Alteracoes\AlterarNiveisAcesso.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Cadastro\CadastrarCurso.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Cadastro\CadastrarGrade.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Cadastro\CadastrarHorario.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Cadastro\CadastrarNiveisAcesso.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Cadastro\CadastrarPeriodo.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Cadastro\CadastrarProfessor.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Cadastro\CadastrarUsuario.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Cadastro\CadastroMateria.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Consulta\ConsultarHorarios.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Consulta\ConsultarMaterias.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Consulta\ConsultarNiveisAcesso.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Consulta\ConsultarPeriodos.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Consulta\ConsultarProfessores.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Consulta\ConsultarUsuarios.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Consulta\ConsultarGrade.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Consulta\ConsultarCursos.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Login.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Paginas\SeletorAlteracoes.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Paginas\SeletorCadastros.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Paginas\SeletorConsultas.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\App.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\GeneratedInternalTypeHelper.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View_MarkupCompile.cache
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View_MarkupCompile.lref
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Paginas\SeletorAlteracoes.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Paginas\SeletorCadastros.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Paginas\SeletorConsultas.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View.exe
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View.pdb
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.View.exe.config
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.View.exe
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.View.pdb
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Base.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.Model.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.ViewModel.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Contracts.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\System.Windows.Interactivity.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Base.pdb
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.Model.pdb
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Client.ViewModel.pdb
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\SistemaHorarios.Contracts.pdb
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\de\System.Windows.Interactivity.resources.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\en\System.Windows.Interactivity.resources.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\es\System.Windows.Interactivity.resources.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\it\System.Windows.Interactivity.resources.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\ru\System.Windows.Interactivity.resources.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Consulta\ConsultarProfessores.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View.g.resources
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View.Properties.Resources.resources
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View.csproj.GenerateResource.Cache
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Principal.g.cs
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Principal.baml

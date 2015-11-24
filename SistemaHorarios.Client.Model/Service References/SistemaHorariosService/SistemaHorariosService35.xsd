@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarPeriodos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarPeriodos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" />
+  <xs:complexType name="ConsultarPeriodosRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q1:BaseRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarPeriodosRequest" nillable="true" type="tns:ConsultarPeriodosRequest" />
+  <xs:complexType name="ConsultarPeriodosResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q2:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Periodos" nillable="true" type="tns:ArrayOfConsultarPeriodosPeriodoDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultarPeriodosResponse" nillable="true" type="tns:ConsultarPeriodosResponse" />
+  <xs:complexType name="ArrayOfConsultarPeriodosPeriodoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConsultarPeriodosPeriodoDTO" nillable="true" type="tns:ConsultarPeriodosPeriodoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConsultarPeriodosPeriodoDTO" nillable="true" type="tns:ArrayOfConsultarPeriodosPeriodoDTO" />
+  <xs:complexType name="ConsultarPeriodosPeriodoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarPeriodosPeriodoDTO" nillable="true" type="tns:ConsultarPeriodosPeriodoDTO" />
+</xs:schema>

@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaHorarios.Client.View", "SistemaHorarios.Client.View\SistemaHorarios.Client.View.csproj", "{CF595B9E-5B4A-41DC-8D04-A2B48AFC4568}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client-Side", "Client-Side", "{ECEE6298-38CA-4C64-AEB0-066A4EA6D34F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server-Side", "Server-Side", "{13726E1E-DF62-42C4-89B4-BBA153EAD399}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{9CBD8FDA-F1D2-4ED5-AAA5-F55971EBC98F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Base", "Base", "{F25657C8-8EAE-49BF-B83F-C7FBFD926368}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaHorarios.Base", "SistemaHorarios.Base\SistemaHorarios.Base.csproj", "{3A55BC74-F0DD-4DD9-9486-1DC868B7BF30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaHorarios.Client.ViewModel", "SistemaHorarios.Client.ViewModel\SistemaHorarios.Client.ViewModel.csproj", "{3DDC8A7A-CF87-4ED9-87D4-9A148BD0A843}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaHorarios.Client.Model", "SistemaHorarios.Client.Model\SistemaHorarios.Client.Model.csproj", "{EB57BEB3-5560-4BF4-A7AA-D3FF54AFD491}"
+	ProjectSection(ProjectDependencies) = postProject
+		{28AAFA52-50B4-4932-9F48-90DE5815E2D2} = {28AAFA52-50B4-4932-9F48-90DE5815E2D2}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaHorarios.Contracts", "SistemaHorarios.Contracts\SistemaHorarios.Contracts.csproj", "{63C5E2B3-271A-4A66-9F0A-2F4571A9EE18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaHorarios.Server.WCF", "SistemaHorarios.Server.WCF\SistemaHorarios.Server.WCF.csproj", "{28AAFA52-50B4-4932-9F48-90DE5815E2D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaHorarios.Server.Business", "SistemaHorarios.Server.Business\SistemaHorarios.Server.Business.csproj", "{A57B36F3-AE09-4F3A-AC57-5B65AB9575A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaHorarios.Server.DAO", "SistemaHorarios.Server.DAO\SistemaHorarios.Server.DAO.csproj", "{F39EC381-4D12-443E-B78B-29BBF8B782AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF595B9E-5B4A-41DC-8D04-A2B48AFC4568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF595B9E-5B4A-41DC-8D04-A2B48AFC4568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF595B9E-5B4A-41DC-8D04-A2B48AFC4568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF595B9E-5B4A-41DC-8D04-A2B48AFC4568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A55BC74-F0DD-4DD9-9486-1DC868B7BF30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A55BC74-F0DD-4DD9-9486-1DC868B7BF30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A55BC74-F0DD-4DD9-9486-1DC868B7BF30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A55BC74-F0DD-4DD9-9486-1DC868B7BF30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DDC8A7A-CF87-4ED9-87D4-9A148BD0A843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DDC8A7A-CF87-4ED9-87D4-9A148BD0A843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DDC8A7A-CF87-4ED9-87D4-9A148BD0A843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DDC8A7A-CF87-4ED9-87D4-9A148BD0A843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB57BEB3-5560-4BF4-A7AA-D3FF54AFD491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB57BEB3-5560-4BF4-A7AA-D3FF54AFD491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB57BEB3-5560-4BF4-A7AA-D3FF54AFD491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB57BEB3-5560-4BF4-A7AA-D3FF54AFD491}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63C5E2B3-271A-4A66-9F0A-2F4571A9EE18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63C5E2B3-271A-4A66-9F0A-2F4571A9EE18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63C5E2B3-271A-4A66-9F0A-2F4571A9EE18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63C5E2B3-271A-4A66-9F0A-2F4571A9EE18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28AAFA52-50B4-4932-9F48-90DE5815E2D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28AAFA52-50B4-4932-9F48-90DE5815E2D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28AAFA52-50B4-4932-9F48-90DE5815E2D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28AAFA52-50B4-4932-9F48-90DE5815E2D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A57B36F3-AE09-4F3A-AC57-5B65AB9575A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A57B36F3-AE09-4F3A-AC57-5B65AB9575A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A57B36F3-AE09-4F3A-AC57-5B65AB9575A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A57B36F3-AE09-4F3A-AC57-5B65AB9575A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F39EC381-4D12-443E-B78B-29BBF8B782AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F39EC381-4D12-443E-B78B-29BBF8B782AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F39EC381-4D12-443E-B78B-29BBF8B782AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F39EC381-4D12-443E-B78B-29BBF8B782AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF595B9E-5B4A-41DC-8D04-A2B48AFC4568} = {ECEE6298-38CA-4C64-AEB0-066A4EA6D34F}
+		{3A55BC74-F0DD-4DD9-9486-1DC868B7BF30} = {F25657C8-8EAE-49BF-B83F-C7FBFD926368}
+		{3DDC8A7A-CF87-4ED9-87D4-9A148BD0A843} = {ECEE6298-38CA-4C64-AEB0-066A4EA6D34F}
+		{EB57BEB3-5560-4BF4-A7AA-D3FF54AFD491} = {ECEE6298-38CA-4C64-AEB0-066A4EA6D34F}
+		{63C5E2B3-271A-4A66-9F0A-2F4571A9EE18} = {9CBD8FDA-F1D2-4ED5-AAA5-F55971EBC98F}
+		{28AAFA52-50B4-4932-9F48-90DE5815E2D2} = {13726E1E-DF62-42C4-89B4-BBA153EAD399}
+		{A57B36F3-AE09-4F3A-AC57-5B65AB9575A8} = {13726E1E-DF62-42C4-89B4-BBA153EAD399}
+		{F39EC381-4D12-443E-B78B-29BBF8B782AA} = {13726E1E-DF62-42C4-89B4-BBA153EAD399}
+	EndGlobalSection
+EndGlobal

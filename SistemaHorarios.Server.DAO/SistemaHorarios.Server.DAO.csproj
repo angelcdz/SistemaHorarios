@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F39EC381-4D12-443E-B78B-29BBF8B782AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistemaHorarios.Server.DAO</RootNamespace>
+    <AssemblyName>SistemaHorarios.Server.DAO</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Atualizacao\AtualizarComposicaoCursoDAO.cs" />
+    <Compile Include="Atualizacao\AtualizarComposicoesHorarioDAO.cs" />
+    <Compile Include="Atualizacao\AtualizarCursosDAO.cs" />
+    <Compile Include="Atualizacao\AtualizarHorariosDAO.cs" />
+    <Compile Include="Atualizacao\AtualizarMateriasDAO.cs" />
+    <Compile Include="Atualizacao\AtualizarNiveisAcessoDAO.cs" />
+    <Compile Include="Atualizacao\AtualizarPeriodosDAO.cs" />
+    <Compile Include="Atualizacao\AtualizarProfessoresDAO.cs" />
+    <Compile Include="Atualizacao\AtualizarSemestresDAO.cs" />
+    <Compile Include="Atualizacao\AtualizarUsuariosDAO.cs" />
+    <Compile Include="AutenticarUsuarioDAO.cs" />
+    <Compile Include="Cadastros\CadastrarComposicaoCursoDAO.cs" />
+    <Compile Include="Cadastros\CadastrarComposicoesHorarioDAO.cs" />
+    <Compile Include="Cadastros\CadastrarCursosDAO.cs" />
+    <Compile Include="Cadastros\CadastrarHorariosDAO.cs" />
+    <Compile Include="Cadastros\CadastrarMateriasDAO.cs" />
+    <Compile Include="Cadastros\CadastrarNiveisAcessoDAO.cs" />
+    <Compile Include="Cadastros\CadastrarPeriodosDAO.cs" />
+    <Compile Include="Cadastros\CadastrarProfessoresDAO.cs" />
+    <Compile Include="Cadastros\CadastrarSemestresDAO.cs" />
+    <Compile Include="Cadastros\CadastrarUsuariosDAO.cs" />
+    <Compile Include="ComposicaoCurso.cs">
+      <DependentUpon>SistemaHorario.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ComposicaoHorario.cs">
+      <DependentUpon>SistemaHorario.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultarCursoParamDAO.cs" />
+    <Compile Include="Consultas\ConsultarDiaSemanaParamDAO.cs" />
+    <Compile Include="Consultas\ConsultarDiasHorariosDAO.cs" />
+    <Compile Include="Consultas\ConsultarDiasPeriodosDAO.cs" />
+    <Compile Include="Consultas\ConsultarHorarioParamDAO.cs" />
+    <Compile Include="Consultas\ConsultarMateriaParamDAO.cs" />
+    <Compile Include="Consultas\ConsultarUsuariosNiveisDAO.cs" />
+    <Compile Include="Consultas\ConsultarUsuariosParamDAO.cs" />
+    <Compile Include="Consultas\ConsultarNiveisAcessoDAO.cs" />
+    <Compile Include="Consultas\ConsultarNivelAcessoParamDAO.cs" />
+    <Compile Include="Consultas\ConsultarPeriodoParamDAO.cs" />
+    <Compile Include="Consultas\ConsultarProfessorParamDAO.cs" />
+    <Compile Include="Consultas\ConsultarComposicoesCursoDAO.cs" />
+    <Compile Include="Consultas\ConsultarComposicoesHorarioDAO.cs" />
+    <Compile Include="Consultas\ConsultarPeriodosDAO.cs" />
+    <Compile Include="Consultas\ConsultarMateriasDAO.cs" />
+    <Compile Include="Consultas\ConsultarHorariosDAO.cs" />
+    <Compile Include="Consultas\ConsultarProfessoresDAO.cs" />
+    <Compile Include="Consultas\ConsultarDiasSemanaDAO.cs" />
+    <Compile Include="Consultas\ConsultarUsuariosDAO.cs" />
+    <Compile Include="Consultas\ConsultarSemestresDAO.cs" />
+    <Compile Include="Consultas\ConsultarCursosDAO.cs" />
+    <Compile Include="Curso.cs">
+      <DependentUpon>SistemaHorario.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Delete\DeletarComposicaoCursoDAO.cs" />
+    <Compile Include="Delete\DeletarComposicoesHorarioDAO.cs" />
+    <Compile Include="Delete\DeletarCursosDAO.cs" />
+    <Compile Include="Delete\DeletarHorariosDAO.cs" />
+    <Compile Include="Delete\DeletarMateriasDAO.cs" />
+    <Compile Include="Delete\DeletarNiveisAcessoDAO.cs" />
+    <Compile Include="Delete\DeletarPeriodosDAO.cs" />
+    <Compile Include="Delete\DeletarProfessoresDAO.cs" />
+    <Compile Include="Delete\DeletarSemestresDAO.cs" />
+    <Compile Include="Delete\DeletarUsuariosDAO.cs" />
+    <Compile Include="DiaSemana.cs">
+      <DependentUpon>SistemaHorario.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Horario.cs">
+      <DependentUpon>SistemaHorario.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Materia.cs">
+      <DependentUpon>SistemaHorario.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NivelAcesso.cs">
+      <DependentUpon>SistemaHorario.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Periodo.cs">
+      <DependentUpon>SistemaHorario.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Professor.cs">
+      <DependentUpon>SistemaHorario.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Semestre.cs">
+      <DependentUpon>SistemaHorario.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaHorario.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaHorario.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaHorario.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaHorario.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaHorario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaHorario.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <DependentUpon>SistemaHorario.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaHorarios.Base\SistemaHorarios.Base.csproj">
+      <Project>{3a55bc74-f0dd-4dd9-9486-1dc868b7bf30}</Project>
+      <Name>SistemaHorarios.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SistemaHorarios.Contracts\SistemaHorarios.Contracts.csproj">
+      <Project>{63c5e2b3-271a-4a66-9f0a-2f4571a9ee18}</Project>
+      <Name>SistemaHorarios.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="SistemaHorario.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SistemaHorario.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="SistemaHorario.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SistemaHorario.edmx</DependentUpon>
+      <LastGenOutput>SistemaHorario.Context.cs</LastGenOutput>
+    </None>
+    <None Include="SistemaHorario.edmx.diagram">
+      <DependentUpon>SistemaHorario.edmx</DependentUpon>
+    </None>
+    <None Include="SistemaHorario.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SistemaHorario.edmx</DependentUpon>
+      <LastGenOutput>SistemaHorario.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

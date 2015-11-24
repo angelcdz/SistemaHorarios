@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="SistemaHorarios.WPF.Telas.Cadastro.CadastrarHorarios"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             mc:Ignorable="d" 
+             d:DesignHeight="665" d:DesignWidth="1184" Name="CadastroDeHorarios">
+    <UserControl.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <ListBox Name="Lista" HorizontalAlignment="Left" Height="520" Margin="54,103,0,0" VerticalAlignment="Top" Width="300"
+                 MouseDoubleClick="Lista_MouseDoubleClick">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding HoraInicial}" FontSize="17" FontWeight="Bold"/>
+                            <TextBlock Text=" - " FontSize="17"/>
+                            <TextBlock Text="{Binding HoraFinal}" FontSize="17" FontWeight="Bold"/>
+                        </StackPanel>
+                        <TextBlock Text="{Binding Path=DiaDaSemana.Descricao}" FontSize="15"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Label Content="Horários cadastrados:" HorizontalAlignment="Left" Margin="54,44,0,0" VerticalAlignment="Top"/>
+
+        <Label Content="Código" HorizontalAlignment="Left" Margin="415,127,0,0" VerticalAlignment="Top"/>
+        <Label Content="Horário Inicial" HorizontalAlignment="Left" Margin="415,192,0,0" VerticalAlignment="Top"/>
+        <Label Content="Horário Final" HorizontalAlignment="Left" Margin="415,257,0,0" VerticalAlignment="Top"/>
+        <Label Content="Dia da semana" HorizontalAlignment="Left" Margin="415,327,0,0" VerticalAlignment="Top"/>
+
+        <TextBox Name="TextBoxCodigo" HorizontalAlignment="Left" Height="24" Margin="415,162,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="305" IsEnabled="False" Grid.ColumnSpan="2"/>
+        <!--<xctk:TimePicker Name="TimeInicial" Margin="415,222,464,413" IsEnabled="False"/>
+        <xctk:TimePicker Name="TimeFinal" Margin="415,292,464,343" IsEnabled="False"/>-->
+        <ComboBox Name="ComboDia" HorizontalAlignment="Left" Height="24" Margin="415,362,0,0" VerticalAlignment="Top" Width="305" IsEnabled="False" Loaded="ComboDia_Loaded"/>
+
+        <Button Name="BotaoConfirmar" Content="Confirmar" HorizontalAlignment="Left" Margin="415,450,0,0" VerticalAlignment="Top" Width="150" Height="30" IsEnabled="False" Click="BotaoConfirmar_Click"/>
+        <Button Name="BotaoCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="570,450,0,0" VerticalAlignment="Top" Width="150" Height="30" IsEnabled="False" Click="BotaoCancelar_Click"/>
+
+        <Button Name="BotaoNovo" Content="Novo..." HorizontalAlignment="Left" Margin="424,573,0,0" VerticalAlignment="Top" Width="90" Height="30" Click="BotaoNovo_Click"/>
+        <Button Name="BotaoEditar" Content="Editar" HorizontalAlignment="Left" Margin="520,573,0,0" VerticalAlignment="Top" Width="90" Height="30" IsEnabled="False" Click="BotaoEditar_Click" Grid.ColumnSpan="2"/>
+        <Button Name="BotaoExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="615,573,0,0" VerticalAlignment="Top" Width="90" Height="30" IsEnabled="False" Click="BotaoExcluir_Click"/>
+
+        <Button Name="BotaoAtualizar" HorizontalAlignment="Left" Margin="314,63,0,0" VerticalAlignment="Top"
+                Width="40" Height="40" Click="BotaoAtualizar_Click">
+            <Button.Content>
+                <Image Source="/SistemaHorarios.WPF;component/Fotos/Refresh.png"/>
+            </Button.Content>
+            <Button.Background>
+                <SolidColorBrush Opacity="0"/>
+            </Button.Background>
+        </Button>
+        <ComboBox Name="ComboFiltro" HorizontalAlignment="Left" Height="24" Margin="54,79,0,0" VerticalAlignment="Top" Width="255" IsEnabled="True" Loaded="ComboFiltro_Loaded"/>
+    </Grid>
+</UserControl>

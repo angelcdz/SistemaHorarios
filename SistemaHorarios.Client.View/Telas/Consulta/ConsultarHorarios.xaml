@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="SistemaHorarios.Client.View.Telas.ConsultarHorarios"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Converters="clr-namespace:SistemaHorarios.Client.View.Converters"  
+             mc:Ignorable="d" Width="700" Height="400">
+    <UserControl.Resources>
+        <Converters:MultiValueConverter x:Key="MultiValueConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <ListView Width="618" VerticalAlignment="Top" Margin="50,140,0,0" ItemsSource="{Binding Lista}" Height="213" HorizontalAlignment="Left">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Codigo}" Header="Código" Width="80"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding HoraInicial}" Header="Hora Inicial" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding HoraFinal}" Header="Hora Final" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding DiaSemana.Nome}" Header="Dia da Semana" Width="300"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBlock VerticalAlignment="Top" Text="Código:" TextWrapping="Wrap" Margin="50,64,0,0" HorizontalAlignment="Left"/>
+        <TextBox x:Name="TextBoxCodigo" Width="80" VerticalAlignment="Top" TextWrapping="Wrap" Margin="50,85,0,0" Height="23" HorizontalAlignment="Left"/>
+        <TextBlock VerticalAlignment="Top" Text="Hora Inicial:" TextWrapping="Wrap" Margin="135,64,0,0" HorizontalAlignment="Left"/>
+        <TextBox x:Name="TextBoxInicial" Width="100" VerticalAlignment="Top" TextWrapping="Wrap" Margin="135,85,0,0" Height="23" HorizontalAlignment="Left"/>
+        <Button Width="100" VerticalAlignment="Top" Style="{StaticResource DefaultButton}" Margin="568,77,0,0" HorizontalAlignment="Left" Command="{Binding ActionCommand}" Content="Buscar">
+            <Button.CommandParameter>
+                <MultiBinding Converter="{StaticResource MultiValueConverter}">
+                    <Binding ElementName="TextBoxCodigo" Path="Text"/>
+                    <Binding ElementName="TextBoxInicial" Path="Text"/>
+                    <Binding ElementName="TextBoxFinal" Path="Text"/>
+                    <Binding ElementName="ComboDia" Path="SelectedItem"/>
+                </MultiBinding>
+            </Button.CommandParameter>
+        </Button>
+        <TextBlock VerticalAlignment="Top" Text="{Binding Status}" TextWrapping="Wrap" Margin="50,358,0,0" HorizontalAlignment="Left"/>
+        <TextBlock VerticalAlignment="Top" Text="Hora Final:" TextWrapping="Wrap" Margin="240,63,0,0" HorizontalAlignment="Left"/>
+        <TextBox x:Name="TextBoxFinal" Width="100" VerticalAlignment="Top" TextWrapping="Wrap" Margin="240,84,0,0" Height="23" HorizontalAlignment="Left"/>
+        <TextBlock VerticalAlignment="Top" Text="Dia da Semana:" TextWrapping="Wrap" Margin="345,64,0,0" HorizontalAlignment="Left"/>
+        <ComboBox Name="ComboDia" HorizontalAlignment="Left" Margin="345,84,0,0" VerticalAlignment="Top"
+                  Width="190" Height="23" ItemsSource="{Binding Dias}" DisplayMemberPath="Nome"/>
+    </Grid>
+</UserControl>

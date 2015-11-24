@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SistemaHorariosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="COMPOSICAO_CURSO">
+    <Key>
+      <PropertyRef Name="COD_COMP_CURSO" />
+    </Key>
+    <Property Name="COD_COMP_CURSO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COD_SEMESTRE" Type="int" />
+    <Property Name="COD_CURSO" Type="int" />
+    <Property Name="COD_MATERIA" Type="int" />
+    <Property Name="COD_PROFESSOR" Type="int" />
+  </EntityType>
+  <EntityType Name="COMPOSICAO_HORARIO">
+    <Key>
+      <PropertyRef Name="COD_COMP_HOR" />
+    </Key>
+    <Property Name="COD_COMP_HOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COD_COMP_CURSO" Type="int" />
+    <Property Name="COD_HORARIO" Type="int" />
+  </EntityType>
+  <EntityType Name="CURSO">
+    <Key>
+      <PropertyRef Name="COD_CURSO" />
+    </Key>
+    <Property Name="COD_CURSO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOME_CURSO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="COD_PERIODO" Type="int" />
+  </EntityType>
+  <EntityType Name="DIA_SEMANA">
+    <Key>
+      <PropertyRef Name="COD_DIA" />
+    </Key>
+    <Property Name="COD_DIA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOME_DIA" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HORARIO">
+    <Key>
+      <PropertyRef Name="COD_HORARIO" />
+    </Key>
+    <Property Name="COD_HORARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HORA_INICIAL" Type="time" Precision="7" Nullable="false" />
+    <Property Name="HORA_FINAL" Type="time" Precision="7" Nullable="false" />
+    <Property Name="COD_PERIODO" Type="int" />
+    <Property Name="COD_DIA" Type="int" />
+  </EntityType>
+  <EntityType Name="MATERIA">
+    <Key>
+      <PropertyRef Name="COD_MATERIA" />
+    </Key>
+    <Property Name="COD_MATERIA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOME_MATERIA" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NIVEL_ACESSO">
+    <Key>
+      <PropertyRef Name="COD_NIVEL" />
+    </Key>
+    <Property Name="COD_NIVEL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRICAO" Type="varchar" MaxLength="50" />
+    <Property Name="CONSULTA" Type="bit" />
+    <Property Name="CADASTRO" Type="bit" />
+    <Property Name="ADMINISTRADOR" Type="bit" />
+  </EntityType>
+  <EntityType Name="PERIODO">
+    <Key>
+      <PropertyRef Name="COD_PERIODO" />
+    </Key>
+    <Property Name="COD_PERIODO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOME_PERIODO" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PROFESSOR">
+    <Key>
+      <PropertyRef Name="COD_PROFESSOR" />
+    </Key>
+    <Property Name="COD_PROFESSOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOME_PROFESSOR" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SEMESTRE">
+    <Key>
+      <PropertyRef Name="COD_SEMESTRE" />
+    </Key>
+    <Property Name="COD_SEMESTRE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NUM_SEMESTRE" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="COD_USUARIO" />
+    </Key>
+    <Property Name="COD_USUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LOGIN" Type="varchar" MaxLength="20" />
+    <Property Name="SENHA" Type="varchar" MaxLength="50" />
+    <Property Name="ULT_LOGIN" Type="datetime2" Precision="7" />
+    <Property Name="NIVEL_ACESSO" Type="int" />
+  </EntityType>
+  <Association Name="FK__COMPOSICA__COD_C__1BFD2C07">
+    <End Role="CURSO" Type="Self.CURSO" Multiplicity="0..1" />
+    <End Role="COMPOSICAO_CURSO" Type="Self.COMPOSICAO_CURSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CURSO">
+        <PropertyRef Name="COD_CURSO" />
+      </Principal>
+      <Dependent Role="COMPOSICAO_CURSO">
+        <PropertyRef Name="COD_CURSO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__COMPOSICA__COD_C__22AA2996">
+    <End Role="COMPOSICAO_CURSO" Type="Self.COMPOSICAO_CURSO" Multiplicity="0..1" />
+    <End Role="COMPOSICAO_HORARIO" Type="Self.COMPOSICAO_HORARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPOSICAO_CURSO">
+        <PropertyRef Name="COD_COMP_CURSO" />
+      </Principal>
+      <Dependent Role="COMPOSICAO_HORARIO">
+        <PropertyRef Name="COD_COMP_CURSO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__COMPOSICA__COD_H__239E4DCF">
+    <End Role="HORARIO" Type="Self.HORARIO" Multiplicity="0..1" />
+    <End Role="COMPOSICAO_HORARIO" Type="Self.COMPOSICAO_HORARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HORARIO">
+        <PropertyRef Name="COD_HORARIO" />
+      </Principal>
+      <Dependent Role="COMPOSICAO_HORARIO">
+        <PropertyRef Name="COD_HORARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__COMPOSICA__COD_M__1CF15040">
+    <End Role="MATERIA" Type="Self.MATERIA" Multiplicity="0..1" />
+    <End Role="COMPOSICAO_CURSO" Type="Self.COMPOSICAO_CURSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MATERIA">
+        <PropertyRef Name="COD_MATERIA" />
+      </Principal>
+      <Dependent Role="COMPOSICAO_CURSO">
+        <PropertyRef Name="COD_MATERIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__COMPOSICA__COD_P__1DE57479">
+    <End Role="PROFESSOR" Type="Self.PROFESSOR" Multiplicity="0..1" />
+    <End Role="COMPOSICAO_CURSO" Type="Self.COMPOSICAO_CURSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROFESSOR">
+        <PropertyRef Name="COD_PROFESSOR" />
+      </Principal>
+      <Dependent Role="COMPOSICAO_CURSO">
+        <PropertyRef Name="COD_PROFESSOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__COMPOSICA__COD_S__1B0907CE">
+    <End Role="SEMESTRE" Type="Self.SEMESTRE" Multiplicity="0..1" />
+    <End Role="COMPOSICAO_CURSO" Type="Self.COMPOSICAO_CURSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEMESTRE">
+        <PropertyRef Name="COD_SEMESTRE" />
+      </Principal>
+      <Dependent Role="COMPOSICAO_CURSO">
+        <PropertyRef Name="COD_SEMESTRE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CURSO__COD_PERIO__145C0A3F">
+    <End Role="PERIODO" Type="Self.PERIODO" Multiplicity="0..1" />
+    <End Role="CURSO" Type="Self.CURSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERIODO">
+        <PropertyRef Name="COD_PERIODO" />
+      </Principal>
+      <Dependent Role="CURSO">
+        <PropertyRef Name="COD_PERIODO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HORARIO__COD_DIA__3D5E1FD2">
+    <End Role="DIA_SEMANA" Type="Self.DIA_SEMANA" Multiplicity="0..1" />
+    <End Role="HORARIO" Type="Self.HORARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIA_SEMANA">
+        <PropertyRef Name="COD_DIA" />
+      </Principal>
+      <Dependent Role="HORARIO">
+        <PropertyRef Name="COD_DIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HORARIO__COD_PER__31EC6D26">
+    <End Role="PERIODO" Type="Self.PERIODO" Multiplicity="0..1" />
+    <End Role="HORARIO" Type="Self.HORARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERIODO">
+        <PropertyRef Name="COD_PERIODO" />
+      </Principal>
+      <Dependent Role="HORARIO">
+        <PropertyRef Name="COD_PERIODO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USUARIO__NIVEL_A__286302EC">
+    <End Role="NIVEL_ACESSO" Type="Self.NIVEL_ACESSO" Multiplicity="0..1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NIVEL_ACESSO">
+        <PropertyRef Name="COD_NIVEL" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="NIVEL_ACESSO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SistemaHorariosModelStoreContainer">
+    <EntitySet Name="COMPOSICAO_CURSO" EntityType="Self.COMPOSICAO_CURSO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMPOSICAO_HORARIO" EntityType="Self.COMPOSICAO_HORARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CURSO" EntityType="Self.CURSO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DIA_SEMANA" EntityType="Self.DIA_SEMANA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HORARIO" EntityType="Self.HORARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MATERIA" EntityType="Self.MATERIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NIVEL_ACESSO" EntityType="Self.NIVEL_ACESSO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PERIODO" EntityType="Self.PERIODO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROFESSOR" EntityType="Self.PROFESSOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEMESTRE" EntityType="Self.SEMESTRE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__COMPOSICA__COD_C__1BFD2C07" Association="Self.FK__COMPOSICA__COD_C__1BFD2C07">
+      <End Role="CURSO" EntitySet="CURSO" />
+      <End Role="COMPOSICAO_CURSO" EntitySet="COMPOSICAO_CURSO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__COMPOSICA__COD_C__22AA2996" Association="Self.FK__COMPOSICA__COD_C__22AA2996">
+      <End Role="COMPOSICAO_CURSO" EntitySet="COMPOSICAO_CURSO" />
+      <End Role="COMPOSICAO_HORARIO" EntitySet="COMPOSICAO_HORARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__COMPOSICA__COD_H__239E4DCF" Association="Self.FK__COMPOSICA__COD_H__239E4DCF">
+      <End Role="HORARIO" EntitySet="HORARIO" />
+      <End Role="COMPOSICAO_HORARIO" EntitySet="COMPOSICAO_HORARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__COMPOSICA__COD_M__1CF15040" Association="Self.FK__COMPOSICA__COD_M__1CF15040">
+      <End Role="MATERIA" EntitySet="MATERIA" />
+      <End Role="COMPOSICAO_CURSO" EntitySet="COMPOSICAO_CURSO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__COMPOSICA__COD_P__1DE57479" Association="Self.FK__COMPOSICA__COD_P__1DE57479">
+      <End Role="PROFESSOR" EntitySet="PROFESSOR" />
+      <End Role="COMPOSICAO_CURSO" EntitySet="COMPOSICAO_CURSO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__COMPOSICA__COD_S__1B0907CE" Association="Self.FK__COMPOSICA__COD_S__1B0907CE">
+      <End Role="SEMESTRE" EntitySet="SEMESTRE" />
+      <End Role="COMPOSICAO_CURSO" EntitySet="COMPOSICAO_CURSO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CURSO__COD_PERIO__145C0A3F" Association="Self.FK__CURSO__COD_PERIO__145C0A3F">
+      <End Role="PERIODO" EntitySet="PERIODO" />
+      <End Role="CURSO" EntitySet="CURSO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HORARIO__COD_DIA__3D5E1FD2" Association="Self.FK__HORARIO__COD_DIA__3D5E1FD2">
+      <End Role="DIA_SEMANA" EntitySet="DIA_SEMANA" />
+      <End Role="HORARIO" EntitySet="HORARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HORARIO__COD_PER__31EC6D26" Association="Self.FK__HORARIO__COD_PER__31EC6D26">
+      <End Role="PERIODO" EntitySet="PERIODO" />
+      <End Role="HORARIO" EntitySet="HORARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USUARIO__NIVEL_A__286302EC" Association="Self.FK__USUARIO__NIVEL_A__286302EC">
+      <End Role="NIVEL_ACESSO" EntitySet="NIVEL_ACESSO" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

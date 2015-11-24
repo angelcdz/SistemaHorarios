@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="SistemaHorarios.Client.View.Telas.AlterarMaterias"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Width="615" Height="400">
+    <Grid>
+        <ListBox x:Name="Lista" HorizontalAlignment="Left" Height="312" Margin="50,44,0,-56" VerticalAlignment="Top" Width="164" Style="{StaticResource NiveisListBox}"/>
+
+        <TextBlock Style="{StaticResource DefaultTextBlock}" Text="Matérias cadastradas:" HorizontalAlignment="Left" Margin="50,30,0,0" VerticalAlignment="Top"/>
+
+        <TextBlock Style="{StaticResource DefaultTextBlock}" Text="Código:" HorizontalAlignment="Left" Margin="260,48,0,0" VerticalAlignment="Top"/>
+        <TextBlock Style="{StaticResource DefaultTextBlock}" Text="Nome da Matéria:" HorizontalAlignment="Left" Margin="260,113,-39.364,0" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="TextBoxCodigo" HorizontalAlignment="Left" Height="25" Margin="260,67,-265,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="305" IsEnabled="False"/>
+        <TextBox x:Name="TextBoxNome" MaxLength="20" Height="25" Margin="260,132,-265,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsEnabled="False" HorizontalAlignment="Left" Width="305"/>
+
+        <Button x:Name="BotaoConfirmar" Style="{StaticResource DefaultButton}" Content="Confirmar" HorizontalAlignment="Left" Margin="260,253,-110,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <Button x:Name="BotaoCancelar" Style="{StaticResource DefaultButton}" Content="Cancelar" HorizontalAlignment="Left" Margin="415,253,-265,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <Button x:Name="BotaoExcluir" Style="{StaticResource DefaultButton}" Content="Excluir" HorizontalAlignment="Left" Margin="338,288,-188,-18" VerticalAlignment="Top" IsEnabled="False"/>
+
+    </Grid>
+</UserControl>
