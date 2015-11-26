@@ -49,7 +49,7 @@
                     </i:Interaction.Triggers>
                 </MenuItem>
                 <Separator Height="2" Width="170" FontWeight="Normal"/>
-                <MenuItem Name="ItemSobre" Header="Sobre" Width="180" FontWeight="Normal"/>
+                <MenuItem Name="ItemSobre" Header="Sobre" Width="180" FontWeight="Normal" Click="ItemSobre_Click"/>
             </MenuItem>
         </Menu>
 

@@ -10,3 +10,4 @@ Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Base\bin\Debug\Sistema
 Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Base\bin\Debug\SistemaHorarios.Base.pdb
 Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Base\obj\Debug\SistemaHorarios.Base.dll
 Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Base\obj\Debug\SistemaHorarios.Base.pdb
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Base\obj\Debug\SistemaHorarios.Base.csprojResolveAssemblyReference.cache

@@ -1,4 +1,5 @@
-﻿using SistemaHorarios.Client.ViewModel;
+﻿using SistemaHorarios.Client.View.Telas;
+using SistemaHorarios.Client.ViewModel;
 using System.Windows;
 
 namespace SistemaHorarios.Client.View
@@ -18,6 +19,11 @@ namespace SistemaHorarios.Client.View
         {
             this.Hide();
             new Login().Show();
+        }
+
+        private void ItemSobre_Click(object sender, RoutedEventArgs e)
+        {
+            new Sobre().Show();
         }
     }
 }

@@ -1,11 +1,12 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.Runtime.Serialization;
 namespace SistemaHorarios.Base
 {
     [DataContract]
     public abstract class BaseRequest
     {
         [DataMember]
-        public System.Guid TransactionId { get; set; }
+        public Guid TransactionId = Guid.NewGuid();
     }
 
     [DataContract]

@@ -131,3 +131,5 @@ Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\
 Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\SistemaHorarios.Client.View.csproj.GenerateResource.Cache
 Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Principal.g.cs
 Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Principal.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Sobre.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Sobre.g.cs

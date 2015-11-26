@@ -1,4 +1,6 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Data.SqlClient;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
 namespace SistemaHorarios.Base
 {
     public abstract class BaseService
@@ -9,10 +11,14 @@ namespace SistemaHorarios.Base
         {
             try
             {
-                return bl.Execute(request);
+                Logger.LogWcfRequest(request);
+                var response = bl.Execute(request);
+                Logger.LogWcfResponse(request.TransactionId, callerMethodName, response.Status.ToString(), response.ErrorMessage);
+                return response;
             }
             catch (System.Exception ex)
             {
+                Logger.LogWcfResponse(request.TransactionId, callerMethodName, ExecutionStatus.TechnicalError.ToString(), ex.Message);
                 return new ResponseType() { ErrorMessage = ex.Message, Status = ExecutionStatus.TechnicalError };
             }
         }

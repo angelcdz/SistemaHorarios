@@ -145,6 +145,9 @@
     <Compile Include="Telas\Paginas\SeletorConsultas.xaml.cs">
       <DependentUpon>SeletorConsultas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Sobre.xaml.cs">
+      <DependentUpon>Sobre.xaml</DependentUpon>
+    </Compile>
     <Page Include="Telas\Alteracoes\AlterarCursos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -270,6 +273,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Telas\Paginas\SeletorConsultas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\Sobre.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
