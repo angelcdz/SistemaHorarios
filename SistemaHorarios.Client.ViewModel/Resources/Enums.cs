@@ -9,4 +9,6 @@ namespace SistemaHorarios.Client.ViewModel
     public enum Alterar { Cursos, Grades, Horarios, Materias, Periodos, Professores, NiveisAcesso, Usuarios }
     public enum Consultar { Cursos, Grades, Horarios, Materias, Periodos, Professores, NiveisAcesso, Usuarios }
     public enum Cadastrar { Cursos, Grades, Horarios, Materias, Periodos, Professores, NiveisAcesso, Usuarios }
+    public enum OperacoesUsuario { Consultar, Alterar, Cadastrar }
+    public enum OperacoesNivel { Consultar, Alterar, Cadastrar }
 }

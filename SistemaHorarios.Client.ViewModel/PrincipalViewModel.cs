@@ -23,6 +23,8 @@ namespace SistemaHorarios.Client.ViewModel
             ActionClose = new RelayCommand();
         }
 
+        #region Atribs
+
         private bool _showConsultas;
         public bool ShowConsultas
         {
@@ -44,22 +46,30 @@ namespace SistemaHorarios.Client.ViewModel
             set { this._showAdmin = value; OnPropertyChanged("ShowAdmin"); }
         }
 
+        private bool _showConsultasTab;
+        public bool ShowConsultasTab
+        {
+            get { return this._showConsultasTab; }
+            set { this._showConsultasTab = value; OnPropertyChanged("ShowConsultasTab"); }
+        }
+
+        private bool _showCadastrosTab;
+        public bool ShowCadastrosTab
+        {
+            get { return this._showCadastrosTab; }
+            set { this._showCadastrosTab = value; OnPropertyChanged("ShowCadastrosTab"); }
+        }
+
+        private bool _showAlteracoesTab;
+        public bool ShowAlteracoesTab
+        {
+            get { return this._showAlteracoesTab; }
+            set { this._showAlteracoesTab = value; OnPropertyChanged("ShowAlteracoesTab"); }
+        }
+
+        #endregion
+
         #region Commands
-
-        //private RelayCommand _actionSair;
-        //public RelayCommand ActionSair
-        //{
-        //    get { return this._actionSair; }
-        //    set
-        //    {
-        //        this._actionSair = new RelayCommand(obj => true, ExecutarSair);
-        //    }
-
-        //}
-        //public void ExecutarSair(object obj)
-        //{
-        //    ShowWindow = Visibility.Hidden;
-        //}
 
         private RelayCommand _actionFechar;
         public RelayCommand ActionFechar

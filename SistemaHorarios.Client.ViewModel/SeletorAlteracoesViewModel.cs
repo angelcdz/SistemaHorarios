@@ -23,9 +23,8 @@ namespace SistemaHorarios.Client.ViewModel
                     new KeyValuePair<string, Alterar>("Grade",Alterar.Grades),
                     new KeyValuePair<string, Alterar>("Horarios",Alterar.Horarios),
                     new KeyValuePair<string, Alterar>("Materias",Alterar.Materias),
-                    new KeyValuePair<string, Alterar>("Níveis de Acesso",Alterar.NiveisAcesso),
                     new KeyValuePair<string, Alterar>("Periodos",Alterar.Periodos),
-                    new KeyValuePair<string, Alterar>("Professores",Alterar.Professores),
+                    new KeyValuePair<string, Alterar>("Professores",Alterar.Professores)
                 };
         }      
     }

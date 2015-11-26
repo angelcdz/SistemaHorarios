@@ -23,10 +23,8 @@ namespace SistemaHorarios.Client.ViewModel
                     new KeyValuePair<string, Cadastrar>("Grade",Cadastrar.Grades),
                     new KeyValuePair<string, Cadastrar>("Horarios",Cadastrar.Horarios),
                     new KeyValuePair<string, Cadastrar>("Materias",Cadastrar.Materias),
-                    new KeyValuePair<string, Cadastrar>("Níveis de Acesso",Cadastrar.NiveisAcesso),
                     new KeyValuePair<string, Cadastrar>("Periodos",Cadastrar.Periodos),
-                    new KeyValuePair<string, Cadastrar>("Professores",Cadastrar.Professores),
-                    new KeyValuePair<string, Cadastrar>("Usuários",Cadastrar.Usuarios)
+                    new KeyValuePair<string, Cadastrar>("Professores",Cadastrar.Professores)
                 };
         }      
     }

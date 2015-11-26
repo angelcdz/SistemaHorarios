@@ -13,10 +13,8 @@ namespace SistemaHorarios.Client.ViewModel
                     new KeyValuePair<string, Consultar>("Grade",Consultar.Grades),
                     new KeyValuePair<string, Consultar>("Horarios",Consultar.Horarios),
                     new KeyValuePair<string, Consultar>("Materias",Consultar.Materias),
-                    new KeyValuePair<string, Consultar>("Níveis de Acesso",Consultar.NiveisAcesso),
                     new KeyValuePair<string, Consultar>("Periodos",Consultar.Periodos),
-                    new KeyValuePair<string, Consultar>("Professores",Consultar.Professores),
-                    new KeyValuePair<string, Consultar>("Usuários",Consultar.Usuarios),
+                    new KeyValuePair<string, Consultar>("Professores",Consultar.Professores)
                 };
         }  
 

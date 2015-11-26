@@ -20,26 +20,21 @@
             BorderBrush="LightGray"
             Height="25"
             VerticalAlignment="Top">
-            <MenuItem Name="MenuConsultas" Header="Operações" Height="25" Style="{StaticResource MenuItemDefault}">
-                <MenuItem Name="ItemConsultas" Header="Consultas" HorizontalAlignment="Right" Width="180" FontWeight="Normal" Visibility="{Binding ShowConsultas,Converter={StaticResource booleanToVisibilityConverter}}"/>
-                <MenuItem Name="ItemCadastros" Header="Cadastros" HorizontalAlignment="Right" Width="180" FontWeight="Normal" Visibility="{Binding ShowOperacoes,Converter={StaticResource booleanToVisibilityConverter}}"/>
-                <MenuItem Name="ItemAlteracoes" Header="Alterações" HorizontalAlignment="Right" Width="180" FontWeight="Normal" Visibility="{Binding ShowOperacoes,Converter={StaticResource booleanToVisibilityConverter}}"/>
+            <MenuItem Header="Operações" Height="25" Style="{StaticResource MenuItemDefault}">
+                <MenuItem Header="Consultas" HorizontalAlignment="Right" Width="180" Click="MenuItem_Click"
+                          FontWeight="Normal" Visibility="{Binding ShowConsultas,Converter={StaticResource booleanToVisibilityConverter}}"/>
+                <MenuItem Header="Cadastros" HorizontalAlignment="Right" Width="180" Click="MenuItem_Click_1"
+                          FontWeight="Normal" Visibility="{Binding ShowOperacoes,Converter={StaticResource booleanToVisibilityConverter}}"/>
+                <MenuItem Header="Alterações" HorizontalAlignment="Right" Width="180" Click="MenuItem_Click_2"
+                          FontWeight="Normal" Visibility="{Binding ShowOperacoes,Converter={StaticResource booleanToVisibilityConverter}}"/>
             </MenuItem>
-            <MenuItem Name="MenuAdministrador" Header="Administrador" Height="25" Style="{StaticResource MenuItemDefault}" Visibility="{Binding ShowAdmin,Converter={StaticResource booleanToVisibilityConverter}}">
-                <!--<MenuItem.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel Orientation="Vertical" Width="300"/>
-                    </ItemsPanelTemplate>
-                </MenuItem.ItemsPanel>-->
-                <!--<MenuItem.Template>
-                    <ControlTemplate>
-                        <MenuItem Header="123" Width="300"/>
-                    </ControlTemplate>
-                </MenuItem.Template>-->
-                <MenuItem Name="ItemUsuarios" Header="Gerenciar Usuários" HorizontalAlignment="Left" Width="250" FontWeight="Normal"/>
-                <MenuItem Name="ItemNiveisAcesso" Header="Gerenciar Níveis de Acesso" HorizontalAlignment="Left" Width="250" FontWeight="Normal"/>
+            <MenuItem Header="Administrador" Height="25" Style="{StaticResource MenuItemDefault}" Visibility="{Binding ShowAdmin,Converter={StaticResource booleanToVisibilityConverter}}">
+                <MenuItem Name="ItemUsuarios" Header="Gerenciar Usuários" HorizontalAlignment="Left"
+                          Width="250" FontWeight="Normal" Click="ItemUsuarios_Click"/>
+                <MenuItem Name="ItemNiveisAcesso" Header="Gerenciar Níveis de Acesso" HorizontalAlignment="Left"
+                          Width="250" FontWeight="Normal" Click="ItemNiveisAcesso_Click"/>
             </MenuItem>
-            <MenuItem Name="MenuOutros" Header="Outros" Height="25" Style="{StaticResource MenuItemDefault}">
+            <MenuItem Header="Outros" Height="25" Style="{StaticResource MenuItemDefault}">
                 <MenuItem Name="ItemSair" Header="Sair" Width="180" FontWeight="Normal" Click="ItemSair_Click"/>
                 <MenuItem Name="ItemFechar" Header="Fechar" Width="180" FontWeight="Normal">
                     <i:Interaction.Triggers>
@@ -53,23 +48,9 @@
             </MenuItem>
         </Menu>
 
-        <TabControl Margin="0,25,0,0">
-            <TabControl.Resources>
-                <Style TargetType="ItemsControl">
-                    <Setter Property="ItemsPanel">
-                        <Setter.Value>
-                            <ItemsPanelTemplate>
-                                <Rectangle></Rectangle>
-                            </ItemsPanelTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </TabControl.Resources>
-            <TabItem Header="Bem-vindo!" Style="{StaticResource TabItemDefault}">
-                <local:SeletorCadastros/>
-            </TabItem>
-            <TabItem Header="Bem-vindo!" Style="{StaticResource TabItemDefault}">
-                <local:SeletorConsultas/>
+        <TabControl x:Name="TabbedPanel" Margin="0,25,0,0">
+            <TabItem x:Name="BemVindo" Header="Bem-vindo!">
+                <local:BoasVindas/>
             </TabItem>
         </TabControl>
 
