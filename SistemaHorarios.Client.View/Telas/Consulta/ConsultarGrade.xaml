@@ -15,7 +15,7 @@
         <TextBlock Style="{StaticResource ResourceKey=DefaultTextBlock}" HorizontalAlignment="Left" Margin="218,172,0,0" TextWrapping="Wrap" Text="Semestre:" VerticalAlignment="Top" Width="55"/>
         <TextBlock Style="{StaticResource ResourceKey=DefaultTextBlock}" HorizontalAlignment="Left" Margin="218,126,0,0" TextWrapping="Wrap" Text="Período:" VerticalAlignment="Top" Width="50"/>
         <ComboBox x:Name="ComboCurso" HorizontalAlignment="Left" Margin="218,99,0,0" VerticalAlignment="Top"
-                  Width="250" ItemsSource="{Binding ListaCursos}">
+                  Width="250" ItemsSource="{Binding ListaCursos}" DisplayMemberPath="Nome">
             <i:Interaction.Triggers>
                 <i:EventTrigger>
                     <i:InvokeCommandAction Command="{Binding ActionConsultarPeriodos}"

@@ -80,6 +80,7 @@
     <Compile Include="ConsultarGradeDAO.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ConsultarPeriodosPorCursoDAO.cs" />
     <Compile Include="Consultas\ConsultarCursoParamDAO.cs" />
     <Compile Include="Consultas\ConsultarDiaSemanaParamDAO.cs" />
     <Compile Include="Consultas\ConsultarDiasHorariosDAO.cs" />

@@ -273,5 +273,10 @@ namespace SistemaHorarios.Server.WCF
         {
             return this.ExecuteBusiness(new ConsultarGradeBL(), request);
         }
+
+        public Contracts.ConsultarPeriodosPorCurso.ConsultarPeriodosPorCursoResponse ConsultarPeriodosPorCurso(Contracts.ConsultarPeriodosPorCurso.ConsultarPeriodosPorCursoRequest request)
+        {
+            return this.ExecuteBusiness(new ConsultarPeriodosPorCursoBL(), request);
+        }
     }
 }
