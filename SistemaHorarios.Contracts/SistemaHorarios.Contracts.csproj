@@ -61,6 +61,7 @@
     <Compile Include="Cadastros\CadastrarHorarios.cs" />
     <Compile Include="Cadastros\CadastrarPeriodos.cs" />
     <Compile Include="Cadastros\CadastrarCursos.cs" />
+    <Compile Include="ConsultarGrade.cs" />
     <Compile Include="Consultas\ConsultarCursoParam.cs" />
     <Compile Include="Consultas\ConsultarDiaSemanaParam.cs" />
     <Compile Include="Consultas\ConsultarDiasHorarios.cs" />

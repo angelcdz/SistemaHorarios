@@ -5,7 +5,8 @@
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q1:BaseRequest">
         <xs:sequence>
-          <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Senha" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -14,9 +15,22 @@
   <xs:complexType name="AutenticarUsuarioResponse">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/SistemaHorarios.Base" base="q2:BaseResponse">
-        <xs:sequence />
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Autenticado" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Existe" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NivelAcesso" nillable="true" type="tns:AutenticarUsuarioNivelAcessoDTO" />
+        </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="AutenticarUsuarioResponse" nillable="true" type="tns:AutenticarUsuarioResponse" />
+  <xs:complexType name="AutenticarUsuarioNivelAcessoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Administrador" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Cadastro" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Consulta" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AutenticarUsuarioNivelAcessoDTO" nillable="true" type="tns:AutenticarUsuarioNivelAcessoDTO" />
 </xs:schema>

@@ -332,6 +332,12 @@ namespace SistemaHorarios.Client.Model.SistemaHorariosService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISistemaHorariosService/AutenticarUsuario", ReplyAction="http://tempuri.org/ISistemaHorariosService/AutenticarUsuarioResponse")]
         System.Threading.Tasks.Task<SistemaHorarios.Contracts.AutenticarUsuario.AutenticarUsuarioResponse> AutenticarUsuarioAsync(SistemaHorarios.Contracts.AutenticarUsuario.AutenticarUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISistemaHorariosService/ConsultarGrade", ReplyAction="http://tempuri.org/ISistemaHorariosService/ConsultarGradeResponse")]
+        SistemaHorarios.Contracts.ConsultarGrade.ConsultarGradeResponse ConsultarGrade(SistemaHorarios.Contracts.ConsultarGrade.ConsultarGradeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISistemaHorariosService/ConsultarGrade", ReplyAction="http://tempuri.org/ISistemaHorariosService/ConsultarGradeResponse")]
+        System.Threading.Tasks.Task<SistemaHorarios.Contracts.ConsultarGrade.ConsultarGradeResponse> ConsultarGradeAsync(SistemaHorarios.Contracts.ConsultarGrade.ConsultarGradeRequest request);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -783,6 +789,14 @@ namespace SistemaHorarios.Client.Model.SistemaHorariosService {
         
         public System.Threading.Tasks.Task<SistemaHorarios.Contracts.AutenticarUsuario.AutenticarUsuarioResponse> AutenticarUsuarioAsync(SistemaHorarios.Contracts.AutenticarUsuario.AutenticarUsuarioRequest request) {
             return base.Channel.AutenticarUsuarioAsync(request);
+        }
+        
+        public SistemaHorarios.Contracts.ConsultarGrade.ConsultarGradeResponse ConsultarGrade(SistemaHorarios.Contracts.ConsultarGrade.ConsultarGradeRequest request) {
+            return base.Channel.ConsultarGrade(request);
+        }
+        
+        public System.Threading.Tasks.Task<SistemaHorarios.Contracts.ConsultarGrade.ConsultarGradeResponse> ConsultarGradeAsync(SistemaHorarios.Contracts.ConsultarGrade.ConsultarGradeRequest request) {
+            return base.Channel.ConsultarGradeAsync(request);
         }
     }
 }

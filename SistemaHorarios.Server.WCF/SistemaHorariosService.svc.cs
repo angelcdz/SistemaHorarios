@@ -268,5 +268,10 @@ namespace SistemaHorarios.Server.WCF
         {
             return this.ExecuteBusiness(new AutenticarUsuarioBL(), request);
         }
+
+        public Contracts.ConsultarGrade.ConsultarGradeResponse ConsultarGrade(Contracts.ConsultarGrade.ConsultarGradeRequest request)
+        {
+            return this.ExecuteBusiness(new ConsultarGradeBL(), request);
+        }
     }
 }

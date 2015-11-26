@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Autenticacao\Usuario.cs" />
     <Compile Include="CadastrarHorarioViewModel.cs" />
+    <Compile Include="ConsultarGradeViewModel.cs" />
     <Compile Include="PrincipalViewModel.cs" />
     <Compile Include="LoginViewModel.cs" />
     <Compile Include="CadastrarUsuarioViewModel.cs" />

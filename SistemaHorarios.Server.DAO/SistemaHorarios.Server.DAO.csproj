@@ -77,6 +77,9 @@
     <Compile Include="ComposicaoHorario.cs">
       <DependentUpon>SistemaHorario.tt</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarGradeDAO.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Consultas\ConsultarCursoParamDAO.cs" />
     <Compile Include="Consultas\ConsultarDiaSemanaParamDAO.cs" />
     <Compile Include="Consultas\ConsultarDiasHorariosDAO.cs" />

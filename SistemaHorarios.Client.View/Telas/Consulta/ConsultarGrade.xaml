@@ -3,15 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Converters="clr-namespace:SistemaHorarios.Client.View.Converters"  
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
              mc:Ignorable="d" Width="700" Height="310">
+    <UserControl.Resources>
+        <Converters:MultiValueConverter x:Key="MultiValueConverter"/>
+    </UserControl.Resources>
     <Grid>
         <TextBlock Style="{StaticResource ResourceKey=DefaultTextBlock}" HorizontalAlignment="Left" Margin="218,38,0,0" TextWrapping="Wrap" Text="Selecione os filtros para visualizar a grade:" VerticalAlignment="Top" Width="233"/>
         <TextBlock Style="{StaticResource ResourceKey=DefaultTextBlock}" HorizontalAlignment="Left" Margin="218,80,0,0" TextWrapping="Wrap" Text="Curso:" VerticalAlignment="Top" Width="40"/>
-        <TextBlock Style="{StaticResource ResourceKey=DefaultTextBlock}" HorizontalAlignment="Left" Margin="218,126,0,0" TextWrapping="Wrap" Text="Semestre:" VerticalAlignment="Top" Width="55"/>
-        <TextBlock Style="{StaticResource ResourceKey=DefaultTextBlock}" HorizontalAlignment="Left" Margin="218,172,0,0" TextWrapping="Wrap" Text="Período:" VerticalAlignment="Top" Width="50"/>
-        <ComboBox HorizontalAlignment="Left" Margin="218,99,0,0" VerticalAlignment="Top" Width="250"/>
-        <ComboBox HorizontalAlignment="Left" Margin="218,145,0,0" VerticalAlignment="Top" Width="100"/>
-        <ComboBox HorizontalAlignment="Left" Margin="218,191,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Gerar Grade" HorizontalAlignment="Left" Margin="218,249,0,0" VerticalAlignment="Top" Width="250" Style="{StaticResource DefaultButton}"/>
+        <TextBlock Style="{StaticResource ResourceKey=DefaultTextBlock}" HorizontalAlignment="Left" Margin="218,172,0,0" TextWrapping="Wrap" Text="Semestre:" VerticalAlignment="Top" Width="55"/>
+        <TextBlock Style="{StaticResource ResourceKey=DefaultTextBlock}" HorizontalAlignment="Left" Margin="218,126,0,0" TextWrapping="Wrap" Text="Período:" VerticalAlignment="Top" Width="50"/>
+        <ComboBox x:Name="ComboCurso" HorizontalAlignment="Left" Margin="218,99,0,0" VerticalAlignment="Top"
+                  Width="250" ItemsSource="{Binding ListaCursos}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger>
+                    <i:InvokeCommandAction Command="{Binding ActionConsultarPeriodos}"
+                                           CommandParameter="{Binding ElementName=ComboCurso,Path=SelectedItem}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </ComboBox>
+        <ComboBox x:Name="ComboPeriodo" HorizontalAlignment="Left" Margin="218,145,0,0" VerticalAlignment="Top"
+                  Width="120" IsEnabled="{Binding EnabledPeriodo,FallbackValue=False}" ItemsSource="{Binding ListaPeriodos}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger>
+                    <i:InvokeCommandAction Command="{Binding ActionConsultarSemestres}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </ComboBox>
+        <ComboBox x:Name="ComboSemestre" HorizontalAlignment="Left" Margin="218,191,0,0" VerticalAlignment="Top"
+                  Width="100" IsEnabled="{Binding EnabledSemestre,FallbackValue=False}" ItemsSource="{Binding ListaSemestres}"/>
+        <Button Content="Consultar Grade" HorizontalAlignment="Left" Margin="218,249,0,0"
+                VerticalAlignment="Top" Width="250" Style="{StaticResource DefaultButton}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="218,284,0,0" TextWrapping="Wrap" Text="{Binding Status}" VerticalAlignment="Top"/>
     </Grid>
 </UserControl>

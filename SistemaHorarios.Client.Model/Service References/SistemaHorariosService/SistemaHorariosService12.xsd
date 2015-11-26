@@ -53,6 +53,7 @@
   <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd53" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuariosParam" />
   <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd54" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuariosNiveis" />
   <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd55" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AutenticarUsuario" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd56" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarGrade" />
   <xs:element name="ConsultarCursos">
     <xs:complexType>
       <xs:sequence>
@@ -792,6 +793,20 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AutenticarUsuario" minOccurs="0" name="AutenticarUsuarioResult" nillable="true" type="q106:AutenticarUsuarioResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarGrade">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarGrade" minOccurs="0" name="request" nillable="true" type="q107:ConsultarGradeRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarGradeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarGrade" minOccurs="0" name="ConsultarGradeResult" nillable="true" type="q108:ConsultarGradeResponse" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

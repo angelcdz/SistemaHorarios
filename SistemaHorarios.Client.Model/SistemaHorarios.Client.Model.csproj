@@ -62,6 +62,7 @@
     <Compile Include="Cadastros\CadastrarProfessoresModel.cs" />
     <Compile Include="Cadastros\CadastrarSemestresModel.cs" />
     <Compile Include="Cadastros\CadastrarUsuariosModel.cs" />
+    <Compile Include="ConsultarGradeModel.cs" />
     <Compile Include="Consultas\ConsultarCursoParamModel.cs" />
     <Compile Include="Consultas\ConsultarDiaSemanaParamModel.cs" />
     <Compile Include="Consultas\ConsultarDiasHorariosModel.cs" />
@@ -145,6 +146,7 @@
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarDiasHorarios.ConsultarDiasHorariosResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarDiasPeriodos.ConsultarDiasPeriodosResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarDiasSemana.ConsultarDiasSemanaResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarGrade.ConsultarGradeResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarHorarioParam.ConsultarHorarioParamResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarHorarios.ConsultarHorariosResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarMateriaParam.ConsultarMateriaParamResponse.datasource" />
@@ -329,6 +331,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\SistemaHorariosService\SistemaHorariosService55.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService56.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\SistemaHorariosService\SistemaHorariosService6.xsd">

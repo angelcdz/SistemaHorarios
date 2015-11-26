@@ -1,3 +1,4 @@
+using SistemaHorarios.Contracts.ConsultarGrade;
 using SistemaHorarios.Contracts.AutenticarUsuario;
 using SistemaHorarios.Contracts.ConsultarUsuariosNiveis;
 using SistemaHorarios.Contracts.ConsultarUsuariosParam;
@@ -164,5 +165,7 @@ namespace SistemaHorarios.Server.WCF
         ConsultarUsuariosNiveisResponse ConsultarUsuariosNiveis(ConsultarUsuariosNiveisRequest request);
         [OperationContract]
         AutenticarUsuarioResponse AutenticarUsuario(AutenticarUsuarioRequest request);
+        [OperationContract]
+        ConsultarGradeResponse ConsultarGrade(ConsultarGradeRequest request);
     }
 }

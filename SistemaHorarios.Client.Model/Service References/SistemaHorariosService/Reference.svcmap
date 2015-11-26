@@ -80,6 +80,7 @@
     <MetadataFile FileName="SistemaHorariosService41.xsd" MetadataType="Schema" ID="315be33a-3b48-442b-b906-378f6989d86a" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd25" />
     <MetadataFile FileName="SistemaHorariosService42.xsd" MetadataType="Schema" ID="ee0bfab0-95b6-4aa2-91f4-363f66dcdda0" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd34" />
     <MetadataFile FileName="SistemaHorariosService43.xsd" MetadataType="Schema" ID="f43c27fa-6a2d-47d5-88c5-cfb2b3226cd9" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SistemaHorariosService56.xsd" MetadataType="Schema" ID="76897d70-5b2f-471a-bbf1-662104ad7b6e" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd56" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

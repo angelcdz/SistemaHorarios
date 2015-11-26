@@ -58,6 +58,7 @@
       <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd53" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuariosParam" />
       <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd54" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuariosNiveis" />
       <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd55" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AutenticarUsuario" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd56" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarGrade" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ISistemaHorariosService_ConsultarCursos_InputMessage">
@@ -378,6 +379,12 @@
   <wsdl:message name="ISistemaHorariosService_AutenticarUsuario_OutputMessage">
     <wsdl:part name="parameters" element="tns:AutenticarUsuarioResponse" />
   </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarGrade_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarGrade" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarGrade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarGradeResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISistemaHorariosService">
     <wsdl:operation name="ConsultarCursos">
       <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarCursos" message="tns:ISistemaHorariosService_ConsultarCursos_InputMessage" />
@@ -590,6 +597,10 @@
     <wsdl:operation name="AutenticarUsuario">
       <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/AutenticarUsuario" message="tns:ISistemaHorariosService_AutenticarUsuario_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/AutenticarUsuarioResponse" message="tns:ISistemaHorariosService_AutenticarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarGrade">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarGrade" message="tns:ISistemaHorariosService_ConsultarGrade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarGradeResponse" message="tns:ISistemaHorariosService_ConsultarGrade_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISistemaHorariosService" type="tns:ISistemaHorariosService">
@@ -1064,6 +1075,15 @@
     </wsdl:operation>
     <wsdl:operation name="AutenticarUsuario">
       <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/AutenticarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarGrade">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarGrade" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
