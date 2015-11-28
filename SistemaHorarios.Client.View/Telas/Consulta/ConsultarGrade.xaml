@@ -15,16 +15,9 @@
         <TextBlock Style="{StaticResource ResourceKey=DefaultTextBlock}" HorizontalAlignment="Left" Margin="218,172,0,0" TextWrapping="Wrap" Text="Semestre:" VerticalAlignment="Top" Width="55"/>
         <TextBlock Style="{StaticResource ResourceKey=DefaultTextBlock}" HorizontalAlignment="Left" Margin="218,126,0,0" TextWrapping="Wrap" Text="Período:" VerticalAlignment="Top" Width="50"/>
         <ComboBox x:Name="ComboCurso" HorizontalAlignment="Left" Margin="218,99,0,0" VerticalAlignment="Top"
-                  Width="250" ItemsSource="{Binding ListaCursos}" DisplayMemberPath="Nome">
-            <i:Interaction.Triggers>
-                <i:EventTrigger>
-                    <i:InvokeCommandAction Command="{Binding ActionConsultarPeriodos}"
-                                           CommandParameter="{Binding ElementName=ComboCurso,Path=SelectedItem}"/>
-                </i:EventTrigger>
-            </i:Interaction.Triggers>
-        </ComboBox>
+                  Width="250" ItemsSource="{Binding ListaCursos}" DisplayMemberPath="Nome"/>
         <ComboBox x:Name="ComboPeriodo" HorizontalAlignment="Left" Margin="218,145,0,0" VerticalAlignment="Top"
-                  Width="120" IsEnabled="{Binding EnabledPeriodo,FallbackValue=False}" ItemsSource="{Binding ListaPeriodos}">
+                  Width="120" ItemsSource="{Binding ListaPeriodos}" DisplayMemberPath="NomePeriodo">
             <i:Interaction.Triggers>
                 <i:EventTrigger>
                     <i:InvokeCommandAction Command="{Binding ActionConsultarSemestres}"/>
@@ -32,7 +25,7 @@
             </i:Interaction.Triggers>
         </ComboBox>
         <ComboBox x:Name="ComboSemestre" HorizontalAlignment="Left" Margin="218,191,0,0" VerticalAlignment="Top"
-                  Width="100" IsEnabled="{Binding EnabledSemestre,FallbackValue=False}" ItemsSource="{Binding ListaSemestres}"/>
+                  Width="100" ItemsSource="{Binding ListaSemestres}" DisplayMemberPath="Numero"/>
         <Button Content="Consultar Grade" HorizontalAlignment="Left" Margin="218,249,0,0"
                 VerticalAlignment="Top" Width="250" Style="{StaticResource DefaultButton}"/>
         <TextBlock HorizontalAlignment="Left" Margin="218,284,0,0" TextWrapping="Wrap" Text="{Binding Status}" VerticalAlignment="Top"/>

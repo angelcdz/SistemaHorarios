@@ -60,6 +60,8 @@
     <Compile Include="Cadastros\CadastrarProfessoresBL.cs" />
     <Compile Include="Cadastros\CadastrarSemestresBL.cs" />
     <Compile Include="Cadastros\CadastrarUsuariosBL.cs" />
+    <Compile Include="ConsultarCursosPeriodosSemestresBL.cs" />
+    <Compile Include="ConsultarCursosSemestresBL.cs" />
     <Compile Include="ConsultarGradeBL.cs" />
     <Compile Include="ConsultarPeriodosPorCursoBL.cs" />
     <Compile Include="Consultas\ConsultarCursoParamBL.cs" />

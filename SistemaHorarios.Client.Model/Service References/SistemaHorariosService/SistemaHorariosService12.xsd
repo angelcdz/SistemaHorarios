@@ -54,6 +54,9 @@
   <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd54" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuariosNiveis" />
   <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd55" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AutenticarUsuario" />
   <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd56" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarGrade" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd57" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarPeriodosPorCurso" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd58" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursosSemestres" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd59" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres" />
   <xs:element name="ConsultarCursos">
     <xs:complexType>
       <xs:sequence>
@@ -807,6 +810,48 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarGrade" minOccurs="0" name="ConsultarGradeResult" nillable="true" type="q108:ConsultarGradeResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPeriodosPorCurso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarPeriodosPorCurso" minOccurs="0" name="request" nillable="true" type="q109:ConsultarPeriodosPorCursoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPeriodosPorCursoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarPeriodosPorCurso" minOccurs="0" name="ConsultarPeriodosPorCursoResult" nillable="true" type="q110:ConsultarPeriodosPorCursoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCursosSemestres">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursosSemestres" minOccurs="0" name="request" nillable="true" type="q111:ConsultarCursosSemestresRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCursosSemestresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursosSemestres" minOccurs="0" name="ConsultarCursosSemestresResult" nillable="true" type="q112:ConsultarCursosSemestresResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCursosPeriodosSemestres">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres" minOccurs="0" name="request" nillable="true" type="q113:ConsultarCursosPeriodosSemestresRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCursosPeriodosSemestresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres" minOccurs="0" name="ConsultarCursosPeriodosSemestresResult" nillable="true" type="q114:ConsultarCursosPeriodosSemestresResponse" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

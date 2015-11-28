@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Controls;
 using System.Windows.Forms;
+using SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres;
+using SistemaHorarios.Contracts.ConsultarSemestres;
 
 namespace SistemaHorarios.Client.ViewModel
 {
@@ -17,15 +19,27 @@ namespace SistemaHorarios.Client.ViewModel
             ActionConsultarSemestres = new RelayCommand();
             ActionConsultarPeriodos = new RelayCommand();
             ActionConsultarGrade = new RelayCommand();
+            ListaPeriodos = new List<ConsultarCursosPeriodoDTO>();
 
             new Task(() =>
             {
                 Status = "Consultando Cursos...";
-                var model = new ConsultarCursosModel();
-                model.Execute(new ConsultarCursosRequest());
+                var model = new ConsultarCursosPeriodosSemestresModel();
+                model.Execute(new ConsultarCursosPeriodosSemestresRequest());
 
-                if (model.Response.Status == ExecutionStatus.Success) ListaCursos = model.Response.Cursos;
-                else System.Windows.Forms.MessageBox.Show(string.Concat("Erro ao consultar professores:\n", model.ErrorMessage));
+                if (model.Response.Status == ExecutionStatus.Success)
+                {
+                    ListaCursos = model.Response.Cursos;
+                    ListaSemestres = model.Response.Semestres;
+                }
+                else
+                {
+                    System.Windows.Forms.MessageBox.Show(string.Concat("Erro ao consultar dados:\n", model.ErrorMessage));
+                    return;
+                }
+
+                foreach (var item in ListaCursos)
+                    ListaPeriodos.Add(item.Periodo);
 
                 Status = string.Empty;
             }).Start();
@@ -38,18 +52,18 @@ namespace SistemaHorarios.Client.ViewModel
             set { this._listaCursos = value; OnPropertyChanged("ListaCursos"); }
         }
 
-        private bool _enabledPeriodo;
-        public bool EnabledPeriodo
+        private List<ConsultarCursosPeriodoDTO> _listaPeriodos;
+        public List<ConsultarCursosPeriodoDTO> ListaPeriodos
         {
-            get { return this._enabledPeriodo; }
-            set { this._enabledPeriodo = value; OnPropertyChanged("EnabledPeriodo"); }
+            get { return this._listaPeriodos; }
+            set { this._listaPeriodos = value; OnPropertyChanged("ListaPeriodos"); }
         }
 
-        private bool _enabledSemestre;
-        public bool EnabledSemestre
+        private List<ConsultarSemestresSemestreDTO> _listaSemestres;
+        public List<ConsultarSemestresSemestreDTO> ListaSemestres
         {
-            get { return this._enabledSemestre; }
-            set { this._enabledSemestre = value; OnPropertyChanged("EnabledSemestre"); }
+            get { return this._listaSemestres; }
+            set { this._listaSemestres = value; OnPropertyChanged("ListaSemestres"); }
         }
 
         private string _status;

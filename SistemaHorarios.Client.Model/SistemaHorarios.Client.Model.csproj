@@ -62,7 +62,10 @@
     <Compile Include="Cadastros\CadastrarProfessoresModel.cs" />
     <Compile Include="Cadastros\CadastrarSemestresModel.cs" />
     <Compile Include="Cadastros\CadastrarUsuariosModel.cs" />
+    <Compile Include="ConsultarCursosPeriodosSemestresModel.cs" />
+    <Compile Include="ConsultarCursosSemestresModel.cs" />
     <Compile Include="ConsultarGradeModel.cs" />
+    <Compile Include="ConsultarPeriodosPorCursoModel.cs" />
     <Compile Include="Consultas\ConsultarCursoParamModel.cs" />
     <Compile Include="Consultas\ConsultarDiaSemanaParamModel.cs" />
     <Compile Include="Consultas\ConsultarDiasHorariosModel.cs" />
@@ -142,6 +145,8 @@
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarComposicoesHorario.ConsultarComposicoesHorarioResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarCursoParam.ConsultarCursoParamResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarCursos.ConsultarCursosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres.ConsultarCursosPeriodosSemestresResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarCursosSemestres.ConsultarCursosSemestresResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarDiaSemanaParam.ConsultarDiaSemanaParamResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarDiasHorarios.ConsultarDiasHorariosResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarDiasPeriodos.ConsultarDiasPeriodosResponse.datasource" />
@@ -155,6 +160,7 @@
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarNivelAcessoParam.ConsultarNivelAcessoParamResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarPeriodoParam.ConsultarPeriodoParamResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarPeriodos.ConsultarPeriodosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarPeriodosPorCurso.ConsultarPeriodosPorCursoResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarProfessores.ConsultarProfessoresResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarProfessorParam.ConsultarProfessorParamResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarSemestres.ConsultarSemestresResponse.datasource" />
@@ -334,6 +340,15 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\SistemaHorariosService\SistemaHorariosService56.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService57.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService58.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService581.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\SistemaHorariosService\SistemaHorariosService6.xsd">

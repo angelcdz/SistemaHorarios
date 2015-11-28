@@ -338,6 +338,26 @@ namespace SistemaHorarios.Client.Model.SistemaHorariosService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISistemaHorariosService/ConsultarGrade", ReplyAction="http://tempuri.org/ISistemaHorariosService/ConsultarGradeResponse")]
         System.Threading.Tasks.Task<SistemaHorarios.Contracts.ConsultarGrade.ConsultarGradeResponse> ConsultarGradeAsync(SistemaHorarios.Contracts.ConsultarGrade.ConsultarGradeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISistemaHorariosService/ConsultarPeriodosPorCurso", ReplyAction="http://tempuri.org/ISistemaHorariosService/ConsultarPeriodosPorCursoResponse")]
+        SistemaHorarios.Contracts.ConsultarPeriodosPorCurso.ConsultarPeriodosPorCursoResponse ConsultarPeriodosPorCurso(SistemaHorarios.Contracts.ConsultarPeriodosPorCurso.ConsultarPeriodosPorCursoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISistemaHorariosService/ConsultarPeriodosPorCurso", ReplyAction="http://tempuri.org/ISistemaHorariosService/ConsultarPeriodosPorCursoResponse")]
+        System.Threading.Tasks.Task<SistemaHorarios.Contracts.ConsultarPeriodosPorCurso.ConsultarPeriodosPorCursoResponse> ConsultarPeriodosPorCursoAsync(SistemaHorarios.Contracts.ConsultarPeriodosPorCurso.ConsultarPeriodosPorCursoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISistemaHorariosService/ConsultarCursosSemestres", ReplyAction="http://tempuri.org/ISistemaHorariosService/ConsultarCursosSemestresResponse")]
+        SistemaHorarios.Contracts.ConsultarCursosSemestres.ConsultarCursosSemestresResponse ConsultarCursosSemestres(SistemaHorarios.Contracts.ConsultarCursosSemestres.ConsultarCursosSemestresRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISistemaHorariosService/ConsultarCursosSemestres", ReplyAction="http://tempuri.org/ISistemaHorariosService/ConsultarCursosSemestresResponse")]
+        System.Threading.Tasks.Task<SistemaHorarios.Contracts.ConsultarCursosSemestres.ConsultarCursosSemestresResponse> ConsultarCursosSemestresAsync(SistemaHorarios.Contracts.ConsultarCursosSemestres.ConsultarCursosSemestresRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISistemaHorariosService/ConsultarCursosPeriodosSemestres", ReplyAction="http://tempuri.org/ISistemaHorariosService/ConsultarCursosPeriodosSemestresRespon" +
+            "se")]
+        SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres.ConsultarCursosPeriodosSemestresResponse ConsultarCursosPeriodosSemestres(SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres.ConsultarCursosPeriodosSemestresRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISistemaHorariosService/ConsultarCursosPeriodosSemestres", ReplyAction="http://tempuri.org/ISistemaHorariosService/ConsultarCursosPeriodosSemestresRespon" +
+            "se")]
+        System.Threading.Tasks.Task<SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres.ConsultarCursosPeriodosSemestresResponse> ConsultarCursosPeriodosSemestresAsync(SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres.ConsultarCursosPeriodosSemestresRequest request);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -797,6 +817,30 @@ namespace SistemaHorarios.Client.Model.SistemaHorariosService {
         
         public System.Threading.Tasks.Task<SistemaHorarios.Contracts.ConsultarGrade.ConsultarGradeResponse> ConsultarGradeAsync(SistemaHorarios.Contracts.ConsultarGrade.ConsultarGradeRequest request) {
             return base.Channel.ConsultarGradeAsync(request);
+        }
+        
+        public SistemaHorarios.Contracts.ConsultarPeriodosPorCurso.ConsultarPeriodosPorCursoResponse ConsultarPeriodosPorCurso(SistemaHorarios.Contracts.ConsultarPeriodosPorCurso.ConsultarPeriodosPorCursoRequest request) {
+            return base.Channel.ConsultarPeriodosPorCurso(request);
+        }
+        
+        public System.Threading.Tasks.Task<SistemaHorarios.Contracts.ConsultarPeriodosPorCurso.ConsultarPeriodosPorCursoResponse> ConsultarPeriodosPorCursoAsync(SistemaHorarios.Contracts.ConsultarPeriodosPorCurso.ConsultarPeriodosPorCursoRequest request) {
+            return base.Channel.ConsultarPeriodosPorCursoAsync(request);
+        }
+        
+        public SistemaHorarios.Contracts.ConsultarCursosSemestres.ConsultarCursosSemestresResponse ConsultarCursosSemestres(SistemaHorarios.Contracts.ConsultarCursosSemestres.ConsultarCursosSemestresRequest request) {
+            return base.Channel.ConsultarCursosSemestres(request);
+        }
+        
+        public System.Threading.Tasks.Task<SistemaHorarios.Contracts.ConsultarCursosSemestres.ConsultarCursosSemestresResponse> ConsultarCursosSemestresAsync(SistemaHorarios.Contracts.ConsultarCursosSemestres.ConsultarCursosSemestresRequest request) {
+            return base.Channel.ConsultarCursosSemestresAsync(request);
+        }
+        
+        public SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres.ConsultarCursosPeriodosSemestresResponse ConsultarCursosPeriodosSemestres(SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres.ConsultarCursosPeriodosSemestresRequest request) {
+            return base.Channel.ConsultarCursosPeriodosSemestres(request);
+        }
+        
+        public System.Threading.Tasks.Task<SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres.ConsultarCursosPeriodosSemestresResponse> ConsultarCursosPeriodosSemestresAsync(SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres.ConsultarCursosPeriodosSemestresRequest request) {
+            return base.Channel.ConsultarCursosPeriodosSemestresAsync(request);
         }
     }
 }

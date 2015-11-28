@@ -1,3 +1,5 @@
+using SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres;
+using SistemaHorarios.Contracts.ConsultarCursosSemestres;
 using SistemaHorarios.Contracts.ConsultarPeriodosPorCurso;
 using SistemaHorarios.Contracts.ConsultarGrade;
 using SistemaHorarios.Contracts.AutenticarUsuario;
@@ -170,5 +172,9 @@ namespace SistemaHorarios.Server.WCF
         ConsultarGradeResponse ConsultarGrade(ConsultarGradeRequest request);
         [OperationContract]
         ConsultarPeriodosPorCursoResponse ConsultarPeriodosPorCurso(ConsultarPeriodosPorCursoRequest request);
+        [OperationContract]
+        ConsultarCursosSemestresResponse ConsultarCursosSemestres(ConsultarCursosSemestresRequest request);
+        [OperationContract]
+        ConsultarCursosPeriodosSemestresResponse ConsultarCursosPeriodosSemestres(ConsultarCursosPeriodosSemestresRequest request);
     }
 }

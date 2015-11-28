@@ -35,6 +35,7 @@
     <MetadataFile FileName="SistemaHorariosService7.xsd" MetadataType="Schema" ID="eb1f9c55-752f-485c-bab7-1b78b290b93f" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd19" />
     <MetadataFile FileName="SistemaHorariosService8.xsd" MetadataType="Schema" ID="9921775d-4e0e-46be-974a-8d90bc83b0d2" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd18" />
     <MetadataFile FileName="SistemaHorariosService9.xsd" MetadataType="Schema" ID="6abb3c81-5dbb-4116-8ad0-41908b219179" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd38" />
+    <MetadataFile FileName="SistemaHorariosService58.xsd" MetadataType="Schema" ID="6d6afc80-0f48-4f2a-b626-9ff0cd6a1c9f" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd59" />
     <MetadataFile FileName="SistemaHorariosService10.xsd" MetadataType="Schema" ID="0fbdc84e-a832-449d-bb7d-548c61609d23" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd30" />
     <MetadataFile FileName="SistemaHorariosService11.xsd" MetadataType="Schema" ID="2778b078-7354-4b47-8523-642f74d4d5cf" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd37" />
     <MetadataFile FileName="SistemaHorariosService12.xsd" MetadataType="Schema" ID="02988f38-1115-403c-94da-49339fcef97e" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd0" />
@@ -73,12 +74,14 @@
     <MetadataFile FileName="SistemaHorariosService36.xsd" MetadataType="Schema" ID="29a62c44-18e5-4481-af93-3356ec3004a1" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd42" />
     <MetadataFile FileName="SistemaHorariosService37.xsd" MetadataType="Schema" ID="2a1ddbad-0649-4414-9ddb-bb8b43672987" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd29" />
     <MetadataFile FileName="SistemaHorariosService49.xsd" MetadataType="Schema" ID="8a4d37b2-978b-4532-a527-880b0e41f549" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd49" />
+    <MetadataFile FileName="SistemaHorariosService581.xsd" MetadataType="Schema" ID="e2d29a8f-9aaf-481d-bd6b-520a9b1e9cac" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd58" />
     <MetadataFile FileName="SistemaHorariosService.disco" MetadataType="Disco" ID="32b61f82-c23d-4fe1-a83f-56128c70cdf3" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?disco" />
     <MetadataFile FileName="SistemaHorariosService38.xsd" MetadataType="Schema" ID="59fd6c2f-c648-4723-971f-04a3adef6cb6" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd20" />
     <MetadataFile FileName="SistemaHorariosService39.xsd" MetadataType="Schema" ID="9982d966-97a5-4e1d-b48d-62a1ed37bcc1" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd27" />
     <MetadataFile FileName="SistemaHorariosService40.xsd" MetadataType="Schema" ID="ecb08dc3-621f-465c-99e0-4b9993f83f01" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd26" />
     <MetadataFile FileName="SistemaHorariosService41.xsd" MetadataType="Schema" ID="315be33a-3b48-442b-b906-378f6989d86a" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd25" />
     <MetadataFile FileName="SistemaHorariosService42.xsd" MetadataType="Schema" ID="ee0bfab0-95b6-4aa2-91f4-363f66dcdda0" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd34" />
+    <MetadataFile FileName="SistemaHorariosService57.xsd" MetadataType="Schema" ID="2ca07e0b-9af2-4329-831d-35118b538a8b" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd57" />
     <MetadataFile FileName="SistemaHorariosService43.xsd" MetadataType="Schema" ID="f43c27fa-6a2d-47d5-88c5-cfb2b3226cd9" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd2" />
     <MetadataFile FileName="SistemaHorariosService56.xsd" MetadataType="Schema" ID="76897d70-5b2f-471a-bbf1-662104ad7b6e" SourceId="1" SourceUrl="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd56" />
   </Metadata>

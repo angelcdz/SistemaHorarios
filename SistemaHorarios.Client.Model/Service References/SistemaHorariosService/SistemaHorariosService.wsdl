@@ -59,6 +59,9 @@
       <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd54" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarUsuariosNiveis" />
       <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd55" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.AutenticarUsuario" />
       <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd56" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarGrade" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd57" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarPeriodosPorCurso" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd58" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursosSemestres" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd59" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ISistemaHorariosService_ConsultarCursos_InputMessage">
@@ -385,6 +388,24 @@
   <wsdl:message name="ISistemaHorariosService_ConsultarGrade_OutputMessage">
     <wsdl:part name="parameters" element="tns:ConsultarGradeResponse" />
   </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarPeriodosPorCurso_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPeriodosPorCurso" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarPeriodosPorCurso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPeriodosPorCursoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarCursosSemestres_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCursosSemestres" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarCursosSemestres_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCursosSemestresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarCursosPeriodosSemestres_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCursosPeriodosSemestres" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarCursosPeriodosSemestres_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCursosPeriodosSemestresResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISistemaHorariosService">
     <wsdl:operation name="ConsultarCursos">
       <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarCursos" message="tns:ISistemaHorariosService_ConsultarCursos_InputMessage" />
@@ -601,6 +622,18 @@
     <wsdl:operation name="ConsultarGrade">
       <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarGrade" message="tns:ISistemaHorariosService_ConsultarGrade_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarGradeResponse" message="tns:ISistemaHorariosService_ConsultarGrade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPeriodosPorCurso">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarPeriodosPorCurso" message="tns:ISistemaHorariosService_ConsultarPeriodosPorCurso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarPeriodosPorCursoResponse" message="tns:ISistemaHorariosService_ConsultarPeriodosPorCurso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCursosSemestres">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarCursosSemestres" message="tns:ISistemaHorariosService_ConsultarCursosSemestres_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarCursosSemestresResponse" message="tns:ISistemaHorariosService_ConsultarCursosSemestres_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCursosPeriodosSemestres">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarCursosPeriodosSemestres" message="tns:ISistemaHorariosService_ConsultarCursosPeriodosSemestres_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarCursosPeriodosSemestresResponse" message="tns:ISistemaHorariosService_ConsultarCursosPeriodosSemestres_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISistemaHorariosService" type="tns:ISistemaHorariosService">
@@ -1084,6 +1117,33 @@
     </wsdl:operation>
     <wsdl:operation name="ConsultarGrade">
       <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarGrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPeriodosPorCurso">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarPeriodosPorCurso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCursosSemestres">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarCursosSemestres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCursosPeriodosSemestres">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarCursosPeriodosSemestres" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
