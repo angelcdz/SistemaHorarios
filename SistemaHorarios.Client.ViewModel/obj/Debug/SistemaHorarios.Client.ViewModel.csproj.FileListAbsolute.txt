@@ -27,3 +27,14 @@ Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.ViewModel\bin\D
 Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.ViewModel\obj\Debug\SistemaHorarios.Client.ViewModel.csprojResolveAssemblyReference.cache
 Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.ViewModel\obj\Debug\SistemaHorarios.Client.ViewModel.dll
 Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.ViewModel\obj\Debug\SistemaHorarios.Client.ViewModel.pdb
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Client.ViewModel\bin\Debug\SistemaHorarios.Client.ViewModel.dll
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Client.ViewModel\bin\Debug\SistemaHorarios.Client.ViewModel.pdb
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Client.ViewModel\bin\Debug\SistemaHorarios.Base.dll
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Client.ViewModel\bin\Debug\SistemaHorarios.Client.Model.dll
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Client.ViewModel\bin\Debug\SistemaHorarios.Contracts.dll
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Client.ViewModel\bin\Debug\SistemaHorarios.Base.pdb
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Client.ViewModel\bin\Debug\SistemaHorarios.Client.Model.pdb
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Client.ViewModel\bin\Debug\SistemaHorarios.Contracts.pdb
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Client.ViewModel\obj\Debug\SistemaHorarios.Client.ViewModel.csprojResolveAssemblyReference.cache
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Client.ViewModel\obj\Debug\SistemaHorarios.Client.ViewModel.dll
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Client.ViewModel\obj\Debug\SistemaHorarios.Client.ViewModel.pdb

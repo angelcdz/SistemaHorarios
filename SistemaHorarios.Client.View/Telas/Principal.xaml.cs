@@ -35,7 +35,18 @@ namespace SistemaHorarios.Client.View
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            var item = new CloseableTabItem() { Content = new SeletorConsultas() };
+            foreach (var child in TabbedPanel.Items)
+            {
+                var tab = child as CloseableTabItem;
+
+                if (tab != null)
+                    if (string.Equals(tab.Name, "Consultas"))
+                    {
+                        TabbedPanel.SelectedItem = tab;
+                        return;
+                    }
+            }
+            var item = new CloseableTabItem() { Content = new SeletorConsultas(), Name = "Consultas" };
             item.SetHeader(new TextBlock() { Text = "Consultas " });
             TabbedPanel.Items.Add(item);
             TabbedPanel.SelectedIndex = TabbedPanel.Items.Count - 1;
@@ -43,7 +54,18 @@ namespace SistemaHorarios.Client.View
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-            var item = new CloseableTabItem() { Content = new SeletorCadastros() };
+            foreach (var child in TabbedPanel.Items)
+            {
+                var tab = child as CloseableTabItem;
+
+                if (tab != null)
+                    if (string.Equals(tab.Name, "Cadastros"))
+                    {
+                        TabbedPanel.SelectedItem = tab;
+                        return;
+                    }
+            }
+            var item = new CloseableTabItem() { Content = new SeletorCadastros(), Name = "Cadastros" };
             item.SetHeader(new TextBlock() { Text = "Cadastros " });
             TabbedPanel.Items.Add(item);
             TabbedPanel.SelectedIndex = TabbedPanel.Items.Count - 1;
@@ -51,7 +73,18 @@ namespace SistemaHorarios.Client.View
 
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
         {
-            var item = new CloseableTabItem() { Content = new SeletorAlteracoes() };
+            foreach (var child in TabbedPanel.Items)
+            {
+                var tab = child as CloseableTabItem;
+
+                if (tab != null)
+                    if (string.Equals(tab.Name, "Alteracoes"))
+                    {
+                        TabbedPanel.SelectedItem = tab;
+                        return;
+                    }
+            }
+            var item = new CloseableTabItem() { Content = new SeletorAlteracoes(), Name = "Alteracoes" };
             item.SetHeader(new TextBlock() { Text = "Alterações " });
             TabbedPanel.Items.Add(item);
             TabbedPanel.SelectedIndex = TabbedPanel.Items.Count - 1;
@@ -59,7 +92,18 @@ namespace SistemaHorarios.Client.View
 
         private void ItemUsuarios_Click(object sender, RoutedEventArgs e)
         {
-            var item = new CloseableTabItem() { Content = new SeletorUsuarios() };
+            foreach (var child in TabbedPanel.Items)
+            {
+                var tab = child as CloseableTabItem;
+
+                if (tab != null)
+                    if (string.Equals(tab.Name, "Usuarios"))
+                    {
+                        TabbedPanel.SelectedItem = tab;
+                        return;
+                    }
+            }
+            var item = new CloseableTabItem() { Content = new SeletorUsuarios(), Name = "Usuarios" };
             item.SetHeader(new TextBlock() { Text = "Usuários " });
             TabbedPanel.Items.Add(item);
             TabbedPanel.SelectedIndex = TabbedPanel.Items.Count - 1;
@@ -67,7 +111,18 @@ namespace SistemaHorarios.Client.View
 
         private void ItemNiveisAcesso_Click(object sender, RoutedEventArgs e)
         {
-            var item = new CloseableTabItem() { Content = new SeletorNiveis() };
+            foreach (var child in TabbedPanel.Items)
+            {
+                var tab = child as CloseableTabItem;
+
+                if (tab != null)
+                    if (string.Equals(tab.Name, "Niveis"))
+                    {
+                        TabbedPanel.SelectedItem = tab;
+                        return;
+                    }
+            }
+            var item = new CloseableTabItem() { Content = new SeletorNiveis(), Name = "Niveis" };
             item.SetHeader(new TextBlock() { Text = "Níveis de Acesso " });
             TabbedPanel.Items.Add(item);
             TabbedPanel.SelectedIndex = TabbedPanel.Items.Count - 1;

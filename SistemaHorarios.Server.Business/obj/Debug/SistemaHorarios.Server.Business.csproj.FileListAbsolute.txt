@@ -37,3 +37,16 @@ Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.Business\bin\De
 Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.Business\obj\Debug\SistemaHorarios.Server.Business.csprojResolveAssemblyReference.cache
 Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.Business\obj\Debug\SistemaHorarios.Server.Business.dll
 Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.Business\obj\Debug\SistemaHorarios.Server.Business.pdb
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.Business\bin\Debug\SistemaHorarios.Server.Business.dll
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.Business\bin\Debug\SistemaHorarios.Server.Business.pdb
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.Business\bin\Debug\SistemaHorarios.Base.dll
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.Business\bin\Debug\SistemaHorarios.Contracts.dll
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.Business\bin\Debug\SistemaHorarios.Server.DAO.dll
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.Business\bin\Debug\EntityFramework.dll
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.Business\bin\Debug\SistemaHorarios.Base.pdb
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.Business\bin\Debug\SistemaHorarios.Contracts.pdb
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.Business\bin\Debug\SistemaHorarios.Server.DAO.pdb
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.Business\bin\Debug\EntityFramework.xml
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.Business\obj\Debug\SistemaHorarios.Server.Business.csprojResolveAssemblyReference.cache
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.Business\obj\Debug\SistemaHorarios.Server.Business.dll
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.Business\obj\Debug\SistemaHorarios.Server.Business.pdb

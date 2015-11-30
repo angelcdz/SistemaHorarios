@@ -39,3 +39,17 @@ Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\E
 Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.DAO\obj\Debug\SistemaHorarios.Server.DAO.csprojResolveAssemblyReference.cache
 Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.DAO\obj\Debug\SistemaHorarios.Server.DAO.dll
 Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Server.DAO\obj\Debug\SistemaHorarios.Server.DAO.pdb
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Server.DAO.dll.config
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Server.DAO.dll
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Server.DAO.pdb
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\EntityFramework.dll
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Base.dll
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Contracts.dll
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Base.pdb
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\SistemaHorarios.Contracts.pdb
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\EntityFramework.xml
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.DAO\obj\Debug\SistemaHorarios.Server.DAO.csprojResolveAssemblyReference.cache
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.DAO\obj\Debug\SistemaHorarios.Server.DAO.dll
+C:\Users\Angel\Desktop\SistemaHorarios\SistemaHorarios.Server.DAO\obj\Debug\SistemaHorarios.Server.DAO.pdb

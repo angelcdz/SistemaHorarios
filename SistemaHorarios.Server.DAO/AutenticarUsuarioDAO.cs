@@ -25,6 +25,7 @@ namespace SistemaHorarios.Server.DAO
                 else if (!string.Equals(usuario.Senha, request.Senha))
                     response.Autenticado = false;
                 else
+                {
                     response.NivelAcesso = new AutenticarUsuarioNivelAcessoDTO()
                     {
                         Administrador = usuario.NivelAcesso.Administrador.HasValue ? usuario.NivelAcesso.Administrador.Value : false,
@@ -32,6 +33,10 @@ namespace SistemaHorarios.Server.DAO
                         Consulta = usuario.NivelAcesso.Consulta.HasValue ? usuario.NivelAcesso.Consulta.Value : false,
                         Nome = usuario.NivelAcesso.Descricao
                     };
+
+                    usuario.UltimoLogin = DateTime.Now;
+                    context.SaveChanges();
+                }
             }
 
             return response;
