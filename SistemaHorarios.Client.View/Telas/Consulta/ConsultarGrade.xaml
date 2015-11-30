@@ -12,22 +12,24 @@
     <Grid>
         <TextBlock Style="{StaticResource ResourceKey=DefaultTextBlock}" HorizontalAlignment="Left" Margin="218,38,0,0" TextWrapping="Wrap" Text="Selecione os filtros para visualizar a grade:" VerticalAlignment="Top" Width="233"/>
         <TextBlock Style="{StaticResource ResourceKey=DefaultTextBlock}" HorizontalAlignment="Left" Margin="218,80,0,0" TextWrapping="Wrap" Text="Curso:" VerticalAlignment="Top" Width="40"/>
-        <TextBlock Style="{StaticResource ResourceKey=DefaultTextBlock}" HorizontalAlignment="Left" Margin="218,172,0,0" TextWrapping="Wrap" Text="Semestre:" VerticalAlignment="Top" Width="55"/>
-        <TextBlock Style="{StaticResource ResourceKey=DefaultTextBlock}" HorizontalAlignment="Left" Margin="218,126,0,0" TextWrapping="Wrap" Text="Período:" VerticalAlignment="Top" Width="50"/>
+        <TextBlock Style="{StaticResource ResourceKey=DefaultTextBlock}" HorizontalAlignment="Left" Margin="218,126,0,0" TextWrapping="Wrap" Text="Semestre:" VerticalAlignment="Top" Width="55"/>
         <ComboBox x:Name="ComboCurso" HorizontalAlignment="Left" Margin="218,99,0,0" VerticalAlignment="Top"
-                  Width="250" ItemsSource="{Binding ListaCursos}" DisplayMemberPath="Nome"/>
-        <ComboBox x:Name="ComboPeriodo" HorizontalAlignment="Left" Margin="218,145,0,0" VerticalAlignment="Top"
-                  Width="120" ItemsSource="{Binding ListaPeriodos}" DisplayMemberPath="NomePeriodo">
-            <i:Interaction.Triggers>
-                <i:EventTrigger>
-                    <i:InvokeCommandAction Command="{Binding ActionConsultarSemestres}"/>
-                </i:EventTrigger>
-            </i:Interaction.Triggers>
-        </ComboBox>
-        <ComboBox x:Name="ComboSemestre" HorizontalAlignment="Left" Margin="218,191,0,0" VerticalAlignment="Top"
+                  Width="250" ItemsSource="{Binding ListaCursos}" DisplayMemberPath="DisplayName"/>
+        <ComboBox x:Name="ComboSemestre" HorizontalAlignment="Left" Margin="218,145,0,0" VerticalAlignment="Top"
                   Width="100" ItemsSource="{Binding ListaSemestres}" DisplayMemberPath="Numero"/>
-        <Button Content="Consultar Grade" HorizontalAlignment="Left" Margin="218,249,0,0"
-                VerticalAlignment="Top" Width="250" Style="{StaticResource DefaultButton}"/>
         <TextBlock HorizontalAlignment="Left" Margin="218,284,0,0" TextWrapping="Wrap" Text="{Binding Status}" VerticalAlignment="Top"/>
+        <TextBlock Style="{StaticResource ResourceKey=DefaultTextBlock}" HorizontalAlignment="Left" Margin="218,172,0,0" TextWrapping="Wrap" Text="Dia da Semana:" VerticalAlignment="Top" Width="100"/>
+        <ComboBox x:Name="ComboDia" HorizontalAlignment="Left" Margin="218,191,0,0" VerticalAlignment="Top"
+        	Width="160" ItemsSource="{Binding ListaDias}" DisplayMemberPath="Nome"/>
+        <Button Content="Consultar Grade" HorizontalAlignment="Left" Margin="218,230,0,0"
+                VerticalAlignment="Top" Width="250" Style="{StaticResource DefaultButton}" Command="{Binding ActionCommand}">
+            <Button.CommandParameter>
+                <MultiBinding Converter="{StaticResource MultiValueConverter}">
+                    <Binding ElementName="ComboCurso" Path="SelectedItem"/>
+                    <Binding ElementName="ComboSemestre" Path="SelectedItem"/>
+                    <Binding ElementName="ComboDia" Path="SelectedItem"/>
+                </MultiBinding>
+            </Button.CommandParameter>
+        </Button>
     </Grid>
 </UserControl>

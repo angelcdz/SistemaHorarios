@@ -2,13 +2,16 @@
 using System.ComponentModel;
 using SistemaHorarios.Client.Model;
 using SistemaHorarios.Base;
-using SistemaHorarios.Contracts.ConsultarCursos;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Controls;
 using System.Windows.Forms;
 using SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres;
 using SistemaHorarios.Contracts.ConsultarSemestres;
+using SistemaHorarios.Contracts.ConsultarCursos;
+using System.Linq;
+using SistemaHorarios.Contracts.ConsultarDiasSemana;
+using SistemaHorarios.Contracts.ConsultarGrade;
 
 namespace SistemaHorarios.Client.ViewModel
 {
@@ -16,10 +19,7 @@ namespace SistemaHorarios.Client.ViewModel
     {
         public ConsultarGradeViewModel()
         {
-            ActionConsultarSemestres = new RelayCommand();
-            ActionConsultarPeriodos = new RelayCommand();
-            ActionConsultarGrade = new RelayCommand();
-            ListaPeriodos = new List<ConsultarCursosPeriodoDTO>();
+            ActionCommand = new RelayCommand();
 
             new Task(() =>
             {
@@ -29,8 +29,15 @@ namespace SistemaHorarios.Client.ViewModel
 
                 if (model.Response.Status == ExecutionStatus.Success)
                 {
-                    ListaCursos = model.Response.Cursos;
+                    ListaCursos = from c in model.Response.Cursos
+                                  select new DisplayCurso()
+                                          {
+                                              DisplayName = string.Concat(c.Nome, " (", c.Periodo.NomePeriodo, ")"),
+                                              CodCurso = c.Codigo,
+                                              CodPeriodo = c.Periodo.Codigo
+                                          };
                     ListaSemestres = model.Response.Semestres;
+                    ListaDias = model.Response.DiasSemana;
                 }
                 else
                 {
@@ -38,32 +45,29 @@ namespace SistemaHorarios.Client.ViewModel
                     return;
                 }
 
-                foreach (var item in ListaCursos)
-                    ListaPeriodos.Add(item.Periodo);
-
                 Status = string.Empty;
             }).Start();
         }
 
-        private List<ConsultarCursosCursoDTO> _listaCursos;
-        public List<ConsultarCursosCursoDTO> ListaCursos
+        private IEnumerable<DisplayCurso> _listaCursos;
+        public IEnumerable<DisplayCurso> ListaCursos
         {
             get { return this._listaCursos; }
             set { this._listaCursos = value; OnPropertyChanged("ListaCursos"); }
         }
 
-        private List<ConsultarCursosPeriodoDTO> _listaPeriodos;
-        public List<ConsultarCursosPeriodoDTO> ListaPeriodos
-        {
-            get { return this._listaPeriodos; }
-            set { this._listaPeriodos = value; OnPropertyChanged("ListaPeriodos"); }
-        }
-
-        private List<ConsultarSemestresSemestreDTO> _listaSemestres;
-        public List<ConsultarSemestresSemestreDTO> ListaSemestres
+        private IEnumerable<ConsultarSemestresSemestreDTO> _listaSemestres;
+        public IEnumerable<ConsultarSemestresSemestreDTO> ListaSemestres
         {
             get { return this._listaSemestres; }
             set { this._listaSemestres = value; OnPropertyChanged("ListaSemestres"); }
+        }
+
+        private IEnumerable<ConsultarDiasSemanaDiaDTO> _listaDias;
+        public IEnumerable<ConsultarDiasSemanaDiaDTO> ListaDias
+        {
+            get { return this._listaDias; }
+            set { this._listaDias = value; OnPropertyChanged("ListaDias"); }
         }
 
         private string _status;
@@ -73,48 +77,70 @@ namespace SistemaHorarios.Client.ViewModel
             set { this._status = value; OnPropertyChanged("Status"); }
         }
 
-        private RelayCommand _actionConsultarSemestres;
-        public RelayCommand ActionConsultarSemestres
+        private RelayCommand _actionCommand;
+        public RelayCommand ActionCommand
         {
-            get { return _actionConsultarSemestres; }
+            get { return _actionCommand; }
             set
             {
-                this._actionConsultarSemestres = new RelayCommand(obj => true, ExecutarConsultarSemestres);
+                this._actionCommand = new RelayCommand(obj => true, Executar);
             }
 
         }
-        public void ExecutarConsultarSemestres(object obj)
+        public void Executar(object obj)
         {
-
-        }
-
-        private RelayCommand _actionConsultarPeriodos;
-        public RelayCommand ActionConsultarPeriodos
-        {
-            get { return _actionConsultarPeriodos; }
-            set
+            var param = (object[])obj;
+            var codCurso = (param[0]) as DisplayCurso;
+            if (codCurso == null)
             {
-                this._actionConsultarPeriodos = new RelayCommand(obj => true, ExecutarConsultarPeriodos);
+                MessageBox.Show("Selecione um curso.");
             }
 
-        }
-        public void ExecutarConsultarPeriodos(object obj)
-        {
-
-        }
-
-        private RelayCommand _actionConsultarGrade;
-        public RelayCommand ActionConsultarGrade
-        {
-            get { return _actionConsultarGrade; }
-            set
+            var codSemestres = (param[1]) as ConsultarSemestresSemestreDTO;
+            if (codSemestres == null)
             {
-                this._actionConsultarGrade = new RelayCommand(obj => true, ExecutarConsultarGrade);
+                MessageBox.Show("Selecione um semestre.");
             }
 
-        }
-        public void ExecutarConsultarGrade(object obj)
-        {
+            var codDia = (param[2]) as ConsultarDiasSemanaDiaDTO;
+            if (codDia == null)
+            {
+                MessageBox.Show("Selecione um dia da semana.");
+            }
+
+
+            new Task(() =>
+            {
+                Status = "Consultando Cursos...";
+                var model = new ConsultarGradeModel();
+                model.Execute(new ConsultarGradeRequest()
+                {
+                    CodCurso = codCurso.CodCurso,
+                    CodDia = codDia.CodigoDia,
+                    CodPeriodo = codCurso.CodPeriodo,
+                    CodSemestre = codSemestres.Codigo
+                });
+
+                if (model.Response.Status == ExecutionStatus.Success)
+                {
+                    //ListaCursos = from c in model.Response.Cursos
+                    //              select new DisplayCurso()
+                    //              {
+                    //                  DisplayName = string.Concat(c.Nome, " (", c.Periodo.NomePeriodo, ")"),
+                    //                  CodCurso = c.Codigo,
+                    //                  CodPeriodo = c.Periodo.Codigo
+                    //              };
+                    //ListaSemestres = model.Response.Semestres;
+                    //ListaDias = model.Response.DiasSemana;
+                }
+                else
+                {
+                    System.Windows.Forms.MessageBox.Show(string.Concat("Erro ao consultar dados:\n", model.ErrorMessage));
+                    return;
+                }
+
+                Status = string.Empty;
+            }).Start();
 
         }
 
@@ -124,5 +150,12 @@ namespace SistemaHorarios.Client.ViewModel
             PropertyChangedEventHandler handler = PropertyChanged;
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
+    }
+
+    public class DisplayCurso
+    {
+        public string DisplayName { get; set; }
+        public int CodCurso { get; set; }
+        public int CodPeriodo { get; set; }
     }
 }

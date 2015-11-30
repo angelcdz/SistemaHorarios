@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:telas="clr-namespace:SistemaHorarios.Client.View.Telas"
         xmlns:local="clr-namespace:SistemaHorarios.Client.View"
+        xmlns:tab="clr-namespace:SistemaHorarios.Client.View.Resources"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         Title="Principal" Height="600" Width="800"
         WindowStartupLocation="CenterScreen"
@@ -49,9 +50,6 @@
         </Menu>
 
         <TabControl x:Name="TabbedPanel" Margin="0,25,0,0">
-            <TabItem x:Name="BemVindo" Header="Bem-vindo!">
-                <local:BoasVindas/>
-            </TabItem>
         </TabControl>
 
     </Grid>

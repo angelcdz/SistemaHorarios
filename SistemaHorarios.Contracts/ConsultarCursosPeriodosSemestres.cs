@@ -1,5 +1,6 @@
 using SistemaHorarios.Base;
 using SistemaHorarios.Contracts.ConsultarCursos;
+using SistemaHorarios.Contracts.ConsultarDiasSemana;
 using SistemaHorarios.Contracts.ConsultarSemestres;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
@@ -18,5 +19,7 @@ namespace SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres
         public List<ConsultarCursosCursoDTO> Cursos { get; set; }
         [DataMember]
         public List<ConsultarSemestresSemestreDTO> Semestres { get; set; }
+        [DataMember]
+        public List<ConsultarDiasSemanaDiaDTO> DiasSemana { get; set; }
     }
 }

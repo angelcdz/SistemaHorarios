@@ -137,3 +137,5 @@ Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\
 Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Paginas\SeletorUsuarios.baml
 Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Paginas\SeletorNiveis.g.cs
 Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Telas\Paginas\SeletorNiveis.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Resources\TabCloseButton.baml
+Z:\Compartilhada\Projetos\SistemaHorarios\SistemaHorarios.Client.View\obj\Debug\Resources\TabCloseButton.g.cs

@@ -58,6 +58,10 @@
     </ApplicationDefinition>
     <Compile Include="Converters\CheckBoxConverter.cs" />
     <Compile Include="Converters\MultiValueConverter.cs" />
+    <Compile Include="Resources\CloseableTabItem.cs" />
+    <Compile Include="Resources\TabCloseButton.xaml.cs">
+      <DependentUpon>TabCloseButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Alteracoes\AlterarCursos.xaml.cs">
       <DependentUpon>AlterarCursos.xaml</DependentUpon>
     </Compile>
@@ -154,6 +158,10 @@
     <Compile Include="Telas\Sobre.xaml.cs">
       <DependentUpon>Sobre.xaml</DependentUpon>
     </Compile>
+    <Page Include="Resources\TabCloseButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Telas\Alteracoes\AlterarCursos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
