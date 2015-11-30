@@ -230,7 +230,7 @@ namespace SistemaHorarios.Client.ViewModel
                 if (model.Response.Status == ExecutionStatus.Success)
                     MessageBox.Show("Elemento de grade cadastrado com sucesso.");
                 else
-                    MessageBox.Show(string.Concat("Erro ao consultar dados:\n", model.Response.ErrorMessage));
+                    MessageBox.Show(string.Concat("Erro ao cadastrar elemento:\n", model.Response.ErrorMessage));
 
                 Status = string.Empty;
             }).Start();
