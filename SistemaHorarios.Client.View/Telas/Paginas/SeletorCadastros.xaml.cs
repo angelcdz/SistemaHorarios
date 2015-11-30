@@ -45,8 +45,6 @@ namespace SistemaHorarios.Client.View
                     Lista.Children.Add(new CadastrarNiveisAcesso());
                     break;
                 case Cadastrar.Usuarios:
-                    Lista.Children.Add(new CadastrarUsuario());
-                    break;
                 default:
                     break;
             }

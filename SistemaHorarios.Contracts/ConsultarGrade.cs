@@ -9,6 +9,13 @@ namespace SistemaHorarios.Contracts.ConsultarGrade
     public class ConsultarGradeRequest : BaseRequest
     {
         [DataMember]
+        public string NomeCurso { get; set; }
+        [DataMember]
+        public int NumeroSemestre { get; set; }
+        [DataMember]
+        public string NomeDia { get; set; }
+
+        [DataMember]
         public int CodPeriodo { get; set; }
         [DataMember]
         public int CodCurso { get; set; }
@@ -21,6 +28,12 @@ namespace SistemaHorarios.Contracts.ConsultarGrade
     [DataContract]
     public class ConsultarGradeResponse : BaseResponse
     {
+        [DataMember]
+        public string NomeCurso { get; set; }
+        [DataMember]
+        public int NumeroSemestre { get; set; }
+        [DataMember]
+        public string NomeDia { get; set; }
         [DataMember]
         public List<ConsultarGradeHorarioDTO> Horarios { get; set; }
     }

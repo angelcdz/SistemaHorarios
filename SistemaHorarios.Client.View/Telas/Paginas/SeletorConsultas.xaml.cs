@@ -45,8 +45,6 @@ namespace SistemaHorarios.Client.View
                     Lista.Children.Add(new ConsultarNiveisAcesso());
                     break;
                 case Consultar.Usuarios:
-                    Lista.Children.Add(new ConsultarUsuarios());
-                    break;
                 default:
                     break;
             }

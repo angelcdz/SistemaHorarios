@@ -13,5 +13,10 @@ namespace SistemaHorarios.Client.View.Telas
             this.DataContext = new ConsultarGradeViewModel();
             InitializeComponent();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            new ExibirGrade();
+        }
     }
 }

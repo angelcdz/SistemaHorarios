@@ -50,6 +50,7 @@
     <Compile Include="Atualizacao\AtualizarSemestresBL.cs" />
     <Compile Include="Atualizacao\AtualizarUsuariosBL.cs" />
     <Compile Include="AutenticarUsuarioBL.cs" />
+    <Compile Include="CadastrarGradeBL.cs" />
     <Compile Include="Cadastros\CadastrarComposicaoCursoBL.cs" />
     <Compile Include="Cadastros\CadastrarComposicoesHorarioBL.cs" />
     <Compile Include="Cadastros\CadastrarCursosBL.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="ConsultarCursosPeriodosSemestresBL.cs" />
     <Compile Include="ConsultarCursosSemestresBL.cs" />
     <Compile Include="ConsultarGradeBL.cs" />
+    <Compile Include="ConsultarParametrosCadastroGradeBL.cs" />
     <Compile Include="ConsultarPeriodosPorCursoBL.cs" />
     <Compile Include="Consultas\ConsultarCursoParamBL.cs" />
     <Compile Include="Consultas\ConsultarDiaSemanaParamBL.cs" />

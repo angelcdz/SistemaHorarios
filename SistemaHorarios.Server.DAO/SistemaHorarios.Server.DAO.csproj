@@ -61,6 +61,7 @@
     <Compile Include="Atualizacao\AtualizarSemestresDAO.cs" />
     <Compile Include="Atualizacao\AtualizarUsuariosDAO.cs" />
     <Compile Include="AutenticarUsuarioDAO.cs" />
+    <Compile Include="CadastrarGradeDAO.cs" />
     <Compile Include="Cadastros\CadastrarComposicaoCursoDAO.cs" />
     <Compile Include="Cadastros\CadastrarComposicoesHorarioDAO.cs" />
     <Compile Include="Cadastros\CadastrarCursosDAO.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="ConsultarGradeDAO.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ConsultarParametrosCadastroGradeDAO.cs" />
     <Compile Include="ConsultarPeriodosPorCursoDAO.cs" />
     <Compile Include="Consultas\ConsultarCursoParamDAO.cs" />
     <Compile Include="Consultas\ConsultarDiaSemanaParamDAO.cs" />

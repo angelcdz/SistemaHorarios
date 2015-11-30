@@ -85,7 +85,7 @@ namespace SistemaHorarios.Client.ViewModel
                 else
                 {
                     Flag = string.Concat(Flag,"x");
-                    Usuario.NivelAcessoLogado = new Usuario.NivelAcesso()
+                    Context.NivelAcessoLogado = new Context.NivelAcesso()
                     {
                         Administrador = model.Response.NivelAcesso.Administrador,
                         Cadastro = model.Response.NivelAcesso.Cadastro,

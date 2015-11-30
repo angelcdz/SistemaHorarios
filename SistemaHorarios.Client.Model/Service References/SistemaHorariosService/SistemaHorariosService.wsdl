@@ -62,6 +62,8 @@
       <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd57" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarPeriodosPorCurso" />
       <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd58" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursosSemestres" />
       <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd59" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd60" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarParametrosCadastroGrade" />
+      <xsd:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd61" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarGrade" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ISistemaHorariosService_ConsultarCursos_InputMessage">
@@ -406,6 +408,18 @@
   <wsdl:message name="ISistemaHorariosService_ConsultarCursosPeriodosSemestres_OutputMessage">
     <wsdl:part name="parameters" element="tns:ConsultarCursosPeriodosSemestresResponse" />
   </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarParametrosCadastroGrade_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarParametrosCadastroGrade" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_ConsultarParametrosCadastroGrade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarParametrosCadastroGradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarGrade_InputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarGrade" />
+  </wsdl:message>
+  <wsdl:message name="ISistemaHorariosService_CadastrarGrade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarGradeResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISistemaHorariosService">
     <wsdl:operation name="ConsultarCursos">
       <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarCursos" message="tns:ISistemaHorariosService_ConsultarCursos_InputMessage" />
@@ -634,6 +648,14 @@
     <wsdl:operation name="ConsultarCursosPeriodosSemestres">
       <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarCursosPeriodosSemestres" message="tns:ISistemaHorariosService_ConsultarCursosPeriodosSemestres_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarCursosPeriodosSemestresResponse" message="tns:ISistemaHorariosService_ConsultarCursosPeriodosSemestres_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarParametrosCadastroGrade">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarParametrosCadastroGrade" message="tns:ISistemaHorariosService_ConsultarParametrosCadastroGrade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/ConsultarParametrosCadastroGradeResponse" message="tns:ISistemaHorariosService_ConsultarParametrosCadastroGrade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarGrade">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarGrade" message="tns:ISistemaHorariosService_CadastrarGrade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISistemaHorariosService/CadastrarGradeResponse" message="tns:ISistemaHorariosService_CadastrarGrade_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISistemaHorariosService" type="tns:ISistemaHorariosService">
@@ -1144,6 +1166,24 @@
     </wsdl:operation>
     <wsdl:operation name="ConsultarCursosPeriodosSemestres">
       <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarCursosPeriodosSemestres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarParametrosCadastroGrade">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/ConsultarParametrosCadastroGrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarGrade">
+      <soap:operation soapAction="http://tempuri.org/ISistemaHorariosService/CadastrarGrade" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

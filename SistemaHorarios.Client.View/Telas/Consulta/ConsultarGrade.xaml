@@ -31,5 +31,6 @@
                 </MultiBinding>
             </Button.CommandParameter>
         </Button>
+        <TextBox Text="{Binding Flag}" TextChanged="TextBox_TextChanged" Width="0" Height="0" Visibility="Hidden"/>
     </Grid>
 </UserControl>

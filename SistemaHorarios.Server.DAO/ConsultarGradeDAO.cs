@@ -12,7 +12,10 @@ namespace SistemaHorarios.Server.DAO
             var response = new ConsultarGradeResponse()
             {
                 Status = ExecutionStatus.Success,
-                Horarios = new System.Collections.Generic.List<ConsultarGradeHorarioDTO>()
+                Horarios = new System.Collections.Generic.List<ConsultarGradeHorarioDTO>(),
+                NomeCurso = request.NomeCurso,
+                NomeDia = request.NomeDia,
+                NumeroSemestre = request.NumeroSemestre
             };
 
             using (var context = new SistemaHorariosEntities())
@@ -40,23 +43,23 @@ namespace SistemaHorarios.Server.DAO
                         HorarioInicial = item.HorarioInicial
                     };
 
-                    var queryMateira = 
+                    var queryMateira =
                     context.Database.SqlQuery<ConsultarGradeHorarioMateriaDTO>(@"SELECT	MA.NOME_MATERIA Materia,
-		                                                                                PR.NOME_PROFESSOR Professor
-                                                                                FROM COMPOSICAO_HORARIO CH
-                                                                                JOIN COMPOSICAO_CURSO CC
-                                                                                ON CH.COD_COMP_HOR = CC.COD_COMP_CURSO
-                                                                                JOIN MATERIA MA
-                                                                                ON CC.COD_MATERIA = MA.COD_MATERIA
-                                                                                JOIN PROFESSOR PR
-                                                                                ON CC.COD_PROFESSOR = PR.COD_PROFESSOR
-                                                                                WHERE CH.COD_HORARIO = @p0", horario.CodHorario).ToList();
+	                                                                                    PR.NOME_PROFESSOR Professor
+                                                                                    FROM COMPOSICAO_HORARIO CH
+                                                                                    JOIN COMPOSICAO_CURSO CC
+                                                                                    ON CH.COD_COMP_CURSO = CC.COD_COMP_CURSO
+                                                                                    JOIN MATERIA MA
+                                                                                    ON CC.COD_MATERIA = MA.COD_MATERIA
+                                                                                    JOIN PROFESSOR PR
+                                                                                    ON CC.COD_PROFESSOR = PR.COD_PROFESSOR
+                                                                                    WHERE CH.COD_HORARIO = @p0", horario.CodHorario).ToList();
 
                     foreach (var materia in queryMateira)
                         horario.Materia = new ConsultarGradeHorarioMateriaDTO()
                         {
-                            Materia = materia.Materia,
-                            Professor = materia.Professor
+                            Materia = UppercaseWords(materia.Materia),
+                            Professor = UppercaseWords(materia.Professor)
                         };
 
                     response.Horarios.Add(horario);

@@ -132,8 +132,8 @@ namespace SistemaHorarios.Client.ViewModel
                 {
                     CodigoDiaSemana = dia.CodigoDia,
                     CodigoPeriodo = periodo.Codigo,
-                    HoraFinal = inicial,
-                    HoraInicial = final
+                    HoraFinal = final,
+                    HoraInicial = inicial
                 });
 
                 if (model.Response.Status == ExecutionStatus.Success) MessageBox.Show("Horário criado com sucesso!");

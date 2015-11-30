@@ -2,22 +2,72 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:Converters="clr-namespace:SistemaHorarios.Client.View.Converters"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" Height="447.075" Width="437">
+             mc:Ignorable="d" Height="403" Width="437">
+    <UserControl.Resources>
+        <Converters:MultiValueConverter x:Key="MultiValueConverter"/>
+    </UserControl.Resources>
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="50,50,0,0" TextWrapping="Wrap" Text="Curso:" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="50,71,0,0" VerticalAlignment="Top" Width="330"/>
-        <TextBlock HorizontalAlignment="Left" Margin="50,98,0,0" TextWrapping="Wrap" Text="Período:" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="50,119,0,0" VerticalAlignment="Top" Width="330"/>
-        <TextBlock HorizontalAlignment="Left" Margin="50,146,0,0" TextWrapping="Wrap" Text="Matéria:" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="50,167,0,0" VerticalAlignment="Top" Width="330"/>
-        <TextBlock HorizontalAlignment="Left" Margin="50,194,0,0" TextWrapping="Wrap" Text="Professor:" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="50,215,0,0" VerticalAlignment="Top" Width="330"/>
-        <TextBlock HorizontalAlignment="Left" Margin="50,242,0,0" TextWrapping="Wrap" Text="Dia da Semana:" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="50,263,0,0" VerticalAlignment="Top" Width="330"/>
-        <TextBlock HorizontalAlignment="Left" Margin="50,290,0,0" TextWrapping="Wrap" Text="Horário:" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="50,311,0,0" VerticalAlignment="Top" Width="330"/>
-        <Button Content="Cadastrar" HorizontalAlignment="Left" Margin="50,372,0,0" VerticalAlignment="Top" Width="150"/>
-        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="230,372,0,0" VerticalAlignment="Top" Width="150"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,29,0,0" TextWrapping="Wrap" Text="Curso:" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="50,50,0,0" VerticalAlignment="Top" Width="330" x:Name="ComboCursos"
+                  ItemsSource="{Binding ListaCursos}" DisplayMemberPath="DisplayName">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <i:InvokeCommandAction Command="{Binding ActionCommandCursos}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </ComboBox>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="50,77,0,0" TextWrapping="Wrap" Text="Matéria:" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="50,98,0,0" VerticalAlignment="Top" Width="330" x:Name="ComboMaterias"
+                  ItemsSource="{Binding ListaMaterias}" DisplayMemberPath="Nome"/>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="50,125,0,0" TextWrapping="Wrap" Text="Professor:" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="50,146,0,0" VerticalAlignment="Top" Width="330" x:Name="ComboProfessores"
+                  ItemsSource="{Binding ListaProfessores}" DisplayMemberPath="Nome"/>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="50,173,0,0" TextWrapping="Wrap" Text="Semestre:" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="50,196,0,0" VerticalAlignment="Top" Width="330" x:Name="ComboSemestres"
+                  ItemsSource="{Binding ListaSemestres}" DisplayMemberPath="Numero"/>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="50,223,0,0" TextWrapping="Wrap" Text="Dia da Semana:" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="50,244,0,0" VerticalAlignment="Top" Width="330" x:Name="ComboDias"
+                  ItemsSource="{Binding ListaDias}" DisplayMemberPath="Nome">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <i:InvokeCommandAction Command="{Binding ActionCommandHorarios}">
+                        <i:InvokeCommandAction.CommandParameter>
+                            <MultiBinding Converter="{StaticResource MultiValueConverter}">
+                                <Binding ElementName="ComboDias" Path="SelectedItem"/>
+                                <Binding ElementName="ComboCursos" Path="SelectedItem"/>
+                            </MultiBinding>
+                        </i:InvokeCommandAction.CommandParameter>
+                    </i:InvokeCommandAction>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </ComboBox>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="50,271,0,0" TextWrapping="Wrap" Text="Horário:" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="50,292,0,0" VerticalAlignment="Top" Width="330" x:Name="ComboHorarios"
+                  ItemsSource="{Binding ListaHorarios}" DisplayMemberPath="DisplayName"/>
+
+        <Button Content="Cadastrar" Style="{StaticResource DefaultButton}" HorizontalAlignment="Left"
+                Margin="50,334,0,0" VerticalAlignment="Top" Width="150" Command="{Binding ActionCommand}">
+            <Button.CommandParameter>
+                <MultiBinding Converter="{StaticResource MultiValueConverter}">
+                    <Binding ElementName="ComboCursos" Path="SelectedItem"/>
+                    <Binding ElementName="ComboMaterias" Path="SelectedItem"/>
+                    <Binding ElementName="ComboProfessores" Path="SelectedItem"/>
+                    <Binding ElementName="ComboSemestres" Path="SelectedItem"/>
+                    <Binding ElementName="ComboDias" Path="SelectedItem"/>
+                    <Binding ElementName="ComboHorarios" Path="SelectedItem"/>
+                </MultiBinding>
+            </Button.CommandParameter>
+        </Button>
+        <Button Content="Cancelar" Style="{StaticResource DefaultButton}" HorizontalAlignment="Left" Margin="230,334,0,0" VerticalAlignment="Top" Width="150"/>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="50,369,0,0" TextWrapping="Wrap" Text="{Binding Status}" VerticalAlignment="Top"/>
     </Grid>
 </UserControl>

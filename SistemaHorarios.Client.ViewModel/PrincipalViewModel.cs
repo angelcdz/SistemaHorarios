@@ -13,11 +13,11 @@ namespace SistemaHorarios.Client.ViewModel
     {
         public PrincipalViewModel()
         {
-            if (Usuario.NivelAcessoLogado != null)
+            if (Context.NivelAcessoLogado != null)
             {
-                ShowConsultas = Usuario.NivelAcessoLogado.Consulta;
-                ShowOperacoes = Usuario.NivelAcessoLogado.Cadastro;
-                ShowAdmin = Usuario.NivelAcessoLogado.Administrador;
+                ShowConsultas = Context.NivelAcessoLogado.Consulta;
+                ShowOperacoes = Context.NivelAcessoLogado.Cadastro;
+                ShowAdmin = Context.NivelAcessoLogado.Administrador;
             }
             ActionFechar = new RelayCommand();
             ActionClose = new RelayCommand();

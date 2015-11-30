@@ -51,6 +51,7 @@
     <Compile Include="Atualizacao\AtualizarSemestres.cs" />
     <Compile Include="Atualizacao\AtualizarUsuarios.cs" />
     <Compile Include="AutenticarUsuario.cs" />
+    <Compile Include="CadastrarGrade.cs" />
     <Compile Include="Cadastros\CadastrarComposicoesHorario.cs" />
     <Compile Include="Cadastros\CadastrarComposicaoCurso.cs" />
     <Compile Include="Cadastros\CadastrarSemestres.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="ConsultarCursosPeriodosSemestres.cs" />
     <Compile Include="ConsultarCursosSemestres.cs" />
     <Compile Include="ConsultarGrade.cs" />
+    <Compile Include="ConsultarParametrosCadastroGrade.cs" />
     <Compile Include="ConsultarPeriodosPorCurso.cs" />
     <Compile Include="Consultas\ConsultarCursoParam.cs" />
     <Compile Include="Consultas\ConsultarDiaSemanaParam.cs" />

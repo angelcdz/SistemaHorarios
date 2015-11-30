@@ -288,5 +288,15 @@ namespace SistemaHorarios.Server.WCF
         {
             return this.ExecuteBusiness(new ConsultarCursosPeriodosSemestresBL(), request);
         }
+
+        public Contracts.ConsultarParametrosCadastroGrade.ConsultarParametrosCadastroGradeResponse ConsultarParametrosCadastroGrade(Contracts.ConsultarParametrosCadastroGrade.ConsultarParametrosCadastroGradeRequest request)
+        {
+            return this.ExecuteBusiness(new ConsultarParametrosCadastroGradeBL(), request);
+        }
+
+        public Contracts.CadastrarGrade.CadastrarGradeResponse CadastrarGrade(Contracts.CadastrarGrade.CadastrarGradeRequest request)
+        {
+            return this.ExecuteBusiness(new CadastrarGradeBL(), request);
+        }
     }
 }

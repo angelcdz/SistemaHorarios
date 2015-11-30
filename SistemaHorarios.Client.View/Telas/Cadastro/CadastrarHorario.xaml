@@ -13,6 +13,17 @@
         <TextBox x:Name="TextInicial" HorizontalAlignment="Left" 
 			Height="23" Margin="50,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"
 			Text="{Binding TextInicial}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="230,50,0,0" TextWrapping="Wrap" Text="Hora Final:" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextFinal" HorizontalAlignment="Left" 
+        	Height="23" Margin="230,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"
+        	Text="{Binding TextFinal}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,189,0,-5.96" TextWrapping="Wrap" Text="{Binding Status}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,99,0,0" TextWrapping="Wrap" Text="Dia da semana:" VerticalAlignment="Top"/>
+        <ComboBox x:Name="ComboDia" HorizontalAlignment="Left" Height="20" Margin="50,120,0,0" 
+                  VerticalAlignment="Top" Width="170" ItemsSource="{Binding ListaDia}" DisplayMemberPath="Nome"/>
+        <TextBlock HorizontalAlignment="Left" Margin="230,99,0,0" TextWrapping="Wrap" Text="Período:" VerticalAlignment="Top"/>
+        <ComboBox x:Name="ComboPerido" HorizontalAlignment="Left" Height="20" Margin="230,120,0,0" 
+        	VerticalAlignment="Top" Width="170" ItemsSource="{Binding ListaPeriodo}" DisplayMemberPath="Nome"/>
         <Button Content="Criar" Style="{StaticResource DefaultButton}" 
 			HorizontalAlignment="Left" Margin="50,154,0,0" 
 			VerticalAlignment="Top" Width="150" IsEnabled="{Binding CriarEnabled}"
@@ -30,17 +41,6 @@
 			HorizontalAlignment="Left" Margin="250,154,0,0" 
 			VerticalAlignment="Top" Width="150" IsEnabled="{Binding CancelarEnabled}"
 			Command="{Binding ActionCommandCancelar}"/>
-        <TextBlock HorizontalAlignment="Left" Margin="50,189,0,-5.96" TextWrapping="Wrap" Text="{Binding Status}" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="230,50,0,0" TextWrapping="Wrap" Text="Hora Final:" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextFinal" HorizontalAlignment="Left" 
-        	Height="23" Margin="230,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"
-        	Text="{Binding TextFinal}"/>
-        <TextBlock HorizontalAlignment="Left" Margin="50,99,0,0" TextWrapping="Wrap" Text="Dia da semana:" VerticalAlignment="Top"/>
-        <ComboBox x:Name="ComboDia" HorizontalAlignment="Left" Height="20" Margin="50,120,0,0" 
-                  VerticalAlignment="Top" Width="170" ItemsSource="{Binding ListaDia}" DisplayMemberPath="Nome"/>
-        <TextBlock HorizontalAlignment="Left" Margin="230,99,0,0" TextWrapping="Wrap" Text="Período:" VerticalAlignment="Top"/>
-        <ComboBox x:Name="ComboPerido" HorizontalAlignment="Left" Height="20" Margin="230,120,0,0" 
-        	VerticalAlignment="Top" Width="170" ItemsSource="{Binding ListaPeriodo}" DisplayMemberPath="Nome"/>
 
     </Grid>
 </UserControl>

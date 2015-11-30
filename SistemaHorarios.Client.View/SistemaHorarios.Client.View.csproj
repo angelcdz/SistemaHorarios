@@ -137,6 +137,9 @@
     <Compile Include="Telas\Consulta\ConsultarCursos.xaml.cs">
       <DependentUpon>ConsultarCursos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Telas\ExibirGrade.xaml.cs">
+      <DependentUpon>ExibirGrade.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -261,6 +264,10 @@
     <Page Include="Telas\Consulta\ConsultarCursos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\ExibirGrade.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Telas\Login.xaml">
       <SubType>Designer</SubType>

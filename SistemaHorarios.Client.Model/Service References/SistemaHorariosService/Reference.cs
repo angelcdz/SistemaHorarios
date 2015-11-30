@@ -358,6 +358,20 @@ namespace SistemaHorarios.Client.Model.SistemaHorariosService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISistemaHorariosService/ConsultarCursosPeriodosSemestres", ReplyAction="http://tempuri.org/ISistemaHorariosService/ConsultarCursosPeriodosSemestresRespon" +
             "se")]
         System.Threading.Tasks.Task<SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres.ConsultarCursosPeriodosSemestresResponse> ConsultarCursosPeriodosSemestresAsync(SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres.ConsultarCursosPeriodosSemestresRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISistemaHorariosService/ConsultarParametrosCadastroGrade", ReplyAction="http://tempuri.org/ISistemaHorariosService/ConsultarParametrosCadastroGradeRespon" +
+            "se")]
+        SistemaHorarios.Contracts.ConsultarParametrosCadastroGrade.ConsultarParametrosCadastroGradeResponse ConsultarParametrosCadastroGrade(SistemaHorarios.Contracts.ConsultarParametrosCadastroGrade.ConsultarParametrosCadastroGradeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISistemaHorariosService/ConsultarParametrosCadastroGrade", ReplyAction="http://tempuri.org/ISistemaHorariosService/ConsultarParametrosCadastroGradeRespon" +
+            "se")]
+        System.Threading.Tasks.Task<SistemaHorarios.Contracts.ConsultarParametrosCadastroGrade.ConsultarParametrosCadastroGradeResponse> ConsultarParametrosCadastroGradeAsync(SistemaHorarios.Contracts.ConsultarParametrosCadastroGrade.ConsultarParametrosCadastroGradeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISistemaHorariosService/CadastrarGrade", ReplyAction="http://tempuri.org/ISistemaHorariosService/CadastrarGradeResponse")]
+        SistemaHorarios.Contracts.CadastrarGrade.CadastrarGradeResponse CadastrarGrade(SistemaHorarios.Contracts.CadastrarGrade.CadastrarGradeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISistemaHorariosService/CadastrarGrade", ReplyAction="http://tempuri.org/ISistemaHorariosService/CadastrarGradeResponse")]
+        System.Threading.Tasks.Task<SistemaHorarios.Contracts.CadastrarGrade.CadastrarGradeResponse> CadastrarGradeAsync(SistemaHorarios.Contracts.CadastrarGrade.CadastrarGradeRequest request);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -841,6 +855,22 @@ namespace SistemaHorarios.Client.Model.SistemaHorariosService {
         
         public System.Threading.Tasks.Task<SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres.ConsultarCursosPeriodosSemestresResponse> ConsultarCursosPeriodosSemestresAsync(SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres.ConsultarCursosPeriodosSemestresRequest request) {
             return base.Channel.ConsultarCursosPeriodosSemestresAsync(request);
+        }
+        
+        public SistemaHorarios.Contracts.ConsultarParametrosCadastroGrade.ConsultarParametrosCadastroGradeResponse ConsultarParametrosCadastroGrade(SistemaHorarios.Contracts.ConsultarParametrosCadastroGrade.ConsultarParametrosCadastroGradeRequest request) {
+            return base.Channel.ConsultarParametrosCadastroGrade(request);
+        }
+        
+        public System.Threading.Tasks.Task<SistemaHorarios.Contracts.ConsultarParametrosCadastroGrade.ConsultarParametrosCadastroGradeResponse> ConsultarParametrosCadastroGradeAsync(SistemaHorarios.Contracts.ConsultarParametrosCadastroGrade.ConsultarParametrosCadastroGradeRequest request) {
+            return base.Channel.ConsultarParametrosCadastroGradeAsync(request);
+        }
+        
+        public SistemaHorarios.Contracts.CadastrarGrade.CadastrarGradeResponse CadastrarGrade(SistemaHorarios.Contracts.CadastrarGrade.CadastrarGradeRequest request) {
+            return base.Channel.CadastrarGrade(request);
+        }
+        
+        public System.Threading.Tasks.Task<SistemaHorarios.Contracts.CadastrarGrade.CadastrarGradeResponse> CadastrarGradeAsync(SistemaHorarios.Contracts.CadastrarGrade.CadastrarGradeRequest request) {
+            return base.Channel.CadastrarGradeAsync(request);
         }
     }
 }

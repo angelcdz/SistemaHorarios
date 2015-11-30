@@ -57,6 +57,8 @@
   <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd57" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarPeriodosPorCurso" />
   <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd58" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursosSemestres" />
   <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd59" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd60" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarParametrosCadastroGrade" />
+  <xs:import schemaLocation="http://localhost:34859/SistemaHorariosService.svc?xsd=xsd61" namespace="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarGrade" />
   <xs:element name="ConsultarCursos">
     <xs:complexType>
       <xs:sequence>
@@ -852,6 +854,34 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres" minOccurs="0" name="ConsultarCursosPeriodosSemestresResult" nillable="true" type="q114:ConsultarCursosPeriodosSemestresResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarParametrosCadastroGrade">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarParametrosCadastroGrade" minOccurs="0" name="request" nillable="true" type="q115:ConsultarParametrosCadastroGradeRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarParametrosCadastroGradeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.ConsultarParametrosCadastroGrade" minOccurs="0" name="ConsultarParametrosCadastroGradeResult" nillable="true" type="q116:ConsultarParametrosCadastroGradeResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarGrade">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarGrade" minOccurs="0" name="request" nillable="true" type="q117:CadastrarGradeRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarGradeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/SistemaHorarios.Contracts.CadastrarGrade" minOccurs="0" name="CadastrarGradeResult" nillable="true" type="q118:CadastrarGradeResponse" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

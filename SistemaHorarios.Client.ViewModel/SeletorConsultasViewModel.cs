@@ -9,6 +9,7 @@ namespace SistemaHorarios.Client.ViewModel
         {
             this.Lista = new List<KeyValuePair<string, Consultar>>()
                 {
+                    new KeyValuePair<string, Consultar>("",Consultar.Usuarios),
                     new KeyValuePair<string, Consultar>("Cursos",Consultar.Cursos),
                     new KeyValuePair<string, Consultar>("Grade",Consultar.Grades),
                     new KeyValuePair<string, Consultar>("Horarios",Consultar.Horarios),

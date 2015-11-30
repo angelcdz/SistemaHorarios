@@ -1,17 +1,16 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel;
+﻿using SistemaHorarios.Base;
 using SistemaHorarios.Client.Model;
-using SistemaHorarios.Base;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using System.Windows.Controls;
-using System.Windows.Forms;
+using SistemaHorarios.Client.ViewModel.Autenticacao;
+using SistemaHorarios.Client.ViewModel.Resources;
 using SistemaHorarios.Contracts.ConsultarCursosPeriodosSemestres;
-using SistemaHorarios.Contracts.ConsultarSemestres;
-using SistemaHorarios.Contracts.ConsultarCursos;
-using System.Linq;
 using SistemaHorarios.Contracts.ConsultarDiasSemana;
 using SistemaHorarios.Contracts.ConsultarGrade;
+using SistemaHorarios.Contracts.ConsultarSemestres;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SistemaHorarios.Client.ViewModel
 {
@@ -41,8 +40,7 @@ namespace SistemaHorarios.Client.ViewModel
                 }
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show(string.Concat("Erro ao consultar dados:\n", model.ErrorMessage));
-                    return;
+                    System.Windows.Forms.MessageBox.Show(string.Concat("Erro ao consultar dados:\n", model.Response.ErrorMessage));
                 }
 
                 Status = string.Empty;
@@ -77,6 +75,13 @@ namespace SistemaHorarios.Client.ViewModel
             set { this._status = value; OnPropertyChanged("Status"); }
         }
 
+        private string _flag;
+        public string Flag
+        {
+            get { return this._flag; }
+            set { this._flag = value; OnPropertyChanged("Flag"); }
+        }
+
         private RelayCommand _actionCommand;
         public RelayCommand ActionCommand
         {
@@ -108,13 +113,16 @@ namespace SistemaHorarios.Client.ViewModel
                 MessageBox.Show("Selecione um dia da semana.");
             }
 
-
             new Task(() =>
             {
-                Status = "Consultando Cursos...";
+                Status = "Consultando Grade...";
                 var model = new ConsultarGradeModel();
                 model.Execute(new ConsultarGradeRequest()
                 {
+                    NomeCurso = codCurso.DisplayName,
+                    NomeDia = codDia.Nome,
+                    NumeroSemestre = codSemestres.Numero,
+
                     CodCurso = codCurso.CodCurso,
                     CodDia = codDia.CodigoDia,
                     CodPeriodo = codCurso.CodPeriodo,
@@ -123,25 +131,16 @@ namespace SistemaHorarios.Client.ViewModel
 
                 if (model.Response.Status == ExecutionStatus.Success)
                 {
-                    //ListaCursos = from c in model.Response.Cursos
-                    //              select new DisplayCurso()
-                    //              {
-                    //                  DisplayName = string.Concat(c.Nome, " (", c.Periodo.NomePeriodo, ")"),
-                    //                  CodCurso = c.Codigo,
-                    //                  CodPeriodo = c.Periodo.Codigo
-                    //              };
-                    //ListaSemestres = model.Response.Semestres;
-                    //ListaDias = model.Response.DiasSemana;
+                    Context.Grade = model.Response;
+                    Flag = Flag + "S";
                 }
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show(string.Concat("Erro ao consultar dados:\n", model.ErrorMessage));
-                    return;
+                    System.Windows.Forms.MessageBox.Show(string.Concat("Erro ao consultar dados:\n", model.Response.ErrorMessage));
                 }
 
                 Status = string.Empty;
             }).Start();
-
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -150,12 +149,5 @@ namespace SistemaHorarios.Client.ViewModel
             PropertyChangedEventHandler handler = PropertyChanged;
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
-    }
-
-    public class DisplayCurso
-    {
-        public string DisplayName { get; set; }
-        public int CodCurso { get; set; }
-        public int CodPeriodo { get; set; }
     }
 }

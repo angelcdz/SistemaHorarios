@@ -52,6 +52,7 @@
     <Compile Include="Atualizacao\AtualizarSemestresModel.cs" />
     <Compile Include="Atualizacao\AtualizarUsuariosModel.cs" />
     <Compile Include="AutenticarUsuarioModel.cs" />
+    <Compile Include="CadastrarGradeModel.cs" />
     <Compile Include="Cadastros\CadastrarComposicaoCursoModel.cs" />
     <Compile Include="Cadastros\CadastrarComposicoesHorarioModel.cs" />
     <Compile Include="Cadastros\CadastrarCursosModel.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="ConsultarCursosPeriodosSemestresModel.cs" />
     <Compile Include="ConsultarCursosSemestresModel.cs" />
     <Compile Include="ConsultarGradeModel.cs" />
+    <Compile Include="ConsultarParametrosCadastroGradeModel.cs" />
     <Compile Include="ConsultarPeriodosPorCursoModel.cs" />
     <Compile Include="Consultas\ConsultarCursoParamModel.cs" />
     <Compile Include="Consultas\ConsultarDiaSemanaParamModel.cs" />
@@ -134,6 +136,7 @@
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.CadastrarComposicaoCurso.CadastrarComposicaoCursoResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.CadastrarComposicoesHorario.CadastrarComposicoesHorarioResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.CadastrarCursos.CadastrarCursosResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.CadastrarGrade.CadastrarGradeResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.CadastrarHorarios.CadastrarHorariosResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.CadastrarMaterias.CadastrarMateriasResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.CadastrarNiveisAcesso.CadastrarNiveisAcessoResponse.datasource" />
@@ -158,6 +161,7 @@
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarMaterias.ConsultarMateriasResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarNiveisAcesso.ConsultarNiveisAcessoResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarNivelAcessoParam.ConsultarNivelAcessoParamResponse.datasource" />
+    <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarParametrosCadastroGrade.ConsultarParametrosCadastroGradeResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarPeriodoParam.ConsultarPeriodoParamResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarPeriodos.ConsultarPeriodosResponse.datasource" />
     <None Include="Properties\DataSources\SistemaHorarios.Contracts.ConsultarPeriodosPorCurso.ConsultarPeriodosPorCursoResponse.datasource" />
@@ -351,7 +355,13 @@
     <None Include="Service References\SistemaHorariosService\SistemaHorariosService581.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService59.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\SistemaHorariosService\SistemaHorariosService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SistemaHorariosService\SistemaHorariosService60.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\SistemaHorariosService\SistemaHorariosService7.xsd">
