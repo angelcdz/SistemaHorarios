@@ -1,6 +1,7 @@
 using SistemaHorarios.Base;
 using SistemaHorarios.Contracts.ConsultarHorarioParam;
 using SistemaHorarios.Contracts.ConsultarHorarios;
+using SistemaHorarios.Contracts.ConsultarPeriodos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,11 @@ namespace SistemaHorarios.Server.DAO
                         {
                             Codigo = item.DiaSemana.CodigoDia,
                             Nome = UppercaseWords(item.DiaSemana.NomeDia)
+                        },
+                        Periodo = new ConsultarPeriodosPeriodoDTO()
+                        {
+                            Codigo = item.Periodo.CodigoPeriodo,
+                            Nome = item.Periodo.NomePeriodo
                         }
                     });
 
@@ -39,6 +45,8 @@ namespace SistemaHorarios.Server.DAO
                         lista = lista.Where(hor => hor.HoraInicial == request.Inicial).ToList();
                     if (request.CodigoDia != 0)
                         lista = lista.Where(hor => hor.DiaSemana.Codigo == request.CodigoDia).ToList();
+                    if (request.CodigoPeriodo != 0)
+                        lista = lista.Where(hor => hor.Periodo.Codigo == request.CodigoPeriodo).ToList();
                 }    
             }
 

@@ -1,4 +1,5 @@
 ﻿using SistemaHorarios.Base;
+using SistemaHorarios.Contracts.ConsultarPeriodos;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
@@ -25,6 +26,8 @@ namespace SistemaHorarios.Contracts.ConsultarHorarios
         public System.TimeSpan HoraFinal { get; set; }
         [DataMember]
         public ConsultarHorariosDiaDTO DiaSemana { get; set; }
+        [DataMember]
+        public ConsultarPeriodosPeriodoDTO Periodo { get; set; }
     }
 
     [DataContract]

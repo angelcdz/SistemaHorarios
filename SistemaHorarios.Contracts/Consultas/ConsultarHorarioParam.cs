@@ -17,6 +17,8 @@ namespace SistemaHorarios.Contracts.ConsultarHorarioParam
         public TimeSpan Final { get; set; }
         [DataMember]
         public int CodigoDia { get; set; }
+        [DataMember]
+        public int CodigoPeriodo { get; set; }
     }
 
     [DataContract]
